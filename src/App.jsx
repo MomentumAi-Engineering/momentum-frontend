@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './components/Home.jsx'
 import Navbar from './components/Navbar.jsx'
+import About from './components/About.jsx'
 
 const App = () => {
   return (
@@ -9,7 +10,9 @@ const App = () => {
       <Navbar />
       </div>
       <Home />
+      <About />
     </div>
+    
   )
 }
 
