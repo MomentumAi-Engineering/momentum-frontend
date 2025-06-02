@@ -1,9 +1,14 @@
 import React from 'react'
+import Home from './components/Home.jsx'
+import Navbar from './components/Navbar.jsx'
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-3xl bg-amber-800 font-bold'>Hi from Raj</h1>
+    <div className='h-screen'>
+      <div className='mt-3'>
+      <Navbar />
+      </div>
+      <Home />
     </div>
   )
 }
