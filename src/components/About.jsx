@@ -3,7 +3,7 @@ import React from "react";
 const GradientText = ({ children }) => (
   <span
     style={{
-      background: "linear-gradient(90deg, #A8A8A8 0%, #D0D0D0 100%)",
+      background: "linear-gradient(90deg, #FBCB8A 0%, #F38BA0 100%)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       fontWeight: 700,
@@ -34,17 +34,20 @@ export default function SnapfixHero() {
           left: "50%",
           top: "50%",
           transform: "translate(-50%, -50%)",
-          fontSize: "20vw",
-          fontWeight: 700,
+          fontSize: "22vw",
+          fontWeight: 800,
           color: "rgba(255,255,255,0.04)",
+          WebkitTextStroke: "1px rgba(255,255,255,0.08)",
+          textShadow: "0 0 20px rgba(255, 255, 255, 0.05)",
           letterSpacing: "-0.05em",
           userSelect: "none",
           zIndex: 1,
           fontFamily: "sans-serif",
         }}
       >
-        Snapfix
+        SnapFix
       </span>
+
       {/* Foreground content */}
       <div
         style={{
