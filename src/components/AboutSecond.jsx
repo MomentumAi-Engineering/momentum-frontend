@@ -1,4 +1,5 @@
 import React from 'react';
+import Companies from './Companies';
 
 const AboutSecond = () => {
   return (
@@ -32,25 +33,30 @@ const AboutSecond = () => {
 
       {/* Cards */}
 
-       <div className="flex justify-center items-center space-x-8">
-  <div className="bg-[#000000] h-120 w-90 mt-30 border-l border-r border-white border-l-[0.2px] border-r-[0.2px] hover:bg-[#141414]">
+       <div className="flex justify-center items-center space-x-8 ">
+  <div className="bg-[#000000] h-120 w-90 mt-30 border-l border-r border-white border-l-[0.2px] border-r-[0.2px] hover:bg-[#141414] pointer-cursor">
     <h2 className="font-semibold text-1.5xl text-left pl-10 pt-7">Live Location Tracking</h2>
     <p className='p-5 text-gray-500'>Our Advanced AI Classifies issues as public or bussiness-related with high accuracy.
       This ensures faster response times, better resource allocation, and enhanced operational efficiency with high accuracy and reliability.
     </p>
   </div>
 
-  <div className="bg-[#000000] h-120 w-90 mt-30 border-l border-r border-white border-l-[0.2px] border-r-[0.2px] hover:bg-[#141414]">
+  <div className="bg-[#000000] h-120 w-90 mt-30 border-l border-r border-white border-l-[0.2px] border-r-[0.2px] hover:bg-[#141414] pointer-cursor">
     <h2 className="font-semibold text-1.5xl text-center text-left pl-10 pt-7">AI Powered Analysis</h2>
     <p className='p-5 text-gray-500'>Classifies your location instantly to ensure precise reporting.Utilizes intelligent algorithms to instantly classify your location, ensuring accurate and context-aware reporting for enhanced decision-making.</p>
   </div>
 
-  <div className="bg-[#000000] h-120 w-90 mt-30 border-l border-r border-white border-l-[0.2px] border-r-[0.2px] hover:bg-[#141414]">
+  <div className="bg-[#000000] h-120 w-90 mt-30 border-l border-r border-white border-l-[0.2px] border-r-[0.2px] hover:bg-[#141414] pointer-cursor">
     <h2 className="font-semibold text-1.5xl text-center text-left pl-10 pt-7">Automated Reports</h2>
     <p className='p-5 text-gray-500 text-1xl'>Receive detailed human-like reports sent directly to the right authorities. Automatically generates detailed, human-like reports and delivers them directly to the appropriate authorities, ensuring quick and accurate communication.
+    </p>
+    </div>
 
-</p>
-  </div>
+       </div>
+
+
+        <div className='mt-35'>
+       <Companies />
        </div>
 
 
