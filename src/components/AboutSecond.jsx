@@ -8,7 +8,7 @@ const AboutSecond = () => {
       <h1 className="text-5xl font-light mb-4">Snapfix for all humanity</h1>
 
       {/* Centered subheading */}
-      <h2 className="text-2xl font-light text-center text-gray-200 mb-12">
+      <h2 className="text-2xl font-light text-center text-gray-200 mb-12 mt-20">
         Powering the world’s best product teams.
         <br />
         From next-gen startups to established enterprises.
@@ -29,6 +29,12 @@ const AboutSecond = () => {
           <span className="text-gray-400 text-sm">Average Response Time</span>
         </div>
       </div>
+
+      {/* Cards */}
+      <div className='bg-gray-700 h-20 w-20 rounded-2xl'>
+
+      </div>
+
     </div>
   );
 };
