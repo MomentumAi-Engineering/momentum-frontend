@@ -8,7 +8,7 @@ const Team = () => {
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-semibold mb-4">About us</h2>
         <p className="text-gray-300 text-lg leading-relaxed">
-          Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home,
+          MomentumAi was founded in 2025 when two hosts welcomed three guests to their San Francisco home,
           and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals
           in almost every country across the globe. Every day, hosts offer unique stays, experiences,
           and services that make it possible for guests to connect with communities in a more authentic way.
