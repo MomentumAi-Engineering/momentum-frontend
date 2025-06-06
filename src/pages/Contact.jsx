@@ -16,8 +16,8 @@ const Contact = () => {
               </div>
               <div>
                 <p className="font-semibold text-white">Email</p>
-                <p>aievolve.ai@gmail.com</p>
-                <p>support@aievollve.com</p>
+                <p>...@gmail.com</p>
+                
               </div>
             </div>
 
@@ -25,11 +25,7 @@ const Contact = () => {
               <div className="bg-gray-800 p-3 rounded-xl">
                 <Phone className="text-white" />
               </div>
-              <div>
-                <p className="font-semibold text-white">Phone</p>
-                <p>+91 (882) 609-9916</p>
-                <p>+91 (639) 890-4235</p>
-              </div>
+              
             </div>
 
             <div className="flex items-start space-x-4">
@@ -38,19 +34,19 @@ const Contact = () => {
               </div>
               <div>
                 <p className="font-semibold text-white">Office</p>
-                <p>AIEvollve Headquarters</p>
-                <p>Sector 62 Noida</p>
-                <p>Uttar Pradesh, India 201309</p>
+                <p>MomentumAi Headquarters</p>
+                <p>Nashville, Tennessee</p>
+                <p>United States</p>
               </div>
             </div>
           </div>
 
-          <div className="mt-10 text-gray-400">
+          {/* <div className="mt-10 text-gray-400">
             <h3 className="font-semibold text-white">Operating Hours</h3>
             <p>Monday - Friday: 10:30 AM - 6:00 PM</p>
             <p>Saturday: 10:00 AM - 4:00 PM</p>
             <p>Sunday: Closed</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Right: Send Message */}

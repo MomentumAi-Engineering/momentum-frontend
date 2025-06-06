@@ -1,25 +1,38 @@
-import React from 'react'
-import Home from './components/Home.jsx'
-import Navbar from './components/Navbar.jsx'
-import About from './components/About.jsx'
-import AboutSecond from './components/AboutSecond.jsx'
-import Team from './components/Team.jsx'
-import Footer from './components/Footer.jsx'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home.jsx';
+import Navbar from './components/Navbar.jsx';
+import About from './components/About.jsx';
+import AboutSecond from './components/AboutSecond.jsx';
+import Team from './components/Team.jsx';
+import Footer from './components/Footer.jsx';
+import Contact from './pages/Contact.jsx';
 
 const App = () => {
   return (
-    <div className='h-screen'>
-      <div className='mt-3'>
-      <Navbar />
-      </div>
-      <Home />
-      <About />
-      <AboutSecond />
-      <Team />
-      <Footer />
-    </div>
-    
-  )
-}
+    <Router>
+      <div className='h-screen'>
+        <Navbar />
 
-export default App
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Home />
+                <About />
+                <AboutSecond />
+                <Team />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/contact" element={<Contact />} />
+          {/* Add more routes as needed */}
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+
+export default App;

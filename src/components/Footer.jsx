@@ -65,6 +65,8 @@ const Footer = () => {
           <FaFacebookF className="hover:text-white cursor-pointer" />
         </div>
       </div>
+
+      
     </footer>
   );
 };
