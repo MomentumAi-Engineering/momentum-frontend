@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx'
 import About from './components/About.jsx'
 import AboutSecond from './components/AboutSecond.jsx'
 import Team from './components/Team.jsx'
+import Footer from './components/Footer.jsx'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <About />
       <AboutSecond />
       <Team />
+      <Footer />
     </div>
     
   )

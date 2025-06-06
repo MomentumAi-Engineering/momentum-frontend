@@ -6,14 +6,14 @@ import py from '../assets/py.webp';
 const founders = [
   {
     name: 'Joel Girones',
-    role: 'Airbnb Co-founder and Chief Executive Officer',
+    role: 'founder and Chief Executive Officer',
     description:
       'Brian leads Airbnb’s vision, strategy, and growth. He’s passionate about design and has driven Airbnb’s mission of belonging since its start.',
     image: po,
   },
   {
     name: 'Rishav Kumar ',
-    role: 'Airbnb Co-founder and Chief Strategy Officer',
+    role: 'Co-founder and Chief Technical Officer',
     description:
       'Nathan oversees Airbnb’s strategy, focusing on growth and innovation. He has a background in engineering and a strong strategic mindset.',
     image: pt,
