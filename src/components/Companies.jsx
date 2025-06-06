@@ -12,7 +12,7 @@ const Companies = () => {
     },
     { name: 'Airbnb', style: 'text-[#ff5a5f] text-xl font-semibold' },
     { name: 'Anthropic', style: 'text-white text-xl font-medium uppercase tracking-wide' },
-    { name: 'URBN', style: 'text-black bg-white text-xl font-extrabold uppercase px-2' },
+    { name: 'URBAN', style: 'text-black bg-white text-xl font-extrabold uppercase px-2' },
     {
       name: 'Microsoft',
       render: () => (
