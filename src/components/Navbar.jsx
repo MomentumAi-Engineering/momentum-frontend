@@ -31,12 +31,12 @@ const Navbar = () => {
           </a>
 
           {/* Login button */}
-          <a
+          {/* <a
             href="/signup"
             className="bg-white text-black font-medium mx-15 px-4 py-2 rounded-4xl border border-transparent hover:bg-black hover:text-white hover:border-white transition-colors duration-300"
           >
             SignUp
-          </a>
+          </a> */}
            <a
             href="/signin"
             className="bg-black text-white font-medium mx-5 px-4 py-2 rounded-4xl border border-transparent   border-white transition-colors duration-300 hover:bg-white hover:text-black"
