@@ -12,7 +12,7 @@ const Navbar = () => {
         {/* Navigation links */}
         <div className="flex items-center space-x-8">
           <a
-            href="/team"
+            href="#team"
             className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
           >
             TEAM

@@ -7,6 +7,8 @@ import AboutSecond from './components/AboutSecond.jsx';
 import Team from './components/Team.jsx';
 import Footer from './components/Footer.jsx';
 import Contact from './pages/Contact.jsx';
+import Signup from './pages/auth/Signup.jsx';
+import Login from './pages/auth/Login.jsx';
 
 const App = () => {
   return (
@@ -28,7 +30,8 @@ const App = () => {
             }
           />
           <Route path="/contact" element={<Contact />} />
-          {/* Add more routes as needed */}
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Login />} />
         </Routes>
       </div>
     </Router>

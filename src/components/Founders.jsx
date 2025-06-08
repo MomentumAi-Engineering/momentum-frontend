@@ -1,22 +1,23 @@
 import React from 'react';
+import Risav from '../assets/Rishabh.jpg';
 import po from '../assets/po.webp';
-import pt from '../assets/pt.webp'; 
+// import pt from '../assets/pt.webp'; 
 import py from '../assets/py.webp';
 
 const founders = [
   {
     name: 'Joel Girones',
-    role: 'founder and Chief Executive Officer',
+    role: 'Founder and Chief Executive Officer',
     description:
       'Brian leads Airbnb’s vision, strategy, and growth. He’s passionate about design and has driven Airbnb’s mission of belonging since its start.',
     image: po,
   },
   {
     name: 'Rishav Kumar ',
-    role: 'Co-founder and Chief Technical Officer',
+    role: 'Chief Technical Officer',
     description:
-      'Nathan oversees Airbnb’s strategy, focusing on growth and innovation. He has a background in engineering and a strong strategic mindset.',
-    image: pt,
+      'Leading the technology strategy and execution at Momentum AI. Oversee end-to-end development of AI-driven platforms, manage cross-functional engineering teams, and drive innovation across product architecture',
+    image: Risav,
   },
   {
     name: 'Raj Baidyanath',

@@ -3,7 +3,7 @@ import Founders from './Founders.jsx';
 
 const Team = () => {
   return (
-    <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white py-16 px-6 md:px-20">
+    <div  id="team" className="bg-gradient-to-b from-black via-gray-950 to-black text-white py-16 px-6 md:px-20 ">
       {/* About Section */}
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-semibold mb-4">About us</h2>
