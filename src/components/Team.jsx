@@ -1,5 +1,6 @@
 import React from 'react';
 import Founders from './Founders.jsx';
+import './Home.css';
 
 const Team = () => {
   return (
@@ -7,7 +8,7 @@ const Team = () => {
       {/* About Section */}
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-semibold mb-4">About us</h2>
-        <p className="text-gray-300 text-lg leading-relaxed">
+        <p className="home-small text-gray-300 text-lg leading-relaxed">
           MomentumAi was founded in 2025 when two hosts welcomed three guests to their San Francisco home,
           and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals
           in almost every country across the globe. Every day, hosts offer unique stays, experiences,

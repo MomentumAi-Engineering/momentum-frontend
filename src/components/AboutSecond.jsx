@@ -1,5 +1,6 @@
 import React from 'react';
 import Companies from './Companies';
+import './Home.css';
 
 const AboutSecond = () => {
   return (
@@ -33,7 +34,7 @@ const AboutSecond = () => {
 
       {/* Cards */}
 
-       <div className="flex justify-center items-center space-x-8 ">
+       <div className="home-small flex justify-center items-center space-x-8 ">
   <div className="bg-[#000000] h-120 w-90 mt-30 border-l border-r border-white border-l-[0.2px] border-r-[0.2px] hover:bg-[#141414] pointer-cursor">
     <h2 className="font-semibold text-1.5xl text-left pl-10 pt-7">Live Location Tracking</h2>
     <p className='p-5 text-gray-500'>Our Advanced AI Classifies issues as public or bussiness-related with high accuracy.
