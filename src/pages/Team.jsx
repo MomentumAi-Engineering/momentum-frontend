@@ -1,6 +1,6 @@
 import React from 'react';
-import Founders from './Founders.jsx';
-import './Home.css';
+import Founders from '../components/Founders';
+import '.././components/Home.css';
 
 const Team = () => {
   return (

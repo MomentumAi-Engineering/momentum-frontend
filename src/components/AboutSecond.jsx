@@ -18,20 +18,21 @@ const AboutSecond = () => {
       </h2>
 
       {/* Stats Section */}
-      <div className="bg-[#111111] py-10 px-6 rounded-lg flex justify-around items-center text-center">
-        <div>
-          <h2 className="text-4xl font-semibold text-white mb-1">10k+</h2>
-          <span className="text-gray-400 text-sm">Issues Reported</span>
-        </div>
-        <div>
-          <h2 className="text-4xl font-semibold text-white mb-1">95%</h2>
-          <span className="text-gray-400 text-sm">Accuracy Rate</span>
-        </div>
-        <div>
-          <h2 className="text-4xl font-semibold text-white mb-1">24h</h2>
-          <span className="text-gray-400 text-sm">Average Response Time</span>
-        </div>
-      </div>
+      <div className="bg-gradient-to-r from-[#1c1c1c] via-[#2a2a2a] to-[#0f0f0f] py-10 px-6 rounded-lg flex justify-around items-center text-center">
+  <div>
+    <h2 className="text-4xl font-semibold text-white mb-1">10k+</h2>
+    <span className="text-gray-400 text-sm">Issues Reported</span>
+  </div>
+  <div>
+    <h2 className="text-4xl font-semibold text-white mb-1">95%</h2>
+    <span className="text-gray-400 text-sm">Accuracy Rate</span>
+  </div>
+  <div>
+    <h2 className="text-4xl font-semibold text-white mb-1">24h</h2>
+    <span className="text-gray-400 text-sm">Average Response Time</span>
+  </div>
+</div>
+
 
       {/* Cards */}
 

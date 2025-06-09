@@ -4,11 +4,12 @@ import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import About from './components/About.jsx';
 import AboutSecond from './components/AboutSecond.jsx';
-import Team from './components/Team.jsx';
+import Team from './pages/Team.jsx';
 import Footer from './components/Footer.jsx';
 import Contact from './pages/Contact.jsx';
 import Signup from './pages/auth/Signup.jsx';
 import Login from './pages/auth/Login.jsx';
+import Moreabout from './components/Moreabout.jsx';
 
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
                 <Home />
                 <About />
                 <AboutSecond />
-                <Team />
+                <Moreabout />
                 <Footer />
               </>
             }
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Login />} />
+          <Route path="/team" element={<Team />} />
         </Routes>
       </div>
     </Router>
