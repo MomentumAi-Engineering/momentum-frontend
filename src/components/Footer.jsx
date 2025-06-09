@@ -23,12 +23,12 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-4">Hosting</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>Airbnb your home</li>
-            <li>AirCover for hosts</li>
-            <li>Hosting resources</li>
+            <li>Service at your home</li>
+            <li>MomentumAI for hosts</li>
+            {/* <li>Hosting resources</li> */}
             <li>Community forum</li>
             <li>Hosting responsibly</li>
-            <li>Airbnb-friendly apartments</li>
+            {/* <li></li> */}
           </ul>
         </div>
 
