@@ -32,7 +32,7 @@ export default function ChatInput() {
       </div>
 
      
-      <div className="w-full max-w-3xl px-4 mb-5 mt-20 ">
+      <div className="w-full max-w-3xl px-4 mb-5 mt-30 ">
         <div className="bg-black border border-white/20 text-white rounded-2xl p-4 flex items-center">
           <input
             type="text"
