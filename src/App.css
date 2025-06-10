@@ -8,3 +8,13 @@ body {
 }
 
 
+/* Hide scrollbars for WebKit browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: ensure scroll works even if scrollbar is hidden */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
