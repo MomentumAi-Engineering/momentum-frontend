@@ -21,7 +21,7 @@ const Navbar = () => {
             href="/support"
             className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
           >
-            COMPANY
+            PRICING
           </a>
           <a
             href="/support"

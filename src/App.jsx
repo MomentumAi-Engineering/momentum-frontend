@@ -10,6 +10,7 @@ import Contact from './pages/Contact.jsx';
 import Signup from './pages/auth/Signup.jsx';
 import Login from './pages/auth/Login.jsx';
 import Moreabout from './components/Moreabout.jsx';
+import Last from './components/Last.jsx';
 
 const App = () => {
   return (
@@ -26,7 +27,9 @@ const App = () => {
                 <About />
                 <AboutSecond />
                 <Moreabout />
+                <Last />
                 <Footer />
+              
               </>
             }
           />
