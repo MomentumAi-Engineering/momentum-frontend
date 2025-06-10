@@ -9,7 +9,7 @@ const founders = [
     name: 'Joel Girones',
     role: 'Founder and Chief Executive Officer',
     description:
-      'Brian leads Airbnb’s vision, strategy, and growth. He’s passionate about design and has driven Airbnb’s mission of belonging since its start.',
+      ' At MomentumAi he guides the creation of intuitive, ethical tools that solve real-world problems at scale. Grounded in nuclear-physics research and refined by rigorous business training, Joel balances technical precision with user empathy and market clarity—building AI that is not just intelligent, but trusted.',
     image: po,
   },
   {

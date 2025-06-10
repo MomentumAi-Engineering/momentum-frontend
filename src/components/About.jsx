@@ -6,7 +6,7 @@ import "./About.css";
 const GradientText = ({ children }) => (
   <span
     style={{
-      background: "linear-gradient(90deg, #FBCB8A 0%, #F38BA0 100%)",
+      background: "linear-gradient(90deg, #aeb8bb 0%, #2F80ED 100%)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       fontWeight: 700,
@@ -15,7 +15,6 @@ const GradientText = ({ children }) => (
     {children}
   </span>
 );
-
 export default function SnapfixHero() {
   return (
     <div
