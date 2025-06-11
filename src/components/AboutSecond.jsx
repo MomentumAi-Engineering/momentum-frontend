@@ -12,7 +12,7 @@ const AboutSecond = () => {
     <div className="bg-black min-h-screen px-8 pt-24 text-white ">
       {/* Left aligned header */}
       <p className="text-sm text-gray-400 tracking-widest mb-4">[ PRODUCTS ]</p>
-      <h1 className="my-text text-6xl font-medium mb-4 ">Snapfix for all humanity</h1>
+      <h1 className=" text-6xl font-medium mb-4 ">Snapfix for all humanity</h1>
 
       {/* Centered subheading */}
       <h2 className="about-second text-2xl font-light text-center text-gray-200 mb-12 mt-20">

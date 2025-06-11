@@ -12,19 +12,19 @@ const Navbar = () => {
         {/* Navigation links */}
         <div className="flex items-center space-x-8">
           <a
-            href="#team"
+            href="/team"
             className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
           >
             TEAM
           </a>
           <a
-            href="/support"
+            href="/pricing"
             className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
           >
             PRICING
           </a>
           <a
-            href="/support"
+            href="/contact"
             className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
           >
             GET IN TOUCH

@@ -11,7 +11,7 @@ import Signup from './pages/auth/Signup.jsx';
 import Login from './pages/auth/Login.jsx';
 import Moreabout from './components/Moreabout.jsx';
 import Last from './components/Last.jsx';
-
+import Pricing from './pages/Pricing.jsx';
 const App = () => {
   return (
     <Router>
@@ -37,6 +37,7 @@ const App = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Login />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/pricing" element={<Pricing />} />  
         </Routes>
       </div>
     </Router>
