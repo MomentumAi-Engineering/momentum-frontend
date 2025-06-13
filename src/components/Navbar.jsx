@@ -1,12 +1,13 @@
-import Logo from './Logo';
+import React from "react";
+import logo from "../assets/logo.jpg"; // Update path if different
 
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#0f111580] border-b border-gray-700 shadow-md">
       <div className="flex items-center justify-between py-4 px-6">
-        {/* Logo */}
+        {/* Logo Image */}
         <div className="w-40 h-12 overflow-hidden flex items-center">
-          <Logo />
+          <img src={logo} alt="Logo" className="h-full object-contain" />
         </div>
 
         {/* Navigation Links */}

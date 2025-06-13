@@ -93,7 +93,7 @@ export default function SnapfixHero() {
       </div>
 
       {/* Bottom text */}
-    <div className="my-font text-4xl text-center z-2 bg-gradient-to-r from-[#aeb8bb] to-[#2F80ED] bg-clip-text text-transparent">
+    <div className="my-font text-4xl text-center z-2 text-white">
   SnapFix empowers citizens to transform overlooked issues into visible actions that matter.
 </div>
 

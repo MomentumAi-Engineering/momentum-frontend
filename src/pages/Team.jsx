@@ -2,6 +2,7 @@ import React from 'react';
 import Founders from '../components/Founders';
 import Teams from '../assets/Team.png';
 import '../components/Teampage.css'; // Assuming you have a CSS file for styling
+import Mission from '../components/Mission'; // Assuming you have a CSS file for styling
 
 const Team = () => {
   return (
@@ -13,6 +14,9 @@ const Team = () => {
       </div>
       <div className='m-10'>
       <Founders />
+      </div>
+      <div>
+      <Mission />
       </div>
 
     </div>
