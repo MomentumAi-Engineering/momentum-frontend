@@ -4,7 +4,7 @@ import signupImage from "../../assets/log-image.jpg";
 
 export default function Signup() {
   return (
-    <div className="min-h-screen flex bg-[#0f1115] text-white">
+    <div className="min-h-screen flex bg-[#0f1115] text-white pt-30">
       {/* Left: Signup Form */}
       <div className="w-1/2 flex items-center justify-center px-8">
         <div className="bg-[#16181d] shadow-lg rounded-2xl p-10 w-full max-w-md">

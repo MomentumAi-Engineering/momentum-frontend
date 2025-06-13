@@ -7,7 +7,7 @@ const Team = () => {
   return (
     <div>
 
-      <div className='my-team text-5xl text-center text-white font-bold mt-10 mb-5'>
+      <div className='my-team text-5xl text-center text-white font-bold mt-10 mb-5 pt-30'>
         <p>Momentum is Bringing<br /> magic back to software</p>
         <img src={Teams} alt="Team" className="mx-auto mt-6" />
       </div>

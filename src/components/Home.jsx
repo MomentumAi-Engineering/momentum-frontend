@@ -13,7 +13,7 @@ export default function ChatInput() {
   };
 
   return (
-    <div className="w-full flex flex-col justify-end items-center pb-10 relative ">
+    <div className="w-full flex flex-col justify-end items-center pb-10 pt-30 relative ">
 
     
     <div className='mt-20'>

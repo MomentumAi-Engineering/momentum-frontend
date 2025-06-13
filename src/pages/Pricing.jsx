@@ -49,7 +49,7 @@ const plans = [
 
 const PricingPlans = () => {
   return (
-    <div className="bg-black min-h-screen text-white py-16 px-6 lg:px-24">
+    <div className="bg-black min-h-screen text-white py-16 px-6 lg:px-24 pt-60">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {plans.map((plan, index) => (
           <div

@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, User, MessageSquareText, SendHorizonal } from 'luc
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-12 md:px-24">
+    <div className="min-h-screen bg-black text-white px-6 py-12 md:px-24 pt-30">
       <div className="grid md:grid-cols-2 gap-12">
         {/* Left: Get in Touch */}
         <div>
@@ -21,12 +21,12 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex items-start space-x-4">
+            {/* <div className="flex items-start space-x-4">
               <div className="bg-gray-800 p-3 rounded-xl">
                 <Phone className="text-white" />
               </div>
               
-            </div>
+            </div> */}
 
             <div className="flex items-start space-x-4">
               <div className="bg-gray-800 p-3 rounded-xl">
