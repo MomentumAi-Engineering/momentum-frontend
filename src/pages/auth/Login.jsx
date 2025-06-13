@@ -4,9 +4,9 @@ import loginImage from "../../assets/log-image.jpg"; // adjust name if needed
 
 export default function Login() {
   return (
-    <div className="min-h-screen flex bg-[#0f1115] text-white pt-30">
+    <div className="min-h-screen flex bg-[#0f1115] text-white ">
       {/* Left: Login Form */}
-      <div className="w-1/2 flex items-center justify-center px-8">
+      <div className="w-1/2 flex items-center justify-center px-8 pt-30">
         <div className="bg-[#16181d] shadow-lg rounded-2xl p-10 w-full max-w-md">
           <h2 className="text-3xl font-semibold mb-6">Log into your account</h2>
 
