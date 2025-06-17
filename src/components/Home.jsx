@@ -19,10 +19,10 @@ export default function ChatInput() {
       {/* Text Section */}
       <div className="mt-20 mr-50">
         <div className="home-text mb-5 font-bold">
-          Ethics that scale. <br />Solutions that work. Impact that matters.
+          Innovation with a Human Purpose.
         </div>
         <div className="home-small mr-10 mb-10 font-medium text-7xl">
-          We exist to provide meaningful, ethical solutions that serve both people and businesses.
+          We empower people and organizations to harness AI in ways that are wholly constructive, ethical, and life-enhancing.
         </div>
       </div>
 
