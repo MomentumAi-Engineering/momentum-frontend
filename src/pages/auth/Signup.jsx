@@ -1,74 +1,126 @@
-import React from "react";
+import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import signupImage from "../../assets/log-image.jpg";
 
 export default function Signup() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setForm(prev => ({ ...prev, [e.target.id]: e.target.value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    if (form.password !== form.confirmPassword) {
+      return setError("Passwords don't match!");
+    }
+
+    setLoading(true);
+    try {
+      const res = await fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          password: form.password
+        })
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.message || "Signup failed");
+
+      console.log("Signup successful:", data);
+      localStorage.setItem("token", data.token);
+      // Optionally redirect or reset form
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="min-h-screen flex bg-[#0f1115] text-white ">
-      {/* Left: Signup Form */}
-      <div className="w-1/2 flex items-center justify-center px-8 pt-30">
+    <div className="min-h-screen flex bg-[#0f1115] text-white">
+      <div className="w-1/2 flex items-center justify-center px-8">
         <div className="bg-[#16181d] shadow-lg rounded-2xl p-10 w-full max-w-md">
           <h2 className="text-3xl font-semibold mb-6">Sign Up</h2>
 
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            {error && <p className="text-red-500">{error}</p>}
+
             <div>
-              <label className="block text-sm mb-1" htmlFor="name">
-                Full Name
-              </label>
+              <label htmlFor="name" className="block text-sm mb-1">Full Name</label>
               <input
-                type="text"
                 id="name"
+                type="text"
+                value={form.name}
+                onChange={handleChange}
                 placeholder="John Doe"
-                className="w-full px-4 py-2 bg-[#0f1115] text-white border border-[#2c2f36] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 bg-[#0f1115] text-white"
+                required
               />
             </div>
 
             <div>
-              <label className="block text-sm mb-1" htmlFor="email">
-                Email Address
-              </label>
+              <label htmlFor="email" className="block text-sm mb-1">Email Address</label>
               <input
-                type="email"
                 id="email"
+                type="email"
+                value={form.email}
+                onChange={handleChange}
                 placeholder="you@example.com"
-                className="w-full px-4 py-2 bg-[#0f1115] text-white border border-[#2c2f36] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 bg-[#0f1115] text-white"
+                required
               />
             </div>
 
             <div>
-              <label className="block text-sm mb-1" htmlFor="password">
-                Password
-              </label>
+              <label htmlFor="password" className="block text-sm mb-1">Password</label>
               <input
-                type="password"
                 id="password"
+                type="password"
+                value={form.password}
+                onChange={handleChange}
                 placeholder="Password"
-                className="w-full px-4 py-2 bg-[#0f1115] text-white border border-[#2c2f36] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 bg-[#0f1115] text-white"
+                required
               />
             </div>
 
             <div>
-              <label className="block text-sm mb-1" htmlFor="confirmPassword">
-                Confirm Password
-              </label>
+              <label htmlFor="confirmPassword" className="block text-sm mb-1">Confirm Password</label>
               <input
-                type="password"
                 id="confirmPassword"
+                type="password"
+                value={form.confirmPassword}
+                onChange={handleChange}
                 placeholder="Re-enter Password"
-                className="w-full px-4 py-2 bg-[#0f1115] text-white border border-[#2c2f36] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 bg-[#0f1115] text-white"
+                required
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-2 mt-2 bg-white text-black font-medium rounded-md hover:bg-gray-200 transition"
+              className="w-full py-2 mt-2 bg-white text-black rounded-md"
+              disabled={loading}
             >
-              Sign Up
+              {loading ? "Signing Up..." : "Sign Up"}
             </button>
 
             <button
               type="button"
-              className="w-full mt-3 flex items-center justify-center gap-2 border border-[#2c2f36] py-2 rounded-md hover:bg-[#1e2027] transition"
+              className="w-full mt-3 flex items-center justify-center gap-2 border py-2 rounded-md"
             >
               <FcGoogle className="text-xl" />
               <span>Sign up with Google</span>
@@ -76,15 +128,11 @@ export default function Signup() {
           </form>
 
           <p className="mt-6 text-sm text-gray-400 text-center">
-            Already have an account?{" "}
-            <a href="/signin" className="text-blue-500 hover:underline">
-              Sign in
-            </a>
+            Already have an account? <a href="/signin" className="text-blue-500">Sign in</a>
           </p>
         </div>
       </div>
 
-      {/* Right: Image */}
       <div className="w-1/2 flex items-center justify-center">
         <img src={signupImage} alt="Signup Visual" className="w-full h-full object-cover" />
       </div>
