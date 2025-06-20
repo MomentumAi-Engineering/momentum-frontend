@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import loginImage from "../../assets/log-image.jpg";
+import { useNavigate } from "react-router-dom"; // ✅ import
 
 export default function Login() {
+  const navigate = useNavigate(); // ✅ initialize
+
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -28,7 +31,9 @@ export default function Login() {
 
       console.log("Login successful:", data);
       localStorage.setItem("token", data.token);
-      // Optionally redirect (e.g., navigate("/dashboard"))
+
+      // ✅ Redirect to /snapfix
+      navigate(data.redirectTo || "/snapfix");
     } catch (err) {
       setError(err.message);
     } finally {

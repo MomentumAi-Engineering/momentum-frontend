@@ -12,6 +12,7 @@ import Login from './pages/auth/Login.jsx';
 import Moreabout from './components/Moreabout.jsx';
 import Last from './components/Last.jsx';
 import Pricing from './pages/Pricing.jsx';
+import Snapfix from './pages/Snapfix.jsx';
 const App = () => {
   return (
     <Router>
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/signin" element={<Login />} />
           <Route path="/team" element={<Team />} />
           <Route path="/pricing" element={<Pricing />} />  
+          <Route path="/snapfix" element={<Snapfix />} />
         </Routes>
       </div>
     </Router>

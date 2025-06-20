@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import signupImage from "../../assets/log-image.jpg";
+import { useNavigate } from "react-router-dom"; 
 
 export default function Signup() {
+  const navigate = useNavigate();
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -41,7 +44,9 @@ export default function Signup() {
 
       console.log("Signup successful:", data);
       localStorage.setItem("token", data.token);
-      // Optionally redirect or reset form
+
+      // ✅ Redirect to /snapfix after signup
+      navigate(data.redirectTo || "/snapfix");
     } catch (err) {
       setError(err.message);
     } finally {
