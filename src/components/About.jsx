@@ -3,6 +3,7 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import "./Home.css";
 import "./About.css";
 
+
 const GradientText = ({ children }) => (
   <span
     style={{
@@ -64,10 +65,11 @@ export default function SnapfixHero() {
           zIndex: 3,
         }}
       >
-        <FaArrowUpRightFromSquare className="text-gray-400 hover:text-white w-4 h-4 mr-2 transition" />
-        <button className="px-6 py-2 border border-white/20 rounded-full text-white text-sm tracking-widest font-mono hover:bg-white/10 transition">
-          TRY NOW
-        </button>
+        {/* <FaArrowUpRightFromSquare className="text-gray-400 hover:text-white w-4 h-4 mr-2 transition" /> */}
+        <button onClick={() => (window.location.href = "/snapfix")}
+        className="px-6 py-2 border border-white/20 rounded-full text-white text-sm tracking-widest font-mono hover:bg-amber-50 text-gray-950 transition">
+        TRY NOW
+       </button>
       </div>
 
       {/* Centered paragraph */}
@@ -93,9 +95,9 @@ export default function SnapfixHero() {
       </div>
 
       {/* Bottom text */}
-    <div className="my-font text-4xl text-center z-2 text-white">
+    {/* <div className="my-font text-4xl text-center z-2 text-white">
   SnapFix empowers citizens to transform overlooked issues into visible actions that matter.
-</div>
+</div> */}
 
 
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const tabs = [
   "AI workflows",
@@ -8,24 +8,16 @@ const tabs = [
 ];
 
 const TabSelector = () => {
-  const [activeTab, setActiveTab] = useState("AI workflows");
-
   return (
     <div className="bg-black">
       <div className="flex gap-4 p-4">
         {tabs.map((tab) => (
-          <button
+          <div
             key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 cursor-pointer
-              ${
-                activeTab === tab
-                  ? "bg-neutral-900 text-white"
-                  : "bg-neutral-100 text-black"
-              }`}
+            className="px-6 py-3 rounded-lg font-medium transition-all duration-200 cursor-pointer bg-neutral-100 text-black hover:bg-neutral-900 hover:text-white"
           >
             {tab}
-          </button>
+          </div>
         ))}
       </div>
     </div>

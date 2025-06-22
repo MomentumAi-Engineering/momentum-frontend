@@ -2,7 +2,8 @@ import React from 'react';
 import './AboutSecond.css';
 import './Moreabout.css';
 import TabSelector from './TabSelector';
-import stock from '../assets/stock.mp4'; 
+// import stock from '../assets/stock.mp4'; 
+import GridContent from '../components/GridContent';
 
 const Moreabout = () => {
   return (
@@ -23,21 +24,12 @@ const Moreabout = () => {
         <p>Instantly analyzes your location with smart algorithms to give accurate, relevant reports you can trust.</p>
       </div>
 
-      <div className="">
-        <a
-          href="#"
-          className="inline-flex mt-30  items-center text-white font-medium underline underline-offset-4 hover:opacity-80 transition"
-        >
-          Learn more <span className="ml-1 text-xl">→</span>
-        </a>
-      </div>    
+     
 
-      <video className="w-full h-auto ml-10 mt-20"
-       autoPlay
-        loop
-        muted
-        playsInline
-        src={stock}>hi</video>
+
+        <div>
+          <GridContent />
+        </div>
 
     </div>
   );

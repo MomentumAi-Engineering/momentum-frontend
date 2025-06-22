@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ArrowUpCircle, ArrowDown, X } from "lucide-react";
 import './Home.css';
+import SplitText from "../mini-components/SplitText";
+import ShinyText from "../mini-components/Shiny-text";
 
 export default function ChatInput() {
   const [message, setMessage] = useState("");
@@ -14,15 +16,17 @@ export default function ChatInput() {
   };
 
   return (
-    <div className="w-full flex flex-col justify-end items-center pb-10 pt-25 relative">
+    <div className="w-full flex flex-col justify-end items-center pb-10 pt-35 relative">
 
       {/* Text Section */}
       <div className="mt-20 mr-50">
         <div className="home-text mb-5 font-bold">
-          Innovation with a Human Purpose.
+          
+          <SplitText text="Innovation with a Human Purpose." />
         </div>
         <div className="home-small mr-10 mb-10 font-medium text-7xl">
-          We empower people and organizations to harness AI in ways that are wholly constructive, ethical, and life-enhancing.
+          
+          <ShinyText text="We empower people and organizations to harness AI in ways that are wholly constructive, ethical, and life-enhancing." />
         </div>
       </div>
 
@@ -33,7 +37,7 @@ export default function ChatInput() {
 
       {/* Chat Input */}
       <div className="w-full max-w-3xl px-4 mb-5 mt-30">
-        <div className="bg-black border border-white/20 text-white rounded-2xl p-4 flex items-center">
+        <div className="bg-black border border-white/20 text-white rounded-2xl p-4 h-25 flex items-center">
           <input
             type="text"
             placeholder=" know more about Momentum..."

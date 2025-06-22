@@ -3,7 +3,7 @@
 
 .my-text {
   font-family: "Ancizar Sans", sans-serif;
-  background: linear-gradient(to right, #aecfdc, #055ccf);
+  background-color: aliceblue;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

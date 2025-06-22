@@ -13,6 +13,7 @@ import Moreabout from './components/Moreabout.jsx';
 import Last from './components/Last.jsx';
 import Pricing from './pages/Pricing.jsx';
 import Snapfix from './pages/Snapfix.jsx';
+import AdminDashboard from './pages/Adminpage.jsx';
 const App = () => {
   return (
     <Router>
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/pricing" element={<Pricing />} />  
           <Route path="/snapfix" element={<Snapfix />} />
+          <Route path = "/admin" element={<AdminDashboard />} />
         </Routes>
       </div>
     </Router>
