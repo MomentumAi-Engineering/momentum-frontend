@@ -57,7 +57,7 @@ export default function Login() {
                 id="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="you@example.com"
+                // placeholder="you@example.com"
                 className="w-full px-4 py-2 bg-[#0f1115] text-white"
                 required
               />
@@ -70,7 +70,7 @@ export default function Login() {
                 id="password"
                 value={form.password}
                 onChange={handleChange}
-                placeholder="Password"
+                // placeholder="Password"
                 className="w-full px-4 py-2 bg-[#0f1115] text-white"
                 required
               />

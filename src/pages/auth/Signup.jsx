@@ -70,7 +70,7 @@ export default function Signup() {
                 type="text"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="John Doe"
+                // placeholder="John Doe"
                 className="w-full px-4 py-2 bg-[#0f1115] text-white"
                 required
               />
@@ -83,7 +83,7 @@ export default function Signup() {
                 type="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="you@example.com"
+                // placeholder="you@example.com"
                 className="w-full px-4 py-2 bg-[#0f1115] text-white"
                 required
               />
@@ -96,7 +96,7 @@ export default function Signup() {
                 type="password"
                 value={form.password}
                 onChange={handleChange}
-                placeholder="Password"
+                // placeholder="Password"
                 className="w-full px-4 py-2 bg-[#0f1115] text-white"
                 required
               />
@@ -109,7 +109,7 @@ export default function Signup() {
                 type="password"
                 value={form.confirmPassword}
                 onChange={handleChange}
-                placeholder="Re-enter Password"
+                // placeholder="Re-enter Password"
                 className="w-full px-4 py-2 bg-[#0f1115] text-white"
                 required
               />
