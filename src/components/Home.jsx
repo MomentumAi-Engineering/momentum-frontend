@@ -3,6 +3,7 @@ import { ArrowUpCircle, ArrowDown, X } from "lucide-react";
 import './Home.css';
 import SplitText from "../mini-components/SplitText";
 import ShinyText from "../mini-components/Shiny-text";
+import HomeAnimation from "./HomeAnimation"; // ✅ Import the animation component
 
 export default function ChatInput() {
   const [message, setMessage] = useState("");
@@ -16,16 +17,19 @@ export default function ChatInput() {
   };
 
   return (
-    <div className="w-full flex flex-col justify-end items-center pb-10 pt-35 relative">
+    <div className="w-full flex flex-col justify-end items-center pb-10 pt-35 relative overflow-hidden">
+
+      {/* ✅ Background Animation */}
+      <div className="absolute inset-0 -z-10">
+        <HomeAnimation />
+      </div>
 
       {/* Text Section */}
       <div className="mt-20 mr-50">
         <div className="home-text mb-5 font-bold">
-          
           <SplitText text="Innovation with a Human Purpose." />
         </div>
         <div className="home-small mr-10 mb-10 font-medium text-7xl">
-          
           <ShinyText text="We empower people and organizations to harness AI in ways that are wholly constructive, ethical, and life-enhancing." />
         </div>
       </div>

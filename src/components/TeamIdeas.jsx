@@ -49,12 +49,10 @@ const FormlessUI = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white min-h-screen">
-
-
-      <div className="flex">
-        {/* Fixed Left Side */}
-        <div className="fixed left-0 top-0 bottom-0 w-1/2 flex items-center justify-center">
+    <div className="bg-black text-white min-h-screen relative">
+      <div className="flex flex-col md:flex-row">
+        {/* Sticky Left Side */}
+        <div className="w-full md:w-1/2 h-screen sticky top-0 flex items-center justify-center bg-black">
           <div className="w-80 h-80 bg-gray-900 rounded-lg flex items-center justify-center">
             {/* Placeholder for image */}
             <span className="text-gray-500">Image placeholder</span>
@@ -62,28 +60,23 @@ const FormlessUI = () => {
         </div>
 
         {/* Scrolling Right Side */}
-        <div className="ml-[50%] w-1/2">
+        <div className="w-full md:w-1/2">
           {sections.map((section, index) => (
             <div 
               key={index}
-              className="min-h-screen flex items-center px-12 py-20"
+              className="min-h-screen flex items-center px-6 md:px-12 py-20"
             >
               <div className="max-w-lg">
-                {/* Section Number */}
                 <div className="text-8xl font-light mb-8 opacity-90">
                   {section.number}
                 </div>
-
-                {/* Content */}
                 <div className="space-y-8">
                   <h2 className="text-3xl font-light">
                     {section.title}
                   </h2>
-
                   <p className="text-lg text-gray-300 leading-relaxed">
                     {section.description}
                   </p>
-
                   <p className="text-base text-gray-400 leading-relaxed">
                     {section.subtitle}
                   </p>
@@ -108,7 +101,7 @@ const FormlessUI = () => {
         </div>
       </div>
 
-      {/* Scroll Progress Indicator - Lines */}
+      {/* Scroll Progress Indicator - Right Side */}
       <div className="fixed right-8 top-1/2 transform -translate-y-1/2 space-y-4">
         {sections.map((_, index) => (
           <div

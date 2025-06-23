@@ -25,9 +25,9 @@ const Team = () => {
       <section className="py-16 px-6 md:px-20">
         <Founders />
       </section>
-      <section className="py-16 px-6 md:px-20">
+      {/* <section className="py-16 px-6 md:px-20">
         <Mission /> 
-      </section>
+      </section> */}
       <section className="py-16 px-6 md:px-20">
         <TeamIdeas />
       </section>
