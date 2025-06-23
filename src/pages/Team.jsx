@@ -2,6 +2,7 @@ import React from 'react';
 import Founders from '../components/Founders';
 import '../components/Teampage.css';
 import Mission from '../components/Mission';
+import TeamIdeas from '../components/TeamIdeas';
 
 const Team = () => {
   return (
@@ -26,6 +27,9 @@ const Team = () => {
       </section>
       <section className="py-16 px-6 md:px-20">
         <Mission /> 
+      </section>
+      <section className="py-16 px-6 md:px-20">
+        <TeamIdeas />
       </section>
     </div>
   );
