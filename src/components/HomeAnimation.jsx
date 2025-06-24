@@ -1,4 +1,10 @@
 const GeometricWaves = () => {
+  // 🎨 Customize your gradient colors here:
+  const gradientColors = [
+    'rgba(0, 153, 255, 0.8)',   // Light Blue
+    'rgba(0, 102, 204, 0.8)'    // Deep Blue
+  ];
+
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden">
       <div className="absolute inset-0">
@@ -11,8 +17,8 @@ const GeometricWaves = () => {
               top: `${i * 20}%`,
               background: `linear-gradient(45deg, 
                 transparent, 
-                rgba(138, 43, 226, 0.8), 
-                rgba(75, 0, 130, 0.8), 
+                ${gradientColors[0]}, 
+                ${gradientColors[1]}, 
                 transparent)`,
               animation: `wave-${i} ${6 + i}s infinite ease-in-out`,
               transform: `rotate(${i * 15}deg)`,
@@ -20,11 +26,16 @@ const GeometricWaves = () => {
           />
         ))}
       </div>
+
       <style jsx>{`
         ${[...Array(5)].map((_, i) => `
           @keyframes wave-${i} {
-            0%, 100% { transform: rotate(${i * 15}deg) translateY(0px); }
-            50% { transform: rotate(${i * 15 + 10}deg) translateY(-50px); }
+            0%, 100% {
+              transform: rotate(${i * 15}deg) translateY(0px);
+            }
+            50% {
+              transform: rotate(${i * 15 + 10}deg) translateY(-50px);
+            }
           }
         `).join('')}
       `}</style>

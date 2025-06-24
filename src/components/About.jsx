@@ -19,20 +19,25 @@ const GradientText = ({ children }) => (
 export default function SnapfixHero() {
   return (
     <div
-      style={{
-        minHeight: "100vh",
-        width: "100vw",
-        background: "radial-gradient(circle at 20% 30%, #1E1E1E 0%, #000000 100%)",
-        position: "relative",
-        overflow: "hidden",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        alignItems: "center",
-        paddingTop: "100px", // adjust if needed
-        paddingBottom: "40px",
-      }}
-    >
+  style={{
+    minHeight: "100vh",
+    width: "100vw",
+    background: `
+      radial-gradient(circle at 20% 30%, #1E1E1E 0%, #000000 100%),
+      radial-gradient(ellipse at left, rgba(0,0,0,0.7), transparent 60%),
+      radial-gradient(ellipse at right, rgba(0,0,0,0.7), transparent 60%)
+    `,
+    position: "relative",
+    overflow: "hidden",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingTop: "100px",
+    paddingBottom: "40px",
+  }}
+>
+
       {/* Large background text */}
       <span
         style={{
