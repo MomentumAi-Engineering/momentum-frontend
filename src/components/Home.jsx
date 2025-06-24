@@ -17,7 +17,7 @@ export default function ChatInput() {
   };
 
   return (
-    <div className="w-full flex flex-col justify-end items-center pb-10 pt-35 relative overflow-hidden">
+    <div className="w-full flex flex-col justify-end items-center pt-38 relative overflow-hidden">
 
       {/* ✅ Background Animation */}
       <div className="absolute inset-0 -z-10">

@@ -1,88 +1,89 @@
 import React from 'react';
-import Companies from './Companies';
-// import './Home.css';
-import './AboutSecond.css'; 
+import { MessageCircle } from 'lucide-react';
+import './AboutSecond.css';
 import picOne from '../assets/pic-one.jpg';
 import picTwo from '../assets/pic-two.jpg';
 import picThree from '../assets/pic-three.jpg';
 
-
 const AboutSecond = () => {
-  return (
-    <div className="bg-black min-h-screen px-8 pt-24 text-white ">
-      {/* Left aligned header */}
-      <p className="text-sm text-gray-400 tracking-widest mb-4">[ PRODUCTS ]</p>
-      <h1 className=" text-6xl font-medium mb-4 ">Snapfix for all humanity</h1>
+  const cardData = [
+    {
+      title: "Live Location Tracking",
+      desc: "Our Advanced AI classifies issues as public or business-related with high accuracy. This ensures faster response times, better resource allocation, and enhanced operational efficiency with high accuracy and reliability.",
+      img: picOne
+    },
+    {
+      title: "AI Powered Analysis",
+      desc: "Utilizes intelligent algorithms to instantly classify your location, ensuring accurate and context-aware reporting for enhanced decision-making.",
+      img: picTwo
+    },
+    {
+      title: "Automated Reports",
+      desc: "Automatically generates detailed, human-like reports and delivers them directly to the appropriate authorities, ensuring quick and accurate communication.",
+      img: picThree
+    }
+  ];
 
-      {/* Centered subheading */}
+  return (
+    <div className="bg-black min-h-screen px-8 pt-24 text-white">
+      {/* Header */}
+      <p className="text-sm text-gray-400 tracking-widest mb-4">[ PRODUCTS ]</p>
+      <h1 className="text-6xl font-medium mb-4">Snapfix for all humanity</h1>
       <h2 className="about-second text-2xl font-light text-center text-gray-200 mb-12 mt-20">
         Powering the world’s best product teams.
         <br />
         From next-gen startups to established enterprises.
       </h2>
 
-      {/* Stats Section */}
-      <div className="bg-gradient-to-r from-[#1c1c1c] via-[#2a2a2a] to-[#0f0f0f] py-10 px-6 rounded-lg flex justify-around items-center text-center">
-  <div>
-    <h2 className="text-4xl font-semibold text-white mb-1">10k+</h2>
-    <span className="text-gray-400 text-sm">Issues Reported</span>
-    
-  </div>
-  <div>
-    <h2 className="text-4xl font-semibold text-white mb-1">95%</h2>
-    <span className="text-gray-400 text-sm">Accuracy Rate</span>
-  </div>
-  <div>
-    <h2 className="text-4xl font-semibold text-white mb-1">24h</h2>
-    <span className="text-gray-400 text-sm">Average Response Time</span>
-  </div>
-</div>
-
+      {/* Stats */}
+      <div className="bg-gradient-to-r from-[#1c1c1c] via-[#2a2a2a] to-[#0f0f0f] py-10 px-6 rounded-lg flex justify-around items-center text-center mb-20">
+        <div>
+          <h2 className="text-4xl font-semibold text-white mb-1">10k+</h2>
+          <span className="text-gray-400 text-sm">Issues Reported</span>
+        </div>
+        <div>
+          <h2 className="text-4xl font-semibold text-white mb-1">95%</h2>
+          <span className="text-gray-400 text-sm">Accuracy Rate</span>
+        </div>
+        <div>
+          <h2 className="text-4xl font-semibold text-white mb-1">24h</h2>
+          <span className="text-gray-400 text-sm">Average Response Time</span>
+        </div>
+      </div>
 
       {/* Cards */}
+      <div className="flex justify-center items-stretch gap-8 flex-wrap">
+        {cardData.map((card, index) => (
+          <div
+            key={index}
+            className="relative w-[320px] min-h-[540px] rounded-xl bg-black border border-white/10 hover:bg-gradient-to-b hover:from-[#111] hover:to-[#000] transition duration-300 shadow-md p-6 flex flex-col justify-between group"
+          >
+            {/* Four corner squares */}
+            <span className="absolute top-0 left-0 w-2 h-2 bg-white opacity-0 group-hover:opacity-100 transition duration-300" />
+            <span className="absolute top-0 right-0 w-2 h-2 bg-white opacity-0 group-hover:opacity-100 transition duration-300" />
+            <span className="absolute bottom-0 left-0 w-2 h-2 bg-white opacity-0 group-hover:opacity-100 transition duration-300" />
+            <span className="absolute bottom-0 right-0 w-2 h-2 bg-white opacity-0 group-hover:opacity-100 transition duration-300" />
 
-       <div className=" flex justify-center items-center space-x-8 ">
-  <div className="bg-[#000000] h-150 w-90 mt-30 border-l border-r border-white border-l-[0.2px] border-r-[0.2px] hover:bg-[#090909] pointer-cursor">
-    <h2 className="font-semibold text-1.5xl text-left pl-10 pt-7">Live Location Tracking</h2>
-    <p className='p-5 text-gray-500 font-medium'>Our Advanced AI Classifies issues as public or bussiness-related with high accuracy.
-      This ensures faster response times, better resource allocation, and enhanced operational efficiency with high accuracy and reliability.
-    </p>
-    <img
-      src={picOne} // Replace with your image URL
-      alt="Issues Icon"
-      className="mx-auto mb-3 w-60 h-60"
-    />
-  </div>
+            {/* Top Icon */}
+            <div>
+              <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center mb-4">
+                <MessageCircle className="text-white w-5 h-5" />
+              </div>
 
-  <div className="bg-[#000000] h-150 w-90 mt-30 border-l border-r border-white border-l-[0.2px] border-r-[0.2px] hover:bg-[#090909] pointer-cursor">
-    <h2 className="font-semibold text-1.5xl text-center text-left pl-10 pt-7">AI Powered Analysis</h2>
-    <p className='p-5 text-gray-500'>Classifies your location instantly to ensure precise reporting.Utilizes intelligent algorithms to instantly classify your location, ensuring accurate and context-aware reporting for enhanced decision-making.</p>
-    <img
-      src={picTwo} // Replace with your image URL
-      alt="Issues Icon"
-      className="mx-auto mb-3 w-70 h-60"
-    />
-  </div>
+              {/* Title & Description */}
+              <h2 className="text-white text-xl font-semibold mb-3">{card.title}</h2>
+              <p className="text-gray-400 text-sm leading-relaxed">{card.desc}</p>
+            </div>
 
-  <div className="bg-[#000000] h-150 w-90 mt-30 border-l border-r border-white border-l-[0.2px] border-r-[0.2px] hover:bg-[#090909] pointer-cursor">
-    <h2 className="font-semibold text-1.5xl text-center text-left pl-10 pt-7">Automated Reports</h2>
-    <p className='p-5 text-gray-500 text-1xl'>Receive detailed human-like reports sent directly to the right authorities. Automatically generates detailed, human-like reports and delivers them directly to the appropriate authorities, ensuring quick and accurate communication.
-    </p>
-    <img
-      src={picThree} // Replace with your image URL
-      alt="Issues Icon"
-      className="mx-auto mb-3 w-70 h-60"
-    />
-    </div>
-
-       </div>
-
-
-        {/* <div className='mt-35'>
-       <Companies />
-       </div> */}
-
-
+            {/* Bottom Image */}
+            <img
+              src={card.img}
+              alt="feature"
+              className="w-[220px] h-[150px] object-cover rounded-md mx-auto mt-6"
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

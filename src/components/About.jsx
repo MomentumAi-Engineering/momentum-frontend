@@ -2,7 +2,7 @@ import React from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import "./Home.css";
 import "./About.css";
-
+import TrueFocus from "../mini-components/TrueFocus";
 
 const GradientText = ({ children }) => (
   <span
@@ -16,16 +16,21 @@ const GradientText = ({ children }) => (
     {children}
   </span>
 );
+
 export default function SnapfixHero() {
   return (
-    <div
+   <div
   style={{
     minHeight: "100vh",
     width: "100vw",
     background: `
-      radial-gradient(circle at 20% 30%, #1E1E1E 0%, #000000 100%),
-      radial-gradient(ellipse at left, rgba(0,0,0,0.7), transparent 60%),
-      radial-gradient(ellipse at right, rgba(0,0,0,0.7), transparent 60%)
+      radial-gradient(circle at 0% 0%, rgba(0,0,0,0.6), transparent 60%),
+      radial-gradient(circle at 100% 0%, rgba(0,0,0,0.6), transparent 60%),
+      radial-gradient(circle at 0% 100%, rgba(0,0,0,0.6), transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(0,0,0,0.6), transparent 60%),
+      radial-gradient(circle at 50% 0%, rgba(0,0,0,0.5), transparent 60%),
+      radial-gradient(circle at 50% 100%, rgba(0,0,0,0.5), transparent 60%),
+      radial-gradient(circle at 50% 50%, #1E1E1E 0%, #000000 100%)
     `,
     position: "relative",
     overflow: "hidden",
@@ -70,11 +75,12 @@ export default function SnapfixHero() {
           zIndex: 3,
         }}
       >
-        {/* <FaArrowUpRightFromSquare className="text-gray-400 hover:text-white w-4 h-4 mr-2 transition" /> */}
-        <button onClick={() => (window.location.href = "/snapfix")}
-        className="px-6 py-2 border border-white/20 rounded-full text-white text-sm tracking-widest font-mono hover:bg-amber-50 text-gray-950 transition">
-        TRY NOW
-       </button>
+        <button
+          onClick={() => (window.location.href = "/snapfix")}
+          className="px-6 py-2 border border-white/20 rounded-full text-white text-sm tracking-widest font-mono hover:bg-amber-50 text-gray-950 transition"
+        >
+          TRY NOW
+        </button>
       </div>
 
       {/* Centered paragraph */}
@@ -88,24 +94,24 @@ export default function SnapfixHero() {
         <span
           className="home-text"
           style={{
-            fontSize: "2.5rem",
+            fontSize: "2rem",
             fontWeight: 400,
             color: "#fff",
             lineHeight: 1.4,
           }}
         >
-          Report community issues effortlessly with {" "}
-          <br />
-          <GradientText>AI powered Analysis</GradientText>
+          Report community issues effortlessly with <br />
+          <TrueFocus 
+sentence="AI powered Analysis"
+manualMode={false}
+blurAmount={5}
+borderColor="blue"
+animationDuration={2}
+pauseBetweenAnimations={1}
+/>
+          {/* <GradientText>AI powered Analysis</GradientText> */}
         </span>
       </div>
-
-      {/* Bottom text */}
-    {/* <div className="my-font text-4xl text-center z-2 text-white">
-  SnapFix empowers citizens to transform overlooked issues into visible actions that matter.
-</div> */}
-
-
     </div>
   );
 }

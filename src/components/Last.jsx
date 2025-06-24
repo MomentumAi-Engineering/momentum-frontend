@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 const Last = () => {
   const [activeTab, setActiveTab] = useState('whyBitcoin');
 
-  const renderThreePanels = () => {
+const renderThreePanels = () => {
   switch (activeTab) {
     case 'whyBitcoin':
       return (
-        <div className="flex justify-center">
-          {/* Left Card */}
-          <div className="bg-gradient-to-br from-blue-900 via-gray-700 to-blue-500 p-6 rounded-lg shadow-lg max-w-md border border-gray-700">
+        <div className="flex flex-wrap justify-center gap-10">
+          {/* Original Card */}
+          <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 p-6 rounded-lg shadow-lg max-w-md border border-gray-700">
             <h3 className="text-white text-xl font-semibold mb-4">Why Snapfix?</h3>
             <ul className="text-gray-300 text-lg space-y-3">
               <li className="flex items-center">
@@ -30,14 +30,19 @@ const Last = () => {
               The greatest digital transformation of the 21st century is the transformation of capital, and <span className="text-yellow-400 font-bold">digital capital</span> is here.
             </p>
           </div>
+
+          {/* Extra Card */}
+          <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 p-6 rounded-lg shadow-lg max-w-md border border-gray-700 flex justify-center items-center">
+            <h3 className="text-white text-3xl font-bold">RAJ</h3>
+          </div>
         </div>
       );
 
     case 'whyGiftBitcoin':
       return (
-        <div className="flex justify-center">
-          {/* Middle Card */}
-          <div className="bg-gradient-to-br from-blue-900 via-gray-700 to-blue-500 p-6 rounded-lg shadow-lg max-w-md border border-gray-700">
+        <div className="flex flex-wrap justify-center gap-10">
+          {/* Original Card */}
+          <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900  p-6 rounded-lg shadow-lg max-w-md border border-gray-700">
             <h3 className="text-white text-xl font-semibold mb-4 text-center">Superior store of value in digital age</h3>
             <ul className="text-gray-300 text-lg space-y-3">
               <li className="flex items-center">
@@ -54,14 +59,19 @@ const Last = () => {
               </li>
             </ul>
           </div>
+
+          {/* Extra Card */}
+          <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 p-6 rounded-lg shadow-lg max-w-md border border-gray-700 flex justify-center items-center">
+            <h3 className="text-white text-3xl font-bold">RISAV</h3>
+          </div>
         </div>
       );
 
     case 'whyUseBitcoinCard':
       return (
-        <div className="flex justify-center">
-          {/* Right Card */}
-          <div className="bg-gradient-to-br from-blue-900 via-gray-700 to-blue-500 p-6 rounded-lg shadow-lg max-w-md border border-gray-700">
+        <div className="flex flex-wrap justify-center gap-10">
+          {/* Original Card */}
+          <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900  p-6 rounded-lg shadow-lg max-w-md border border-gray-700">
             <h3 className="text-white text-xl font-semibold mb-4 text-center">Largest growing AI Company</h3>
             <div className="bg-gray-700 p-3 rounded-md text-sm text-gray-300">
               <p className="text-white font-semibold mb-2">Market Cap</p>
@@ -90,6 +100,11 @@ const Last = () => {
               <span className="text-yellow-400 font-bold">7th largest market cap</span>
             </p>
           </div>
+
+          {/* Extra Card */}
+          <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 p-6 rounded-lg shadow-lg max-w-md border border-gray-700 flex justify-center items-center">
+            <h3 className="text-white text-3xl font-bold">JOEL</h3>
+          </div>
         </div>
       );
 
@@ -97,6 +112,8 @@ const Last = () => {
       return null;
   }
 };
+
+
 
 
   const renderContent = () => {
