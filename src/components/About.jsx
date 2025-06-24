@@ -88,13 +88,14 @@ export default function SnapfixHero() {
         <span
           className="home-text"
           style={{
-            fontSize: "2rem",
+            fontSize: "2.5rem",
             fontWeight: 400,
             color: "#fff",
             lineHeight: 1.4,
           }}
         >
-          Report your local issues, business damages, garbages etc with ease using{" "}
+          Report community issues effortlessly with {" "}
+          <br />
           <GradientText>AI powered Analysis</GradientText>
         </span>
       </div>
