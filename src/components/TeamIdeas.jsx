@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const FormlessUI = () => {
   const [activeSection, setActiveSection] = useState(0);
+  const containerRef = useRef(null); // <-- Added ref here
 
   const sections = [
     {
@@ -11,7 +12,7 @@ const FormlessUI = () => {
       subtitle: "Access, distribute and co-own what matters to you, while generating passive income through revenue sharing."
     },
     {
-      number: "02", 
+      number: "02",
       title: "Innovation",
       description: "Transform ideas into reality through collaborative development and shared ownership models.",
       subtitle: "Build the future together with creators and innovators who share your vision and values."
@@ -38,10 +39,17 @@ const FormlessUI = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (!containerRef.current) return;
+
+      const containerTop = containerRef.current.offsetTop;
       const scrollPosition = window.scrollY;
+      const relativeScroll = scrollPosition - containerTop;
       const windowHeight = window.innerHeight;
-      const sectionIndex = Math.floor(scrollPosition / (windowHeight * 0.8));
-      setActiveSection(Math.min(sectionIndex, sections.length - 1));
+
+      if (relativeScroll >= 0) {
+        const sectionIndex = Math.floor(relativeScroll / (windowHeight * 0.8));
+        setActiveSection(Math.min(sectionIndex, sections.length - 1));
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -49,12 +57,11 @@ const FormlessUI = () => {
   }, []);
 
   return (
-    <div className="bg-black text-white min-h-screen relative">
+    <div ref={containerRef} className="bg-black text-white min-h-screen relative">
       <div className="flex flex-col md:flex-row">
         {/* Sticky Left Side */}
         <div className="w-full md:w-1/2 h-screen sticky top-0 flex items-center justify-center bg-black">
           <div className="w-80 h-80 bg-gray-900 rounded-lg flex items-center justify-center">
-            {/* Placeholder for image */}
             <span className="text-gray-500">Image placeholder</span>
           </div>
         </div>
@@ -62,7 +69,7 @@ const FormlessUI = () => {
         {/* Scrolling Right Side */}
         <div className="w-full md:w-1/2">
           {sections.map((section, index) => (
-            <div 
+            <div
               key={index}
               className="min-h-screen flex items-center px-6 md:px-12 py-20"
             >
@@ -88,8 +95,8 @@ const FormlessUI = () => {
                     <div
                       key={tabIndex}
                       className={`h-1 transition-all duration-300 ${
-                        tabIndex === activeSection 
-                          ? 'w-12 bg-white' 
+                        tabIndex === activeSection
+                          ? 'w-12 bg-white'
                           : 'w-6 bg-gray-600'
                       }`}
                     />
@@ -107,8 +114,8 @@ const FormlessUI = () => {
           <div
             key={index}
             className={`transition-all duration-500 ${
-              index === activeSection 
-                ? 'w-12 h-0.5 bg-white' 
+              index === activeSection
+                ? 'w-12 h-0.5 bg-white'
                 : 'w-6 h-px bg-gray-600'
             }`}
           />

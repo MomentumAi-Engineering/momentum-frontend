@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import loginImage from "../../assets/log-image.jpg";
+// import loginImage from "../../assets/log-image.jpg";
 import { useNavigate } from "react-router-dom"; // ✅ import
 
 export default function Login() {
@@ -104,9 +104,9 @@ export default function Login() {
         </div>
       </div>
 
-      <div className="w-1/2 flex items-center justify-center">
+      {/* <div className="w-1/2 flex items-center justify-center">
         <img src={loginImage} alt="Login Visual" className="w-full h-full object-cover" />
-      </div>
+      </div> */}
     </div>
   );
 }
