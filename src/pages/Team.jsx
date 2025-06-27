@@ -36,7 +36,7 @@ const Team = () => {
   </div>
 </section>
 
-      <section className="py-16 px-6 md:px-20">
+      <section className=" px-6 md:px-20">
         <TeamIdeas />
       </section>
 
