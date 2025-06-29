@@ -5,12 +5,13 @@ import Aurora from '../mini-components/Aurora.jsx';
 
 const Footer = () => {
   return (
-    <footer className="relative bg-black text-white px-6 md:px-20 pt-32 pb-48 overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+    <footer className="relative bg-black text-white px-6 sm:px-10 md:px-20 pt-24 pb-40 overflow-hidden">
+      {/* Links Section */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-12">
         {/* Support */}
         <div>
-          <h3 className="font-bold mb-4">Support</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
+          <h3 className="font-bold text-base sm:text-lg mb-4">Support</h3>
+          <ul className="space-y-2 text-sm sm:text-base text-gray-300">
             <li>Help Center</li>
             <li>AirCover</li>
             <li>Anti-discrimination</li>
@@ -22,8 +23,8 @@ const Footer = () => {
 
         {/* Hosting */}
         <div>
-          <h3 className="font-bold mb-4">Hosting</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
+          <h3 className="font-bold text-base sm:text-lg mb-4">Hosting</h3>
+          <ul className="space-y-2 text-sm sm:text-base text-gray-300">
             <li>Service at your home</li>
             <li>MomentumAI for hosts</li>
             <li>Community forum</li>
@@ -33,35 +34,36 @@ const Footer = () => {
 
         {/* MomentumAi */}
         <div>
-          <h3 className="font-bold mb-4">MomentumAi</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
+          <h3 className="font-bold text-base sm:text-lg mb-4">MomentumAi</h3>
+          <ul className="space-y-2 text-sm sm:text-base text-gray-300">
             <li>Newsroom</li>
             <li>New features</li>
             <li>Careers</li>
             <li>Investors</li>
-            <li>Airbnb.org emergency stays</li>
+            <li>Emergency stays</li>
           </ul>
         </div>
       </div>
 
       {/* Disclaimer */}
-      <div className="mb-8 text-sm text-gray-400">
+      <div className="mb-10 text-sm sm:text-base text-gray-400">
         <h4 className="font-bold mb-2">Disclaimer</h4>
         <p>
-          The MomentumAi Newsroom is aimed at journalists. All Homes and Experiences referenced on the Momentum Newsroom are
-          intended purely to inspire and illustrate. MomentumAi does not recommend or endorse specific Home or Experience
-          listings on the MomentumAi platform.
+          The MomentumAi Newsroom is aimed at journalists. All Homes and Experiences referenced are for inspiration only.
+          MomentumAi does not endorse specific Home or Experience listings on the platform.
         </p>
       </div>
 
       {/* Bottom Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-6 text-sm text-gray-400">
-        <p>© 2025 MomentumAi, Inc. All rights reserved · Privacy · Terms · Sitemap</p>
-        <div className="flex space-x-5 mt-4 md:mt-0 text-xl">
-          <FaXTwitter className="hover:text-white cursor-pointer" />
-          <FaInstagram className="hover:text-white cursor-pointer" />
-          <FaLinkedinIn className="hover:text-white cursor-pointer" />
-          <FaFacebookF className="hover:text-white cursor-pointer" />
+      <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-6 text-xs sm:text-sm text-gray-400">
+        <p className="text-center md:text-left">
+          © 2025 MomentumAi, Inc. All rights reserved · Privacy · Terms · Sitemap
+        </p>
+        <div className="flex space-x-5 mt-4 md:mt-0 text-lg sm:text-xl">
+          <FaXTwitter className="hover:text-white cursor-pointer transition" />
+          <FaInstagram className="hover:text-white cursor-pointer transition" />
+          <FaLinkedinIn className="hover:text-white cursor-pointer transition" />
+          <FaFacebookF className="hover:text-white cursor-pointer transition" />
         </div>
       </div>
 

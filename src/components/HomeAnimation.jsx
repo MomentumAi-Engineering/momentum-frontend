@@ -1,12 +1,14 @@
+import React from 'react';
+
 const GeometricWaves = () => {
-  // 🎨 Customize your gradient colors here:
   const gradientColors = [
-    'rgba(0, 153, 255, 0.8)',   // Light Blue
-    'rgba(0, 102, 204, 0.8)'    // Deep Blue
+    'rgba(0, 153, 255, 0.8)',  // Light Blue
+    'rgba(0, 102, 204, 0.8)'   // Deep Blue
   ];
 
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden">
+      {/* Animated Layers */}
       <div className="absolute inset-0">
         {[...Array(5)].map((_, i) => (
           <div
@@ -27,6 +29,7 @@ const GeometricWaves = () => {
         ))}
       </div>
 
+      {/* Inject keyframes for each wave */}
       <style jsx>{`
         ${[...Array(5)].map((_, i) => `
           @keyframes wave-${i} {
