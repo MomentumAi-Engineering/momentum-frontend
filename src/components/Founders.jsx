@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {
-  Star,
   Sparkles,
   ArrowRight,
   Github,
@@ -19,7 +18,7 @@ const teamMembers = [
     role: "Founder & CEO",
     img: Risav,
     description:
-      "Joel is a scientist, strategist, and communicator with a vision to humanize AI. At MomentumAi he guides the creation of intuitive, ethical tools that solve real-world problems at scale. Grounded in nuclear-physics research and refined by rigorous business training, Joel balances technical precision with user empathy and market clarity—building AI that is not just intelligent, but trusted.",
+      "Joel is a scientist, strategist, and communicator with a vision to humanize AI. At MomentumAi he guides the creation of intuitive, ethical tools that solve real-world problems at scale.",
     location: "San Francisco, CA",
     expertise: ["AI Strategy", "Nuclear Physics", "Product Vision"],
     achievements: "PhD in Nuclear Physics, 15+ years in AI research",
@@ -30,7 +29,7 @@ const teamMembers = [
     role: "Chief Technology Officer",
     img: Risav,
     description:
-      "Leading the technology strategy and execution at Momentum AI. Oversee end-to-end development of AI-driven platforms, manage cross-functional engineering teams, and drive innovation across product architecture, cloud infrastructure, and machine learning integration. Ensure scalable, secure, and high-performance systems aligned with business goals.",
+      "Leading the technology strategy and execution at Momentum AI. Oversee AI-driven platforms, cloud infrastructure, and team innovation.",
     location: "Toronto, ON",
     expertise: ["Cloud Architecture", "ML Engineering", "Team Leadership"],
     achievements: "Built 3 unicorn startups, 50+ patents filed",
@@ -41,7 +40,7 @@ const teamMembers = [
     role: "Senior Software Engineer",
     img: "https://via.placeholder.com/200x200/06b6d4/ffffff?text=RB",
     description:
-      "I'm a software developer and computer scientist contributing to both the front end and back end of MomentumAi's platform. As one of the early developers, I've been involved in shaping the design, architecture, and overall user experience of our core web presence. Currently working as an intern and part-time contractor with MomentumAi, I strive to be a reliable and collaborative team member.",
+      "Full-stack developer shaping the UI/UX and backend architecture of MomentumAi. Google Code-in winner, open source contributor.",
     location: "New York, NY",
     expertise: ["Full-Stack Development", "UI/UX Design", "System Architecture"],
     achievements: "Google Code-in winner, Open source contributor",
@@ -49,25 +48,8 @@ const teamMembers = [
   },
 ];
 
-const FloatingParticle = ({ delay = 0 }) => (
-  <div
-    className="absolute w-1 h-1 bg-gray-500 rounded-full opacity-40 animate-pulse"
-    style={{
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
-      animationDelay: `${delay}s`,
-      animationDuration: `${3 + Math.random() * 2}s`,
-    }}
-  />
-);
-
 export default function TeamPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [flippedCards, setFlippedCards] = useState({});
-
-  const toggleFlip = (index) => {
-    setFlippedCards((prev) => ({ ...prev, [index]: !prev[index] }));
-  };
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -79,17 +61,6 @@ export default function TeamPage() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(64,64,64,0.3),transparent_70%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(64,64,64,0.2),transparent_70%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(64,64,64,0.2),transparent_70%)]" />
-        {[...Array(20)].map((_, i) => (
-          <FloatingParticle key={i} delay={i * 0.2} />
-        ))}
-      </div>
-
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 via-gray-800/10 to-gray-900/10" />
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-20 space-y-8">
           <div className="inline-flex items-center gap-2 bg-gray-900/80 backdrop-blur-lg rounded-full px-6 py-3 border border-gray-700">
@@ -130,9 +101,42 @@ export default function TeamPage() {
           </button>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Team member cards would be here */}
-        </div>
+       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {teamMembers.map((member, index) => (
+    <div
+      key={index}
+      className={`bg-gray-900/50 rounded-2xl p-6 backdrop-blur-md hover:scale-[1.02] transition-all duration-300 ${
+        index <= 2 ? 'border border-gray-700' : ''
+      }`}
+    >
+      <img
+        src={member.img}
+        alt={member.name}
+        className="w-28 h-28 rounded-full mx-auto mb-4 object-cover"
+      />
+      <h3 className="text-xl font-semibold text-center">{member.name}</h3>
+      <p className="text-sm text-gray-400 text-center">{member.role}</p>
+      <p className="mt-4 text-sm text-gray-300 text-center">{member.description}</p>
+      <div className="flex justify-center gap-4 mt-4 text-gray-400 text-sm">
+        <span>{member.location}</span>
+      </div>
+      <div className="mt-4 text-xs text-gray-500 text-center">
+        <span className="font-medium text-gray-300">Expertise:</span>{" "}
+        {member.expertise.join(", ")}
+      </div>
+      <div className="mt-2 text-xs text-gray-500 text-center">
+        <span className="font-medium text-gray-300">Achievements:</span>{" "}
+        {member.achievements}
+      </div>
+      <div className="flex justify-center gap-4 mt-4">
+        <a href={member.social.github}><Github className="w-4 h-4 hover:text-white" /></a>
+        <a href={member.social.linkedin}><Linkedin className="w-4 h-4 hover:text-white" /></a>
+        <a href={`mailto:${member.social.email}`}><Mail className="w-4 h-4 hover:text-white" /></a>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         <div className="text-center mt-20 space-y-6">
           <div className="inline-flex items-center gap-2 text-lg font-medium text-gray-300">

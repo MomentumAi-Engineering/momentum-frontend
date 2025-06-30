@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const FormlessUI = () => {
   const [activeSection, setActiveSection] = useState(0);
-  const containerRef = useRef(null); // <-- Added ref here
+  const containerRef = useRef(null);
 
   const sections = [
     {
@@ -57,12 +57,15 @@ const FormlessUI = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="bg-black text-white min-h-screen relative">
+    <div ref={containerRef} className="bg-black text-white min-h-screen">
       <div className="flex flex-col md:flex-row">
+        
         {/* Sticky Left Side */}
-        <div className="w-full md:w-1/2 h-screen sticky top-0 flex items-center justify-center bg-black">
-          <div className="w-80 h-80 bg-gray-900 rounded-lg flex items-center justify-center">
-            <span className="text-gray-500">Image placeholder</span>
+        <div className="w-full md:w-1/2 hidden md:block">
+          <div className="h-screen sticky top-0 flex items-center justify-center bg-black">
+            <div className="w-80 h-80 bg-gray-900 rounded-lg flex items-center justify-center">
+              <span className="text-gray-500">Image placeholder</span>
+            </div>
           </div>
         </div>
 
@@ -78,15 +81,9 @@ const FormlessUI = () => {
                   {section.number}
                 </div>
                 <div className="space-y-8">
-                  <h2 className="text-3xl font-light">
-                    {section.title}
-                  </h2>
-                  <p className="text-lg text-gray-300 leading-relaxed">
-                    {section.description}
-                  </p>
-                  <p className="text-base text-gray-400 leading-relaxed">
-                    {section.subtitle}
-                  </p>
+                  <h2 className="text-3xl font-light">{section.title}</h2>
+                  <p className="text-lg text-gray-300 leading-relaxed">{section.description}</p>
+                  <p className="text-base text-gray-400 leading-relaxed">{section.subtitle}</p>
                 </div>
 
                 {/* Tab Indicator */}
@@ -108,8 +105,8 @@ const FormlessUI = () => {
         </div>
       </div>
 
-      {/* Scroll Progress Indicator - Right Side */}
-      <div className="fixed right-8 top-1/2 transform -translate-y-1/2 space-y-4">
+      {/* Scroll Progress Indicator */}
+      <div className="fixed right-4 md:right-8 top-1/2 transform -translate-y-1/2 space-y-4">
         {sections.map((_, index) => (
           <div
             key={index}

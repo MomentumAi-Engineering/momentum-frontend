@@ -6,18 +6,8 @@ import TrueFocus from "../mini-components/TrueFocus";
 
 export default function SnapfixHero() {
   return (
-    <div className="min-h-screen w-full relative overflow-hidden flex flex-col justify-between items-center pt-24 pb-10 px-4 sm:px-6 md:px-12"
-      style={{
-        background: `
-          radial-gradient(circle at 0% 0%, rgba(0,0,0,0.6), transparent 60%),
-          radial-gradient(circle at 100% 0%, rgba(0,0,0,0.6), transparent 60%),
-          radial-gradient(circle at 0% 100%, rgba(0,0,0,0.6), transparent 60%),
-          radial-gradient(circle at 100% 100%, rgba(0,0,0,0.6), transparent 60%),
-          radial-gradient(circle at 50% 0%, rgba(0,0,0,0.5), transparent 60%),
-          radial-gradient(circle at 50% 100%, rgba(0,0,0,0.5), transparent 60%),
-          radial-gradient(circle at 50% 50%, #1E1E1E 0%, #000000 100%)
-        `
-      }}
+    <div
+      className="min-h-screen w-full bg-black relative overflow-hidden flex flex-col justify-between items-center pt-24 pb-10 px-4 sm:px-6 md:px-12"
     >
       {/* Big Background Text */}
       <span

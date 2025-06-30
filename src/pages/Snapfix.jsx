@@ -86,24 +86,7 @@ const Snapfix = () => {
                 </div>
 
                 {/* Email + CTA */}
-                <div className="space-y-4 max-w-md mx-auto">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    aria-label="Email address"
-                    className="w-full px-4 py-3 rounded-2xl bg-gray-900 border border-gray-700 text-white placeholder-gray-500 outline-none"
-                  />
-                  <button
-                    aria-label="Notify me when Snapfix launches"
-                    className="group relative inline-flex items-center justify-center w-full px-8 py-4 bg-white text-black rounded-2xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-white/25 hover:scale-105"
-                  >
-                    <span className="relative z-10">Notify Me When Ready</span>
-                    <div className="absolute inset-0 bg-gray-200 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </button>
-                  <p className="text-sm text-gray-500">
-                    Be the first to know when we launch.
-                  </p>
-                </div>
+               
               </div>
             </div>
           </div>

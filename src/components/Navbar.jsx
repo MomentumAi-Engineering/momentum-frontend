@@ -44,7 +44,7 @@ const Navbar = () => {
             <a
               key={item}
               href={`/${item}`}
-              className="text-gray-300 hover:text-white hover:bg-white/10 px-3 py-1 rounded-md transition text-sm font-medium"
+              className="text-gray-300 hover:text-white  px-3 py-1 rounded-md transition text-sm font-medium"
             >
               {item.toUpperCase()}
             </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
           ))}
           <a
             href="/signin"
-            className="block bg-white text-black font-semibold px-5 py-2 rounded-full hover:bg-gray-300 transition"
+            className="block bg-white text-black font-semibold px-5 py-2 rounded-full hover:bg-gray-900 transition"
             onClick={() => setMenuOpen(false)}
           >
             Sign in
