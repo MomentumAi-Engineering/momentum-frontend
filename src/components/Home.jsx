@@ -44,7 +44,7 @@ export default function ChatInput() {
         <div className="bg-black border border-white/20 text-white rounded-2xl p-3 sm:p-4 flex items-center">
           <input
             type="text"
-            placeholder="know more about Momentum..."
+            placeholder="know more about Momntum..."
             className="bg-transparent text-white flex-1 outline-none placeholder-gray-400 px-2 text-sm sm:text-base"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
@@ -59,7 +59,7 @@ export default function ChatInput() {
       {/* CTA Buttons */}
       <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 mb-10">
         <button className="px-5 py-2 border border-white/20 rounded-full text-white text-xs sm:text-sm tracking-widest font-mono hover:bg-white/10 transition">
-          BUILD WITH MOMENTUM
+          BUILD WITH MOMNTUM
         </button>
         <button
           onClick={() => setShowCard(true)}
@@ -83,9 +83,9 @@ export default function ChatInput() {
             </button>
 
             {/* Card Content */}
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 text-purple-400">About Momentum</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 text-purple-400">About Momntum</h2>
             <p className="text-sm sm:text-base leading-relaxed text-gray-200">
-              MomentumAI is built with a vision to revolutionize how ethical technology interacts
+              MomntumAI is built with a vision to revolutionize how ethical technology interacts
               with modern business. We blend innovation with responsibility, ensuring that every
               solution we offer drives impact not just in productivity, but in people’s lives too.
             </p>
