@@ -11,7 +11,7 @@ export default function SnapfixHero() {
     >
       {/* Big Background Text */}
       <span
-        className="absolute text-[22vw] font-extrabold text-white/5 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 select-none pointer-events-none"
+        className="absolute text-[17vw] font-extrabold text-white/5 left-1/2 top-1/2 -translate-x-1/2 pt-13 -translate-y-1/2 z-0 select-none pointer-events-none"
         style={{
           WebkitTextStroke: "1px rgba(255,255,255,0.08)",
           textShadow: "0 0 20px rgba(255, 255, 255, 0.05)",
