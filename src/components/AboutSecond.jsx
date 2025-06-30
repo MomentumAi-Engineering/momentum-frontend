@@ -25,7 +25,7 @@ const AboutSecond = () => {
   ];
 
   return (
-    <div className="bg-black min-h-screen px-6 sm:px-10 pt-24 text-white">
+    <div id="services-section" className="bg-black min-h-screen px-6 sm:px-10 pt-24 text-white">
       {/* Header */}
       <p className="text-sm text-gray-400 tracking-widest mb-4">[ PRODUCTS ]</p>
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium mb-4">Snapfix for all humanity</h1>
