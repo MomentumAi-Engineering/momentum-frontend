@@ -21,6 +21,7 @@ import Last from './components/Last.jsx';
 import Snapfix from './pages/Snapfix.jsx';
 import AdminDashboard from './pages/Adminpage.jsx';
 import AuthCallback from './pages/auth/AuthCallback.jsx';
+import BottomContext from './components/BottomContext.jsx';
 
 const AppWrapper = () => {
   const location = useLocation();
@@ -40,6 +41,7 @@ const AppWrapper = () => {
               <AboutSecond />
               <Moreabout />
               <Last />
+              <BottomContext />
               <Footer />
             </>
           }
