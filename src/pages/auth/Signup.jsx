@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import signupImage from "../../assets/log-image.jpg";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
+
+const CLIENT_ID = "682691449006-5rden5no17tj6aeuel4ef5q76vsh6kol.apps.googleusercontent.com"; 
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -16,7 +18,7 @@ export default function Signup() {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    setForm(prev => ({ ...prev, [e.target.id]: e.target.value }));
+    setForm((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
   const handleSubmit = async (e) => {
@@ -44,8 +46,6 @@ export default function Signup() {
 
       console.log("Signup successful:", data);
       localStorage.setItem("token", data.token);
-
-      // ✅ Redirect to /snapfix after signup
       navigate(data.redirectTo || "/snapfix");
     } catch (err) {
       setError(err.message);
@@ -54,10 +54,20 @@ export default function Signup() {
     }
   };
 
+  const handleGoogleLogin = () => {
+    const redirectUri = "http://localhost:5173/auth/callback/";
+    const scope = "openid profile email";
+    const responseType = "code";
+
+    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&redirect_uri=${redirectUri}&response_type=${responseType}&scope=${scope}&access_type=offline&prompt=consent`;
+
+    window.location.href = authUrl;
+  };
+
   return (
-    <div className="min-h-screen flex bg-[#0f1115] text-white ">
+    <div className="min-h-screen flex bg-[#0f1115] text-white">
       <div className="w-1/2 flex items-center justify-center px-8 pt-30">
-        <div className="bg-[#16181d] shadow-lg rounded-2xl p-10 w-full max-w-md ">
+        <div className="bg-[#16181d] shadow-lg rounded-2xl p-10 w-full max-w-md">
           <h2 className="text-3xl font-semibold mb-6">Sign Up</h2>
 
           <form className="space-y-4" onSubmit={handleSubmit}>
@@ -70,7 +80,6 @@ export default function Signup() {
                 type="text"
                 value={form.name}
                 onChange={handleChange}
-                // placeholder="John Doe"
                 className="w-full px-4 py-2 bg-[#0f1115] text-white"
                 required
               />
@@ -83,7 +92,6 @@ export default function Signup() {
                 type="email"
                 value={form.email}
                 onChange={handleChange}
-                // placeholder="you@example.com"
                 className="w-full px-4 py-2 bg-[#0f1115] text-white"
                 required
               />
@@ -96,7 +104,6 @@ export default function Signup() {
                 type="password"
                 value={form.password}
                 onChange={handleChange}
-                // placeholder="Password"
                 className="w-full px-4 py-2 bg-[#0f1115] text-white"
                 required
               />
@@ -109,7 +116,6 @@ export default function Signup() {
                 type="password"
                 value={form.confirmPassword}
                 onChange={handleChange}
-                // placeholder="Re-enter Password"
                 className="w-full px-4 py-2 bg-[#0f1115] text-white"
                 required
               />
@@ -123,8 +129,10 @@ export default function Signup() {
               {loading ? "Signing Up..." : "Sign Up"}
             </button>
 
+            {/* Google Signup Button */}
             <button
               type="button"
+              onClick={handleGoogleLogin}
               className="w-full mt-3 flex items-center justify-center gap-2 border py-2 rounded-md"
             >
               <FcGoogle className="text-xl" />

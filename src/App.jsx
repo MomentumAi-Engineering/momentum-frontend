@@ -20,6 +20,7 @@ import Last from './components/Last.jsx';
 // import Pricing from './pages/Pricing.jsx';
 import Snapfix from './pages/Snapfix.jsx';
 import AdminDashboard from './pages/Adminpage.jsx';
+import AuthCallback from './pages/auth/AuthCallback.jsx';
 
 const AppWrapper = () => {
   const location = useLocation();
@@ -50,6 +51,7 @@ const AppWrapper = () => {
         {/* <Route path="/pricing" element={<Pricing />} /> */}
         <Route path="/snapfix" element={<Snapfix />} />
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path = "/auth/callback" element={<AuthCallback />} />
       </Routes>
     </div>
   );
