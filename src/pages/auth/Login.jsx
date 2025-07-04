@@ -1,17 +1,18 @@
 import React, { useState } from "react";
+import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
-// import loginImage from "../../assets/log-image.jpg";
-import { useNavigate } from "react-router-dom"; // ✅ import
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const navigate = useNavigate(); // ✅ initialize
-
+  const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [focusedField, setFocusedField] = useState("");
 
   const handleChange = (e) => {
-    setForm(prev => ({ ...prev, [e.target.id]: e.target.value }));
+    setForm((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
   const handleSubmit = async (e) => {
@@ -23,16 +24,13 @@ export default function Login() {
       const res = await fetch("http://localhost:5000/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: form.email, password: form.password })
+        body: JSON.stringify({ email: form.email, password: form.password }),
       });
       const data = await res.json();
 
       if (!res.ok) throw new Error(data.message || "Login failed");
 
-      console.log("Login successful:", data);
       localStorage.setItem("token", data.token);
-
-      // ✅ Redirect to /snapfix
       navigate(data.redirectTo || "/snapfix");
     } catch (err) {
       setError(err.message);
@@ -42,72 +40,117 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#0f1115] text-white">
-      <div className="w-1/2 flex items-center justify-center px-8">
-        <div className="bg-[#16181d] shadow-lg rounded-2xl p-10 w-full max-w-md">
-          <h2 className="text-3xl font-semibold mb-6">Log into your account</h2>
+    <div className="min-h-screen bg-black flex items-center justify-center p-4 relative overflow-hidden">
+      {/* Background gradient effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
+      <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
 
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            {error && <p className="text-red-500">{error}</p>}
+      <div className="relative w-full max-w-md">
+        <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl p-8 shadow-2xl">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-white mb-2">Log In</h1>
+            <p className="text-gray-400">Access your account</p>
+          </div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm mb-1">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                value={form.email}
-                onChange={handleChange}
-                // placeholder="you@example.com"
-                className="w-full px-4 py-2 bg-[#0f1115] text-white"
-                required
-              />
+          {error && (
+            <div className="mb-6 p-4 bg-red-900/20 border border-red-500/50 rounded-xl text-red-400 text-sm">
+              {error}
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Email Field */}
+            <div className="relative">
+              <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="email"
+                  id="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  onFocus={() => setFocusedField("email")}
+                  onBlur={() => setFocusedField("")}
+                  className={`w-full pl-12 pr-4 py-3 bg-gray-800/50 border rounded-xl text-white placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent ${focusedField === "email" ? "border-purple-500 bg-gray-800/70" : "border-gray-700"}`}
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
             </div>
 
-            <div>
-              <label htmlFor="password" className="block text-sm mb-1">Password</label>
-              <input
-                type="password"
-                id="password"
-                value={form.password}
-                onChange={handleChange}
-                // placeholder="Password"
-                className="w-full px-4 py-2 bg-[#0f1115] text-white"
-                required
-              />
+            {/* Password Field */}
+            <div className="relative">
+              <label className="block text-sm font-medium text-gray-300 mb-2">Password</label>
+              <div className="relative">
+                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type={showPassword ? "text" : "password"}
+                  id="password"
+                  value={form.password}
+                  onChange={handleChange}
+                  onFocus={() => setFocusedField("password")}
+                  onBlur={() => setFocusedField("")}
+                  className={`w-full pl-12 pr-12 py-3 bg-gray-800/50 border rounded-xl text-white placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent ${focusedField === "password" ? "border-purple-500 bg-gray-800/70" : "border-gray-700"}`}
+                  placeholder="Enter your password"
+                  required
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                >
+                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                </button>
+              </div>
             </div>
 
+            {/* Login Button */}
             <button
-  type="submit"
-  className="w-full py-2 mt-2 bg-white text-black rounded-md cursor-pointer hover:bg-gray-200 transition duration-300"
-  disabled={loading}
->
-  {loading ? "Logging In..." : "Log In"}
-</button>
+              type="submit"
+              disabled={loading}
+              className={`w-full py-3 rounded-xl font-semibold text-white transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900 relative overflow-hidden group ${!loading ? 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 hover:scale-[1.02] hover:-translate-y-1' : 'bg-gray-700 cursor-not-allowed'}`}
+            >
+              <div className="relative z-10">
+                {loading ? (
+                  <div className="flex items-center justify-center">
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                    Logging In...
+                  </div>
+                ) : (
+                  "Log In"
+                )}
+              </div>
+            </button>
 
-<button
-  type="button"
-  className="w-full mt-3 flex items-center justify-center gap-2 border border-gray-500 py-2 rounded-md text-white cursor-pointer hover:bg-[#2a2d34] transition duration-300"
->
-  <FcGoogle className="text-xl" />
-  <span>Login with Google</span>
-</button>
+            {/* Divider */}
+            <div className="relative flex items-center justify-center py-4">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-gray-700"></div>
+              </div>
+              <div className="relative bg-gray-900 px-4 text-sm text-gray-400">
+                or continue with
+              </div>
+            </div>
 
+            {/* Google Login */}
+            <button
+              type="button"
+              className="w-full mt-1 flex items-center justify-center gap-2 border border-gray-700 py-3 px-4 rounded-xl text-white transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900 relative overflow-hidden group hover:border-gray-600 hover:bg-gray-800/50 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-500/10"
+            >
+              <FcGoogle className="text-xl" />
+              <span>Login with Google</span>
+            </button>
           </form>
 
-          <p className="mt-6 text-sm text-gray-400 text-center">
+          <p className="text-center text-gray-400 mt-8">
             Don't have an account?{" "}
-            <a href="/signup" className="text-blue-500 hover:underline">Sign up</a>
-          </p>
-
-          <p className="mt-4 text-xs text-center text-gray-500">
-            By continuing, you agree to Terms of Service & Privacy Policy.
+            <a href="/signup" className="text-purple-400 hover:text-purple-300 font-medium transition-colors">
+              Sign up
+            </a>
           </p>
         </div>
       </div>
-
-      {/* <div className="w-1/2 flex items-center justify-center">
-        <img src={loginImage} alt="Login Visual" className="w-full h-full object-cover" />
-      </div> */}
     </div>
   );
 }
