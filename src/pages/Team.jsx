@@ -7,6 +7,7 @@ import AtomixCard from '../mini-components/Modern-card';
 import FormlessUI from '../components/TeamIdeas'; // Add this import
 import '../components/Teampage.css';
 import '../components/Team-page-head.css'; // Import the CSS file for team page styles
+import Socials from '../mini-components/Socials.jsx'; 
 
 const Team = () => {
   return (
@@ -39,8 +40,10 @@ const Team = () => {
         <TeamIdeas />
       </section>
 
-      {/* 👇 Add Sticky Scroll Section
-      <FormlessUI /> */}
+      <section className="px-6 md:px-20 py-16">
+        <Socials />
+      </section>
+      
     </div>
   );
 };

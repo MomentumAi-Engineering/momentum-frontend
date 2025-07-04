@@ -32,13 +32,14 @@ const Navbar = () => {
           {/* Logo - Left Side */}
           <div className="flex items-center space-x-3">
             {/* Orygin Logo Recreation */}
-            <div className="relative">
-              <div className="w-9 h-9 bg-gradient-to-br from-red-500 via-red-600 to-red-700 rounded-xl flex items-center justify-center shadow-lg">
-                <div className="w-3 h-3 bg-white rounded-full"></div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-400 rounded-full opacity-80"></div>
-                <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-red-400 rounded-full opacity-80"></div>
-              </div>
-            </div>
+           <div className="relative">
+  <div className="w-9 h-9 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-800 rounded-xl flex items-center justify-center shadow-lg">
+    <div className="w-3 h-3 bg-white rounded-full"></div>
+    <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full opacity-80"></div>
+    <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full opacity-80"></div>
+  </div>
+</div>
+
             <span className="text-white font-semibold text-xl tracking-wide">MomntumAI</span>
           </div>
 
