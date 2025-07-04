@@ -12,50 +12,55 @@ const GrokGrid = () => {
         <div className="hidden sm:block absolute inset-x-0 top-1/2 h-px bg-gray-700"></div>
 
         {/* Top-left */}
-        <div className="flex items-center justify-center p-6 text-white text-center sm:text-left">
-          <div>
-            <h2 className="text-2xl font-bold">Find meaning with Grok Think</h2>
-            <p className="text-sm text-gray-400 mt-2">
-              Discover profound insights with Grok Think, connecting dots and revealing truths in complex ideas.
-            </p>
-            <button className="mt-4 border border-white/30 px-4 py-2 rounded-full text-sm hover:bg-white/10 transition">
-              FIND ANSWERS →
-            </button>
-          </div>
-        </div>
+       {/* Top-left (Main Product Pitch) */}
+<div className="flex items-center justify-center p-6 text-white text-center sm:text-left">
+  <div>
+    <h2 className="text-2xl font-bold">SnapFix – Transform Visual Inputs into Smart Reports</h2>
+    <p className="text-sm text-gray-400 mt-2">
+      SnapFix by <span className="text-purple-400 font-semibold">MomntumAi</span> converts simple photos and brief descriptions into intelligent, structured reports on real-world infrastructure, safety, and environmental issues.
+    </p>
+    <p className="text-sm text-gray-400 mt-3">
+      Designed to minimize user effort while maximizing clarity, SnapFix automatically routes each case to the right agency or contractor, ensuring timely, accurate resolutions. One snap. One line. Complete action.
+    </p>
+    <button className="mt-4 border border-white/30 px-4 py-2 rounded-full text-sm hover:bg-white/10 transition">
+      EXPERIENCE SNAPFIX →
+    </button>
+  </div>
+</div>
 
-        {/* Top-right */}
-        <div className="flex items-center justify-center p-6 text-white">
-          <div className="bg-[#1e1e1e] p-4 rounded-lg max-w-sm text-center sm:text-left">
-            <p className="text-green-400 text-sm font-semibold mb-2">✔ Thought for 5 seconds</p>
-            <p className="text-sm text-gray-300">
-              The question "What is the meaning of life?" is deeply personal and varies depending on who’s asking and what they value.
-            </p>
-          </div>
-        </div>
+{/* Top-right (Fast Routing Feature) */}
+<div className="flex items-center justify-center p-6 text-white">
+  <div className="bg-[#1e1e1e] p-4 rounded-lg max-w-sm text-center sm:text-left">
+    <p className="text-green-400 text-sm font-semibold mb-2">✔ Intelligent Routing</p>
+    <p className="text-sm text-gray-300">
+      SnapFix identifies the right authority or contractor for each issue — automating the handoff process and reducing delays to resolution.
+    </p>
+  </div>
+</div>
 
-        {/* Bottom-left */}
-        <div className="flex items-center justify-center p-6 text-white text-center sm:text-left">
-          <div>
-            <h2 className="text-2xl font-bold">Talk with Grok Chat</h2>
-            <p className="text-sm text-gray-400 mt-2">
-              Engage in smart conversations with Grok Chat and get real-time intelligent responses tailored for you.
-            </p>
-            <button className="mt-4 border border-white/30 px-4 py-2 rounded-full text-sm hover:bg-white/10 transition">
-              START CHATTING →
-            </button>
-          </div>
-        </div>
+{/* Bottom-left (Ease of Use) */}
+<div className="flex items-center justify-center p-6 text-white text-center sm:text-left">
+  <div>
+    <h2 className="text-2xl font-bold">Zero Complexity, Maximum Clarity</h2>
+    <p className="text-sm text-gray-400 mt-2">
+      Submit a photo and a short note — SnapFix does the rest. No long forms, no guesswork. Just clean, actionable issue reports in seconds.
+    </p>
+    <button className="mt-4 border border-white/30 px-4 py-2 rounded-full text-sm hover:bg-white/10 transition">
+      GET STARTED →
+    </button>
+  </div>
+</div>
 
-        {/* Bottom-right */}
-        <div className="flex items-center justify-center p-6 text-white">
-          <div className="bg-[#1e1e1e] p-4 rounded-lg max-w-sm text-center sm:text-left">
-            <p className="text-green-400 text-sm font-semibold mb-2">✔ Instant Response</p>
-            <p className="text-sm text-gray-300">
-              Grok Chat delivers quick, helpful replies to help you solve problems and explore ideas in real time.
-            </p>
-          </div>
-        </div>
+{/* Bottom-right (Impact Focus) */}
+<div className="flex items-center justify-center p-6 text-white">
+  <div className="bg-[#1e1e1e] p-4 rounded-lg max-w-sm text-center sm:text-left">
+    <p className="text-green-400 text-sm font-semibold mb-2">✔ Real-World Impact</p>
+    <p className="text-sm text-gray-300">
+      From broken sidewalks to leaking pipes — SnapFix ensures community concerns are transformed into data-driven action plans with lasting effect.
+    </p>
+  </div>
+</div>
+
         
       </div>
     </div>

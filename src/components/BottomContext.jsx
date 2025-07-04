@@ -8,12 +8,13 @@ export default function BeautifulUIHero() {
       {/* Main content */}
       <div className="relative z-10 text-center px-8 max-w-4xl mx-auto">
         {/* Main heading */}
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-light text-white mb-4 leading-tight tracking-tight">
-          Build Beautiful UI.
-        </h1>
-        <h2 className="text-6xl md:text-7xl lg:text-8xl font-light text-white mb-16 leading-tight tracking-tight">
-          Start Today.
-        </h2>
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 leading-tight tracking-tight">
+ Click. Report. Resolve.
+</h1>
+<h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-16 leading-tight tracking-tight">
+  Start Today.
+</h2>
+
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -35,28 +36,29 @@ export default function BeautifulUIHero() {
 
         {/* Description */}
         <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-          Access a fully-featured UI toolkit with multiple pre-built components and customizable themes. Start building beautiful interfaces in minutes.
+          Transform photos and short notes into structured, actionable reports for faster resolution of infrastructure, safety, and environmental issues.
         </p>
       </div>
 
       {/* Bottom white glow effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-96">
-        {/* Main white glow */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-4xl h-64">
-          <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-white/10 to-transparent blur-3xl"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-white/15 via-white/5 to-transparent blur-2xl"></div>
-        </div>
-        
-        {/* Secondary white glow layers */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-48">
-          <div className="absolute inset-0 bg-gradient-to-t from-white/25 via-transparent to-transparent blur-xl"></div>
-        </div>
-        
-        {/* Inner intense white glow */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-32">
-          <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent blur-lg"></div>
-        </div>
-      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-96 z-0">
+  {/* Main purple-blue glow */}
+  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-4xl h-64">
+    <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-purple-400/10 to-transparent blur-3xl"></div>
+    <div className="absolute inset-0 bg-gradient-to-t from-purple-400/15 via-purple-300/5 to-transparent blur-2xl"></div>
+  </div>
+
+  {/* Secondary glow layers */}
+  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-48">
+    <div className="absolute inset-0 bg-gradient-to-t from-purple-500/25 via-transparent to-transparent blur-xl"></div>
+  </div>
+
+  {/* Inner intense glow */}
+  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-32">
+    <div className="absolute inset-0 bg-gradient-to-t from-purple-500/30 to-transparent blur-lg"></div>
+  </div>
+</div>
+
 
       {/* Custom styles */}
       <style jsx>{`

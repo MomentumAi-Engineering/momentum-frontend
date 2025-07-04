@@ -17,15 +17,16 @@ export default function ChatInput() {
   };
 
   return (
-    <div className="w-full flex flex-col justify-end items-center pt-28 sm:pt-36 relative overflow-hidden">
+    <div className="relative w-full flex flex-col justify-end items-center pt-28 sm:pt-36 overflow-hidden bg-black">
 
-      {/* Background Animation */}
-      <div className="absolute inset-0 -z-10">
-        <HomeAnimation />
-      </div>
+      {/* 🔵 Top-Left Glow */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl z-0" />
+
+      {/* 🔵 Bottom-Right Glow */}
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl z-0" />
 
       {/* Intro Text Section */}
-      <div className="mt-10 sm:mt-20 sm:mr-20 px-4 sm:px-0 text-center sm:text-left">
+      <div className="mt-10 sm:mt-20 sm:mr-20 px-4 sm:px-0 text-center sm:text-left relative z-10">
         <div className="home-text mb-4 font-bold text-lg sm:text-2xl">
           <SplitText text="Innovation with a Human Purpose." />
         </div>
@@ -35,12 +36,12 @@ export default function ChatInput() {
       </div>
 
       {/* Arrow Down Icon */}
-      <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
+      <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 z-10">
         <ArrowDown className="text-white w-5 h-5 sm:w-6 sm:h-6 animate-bounce" />
       </div>
 
       {/* Chat Input Box */}
-      <div className="w-full max-w-3xl px-4 mb-6 mt-20 sm:mt-32">
+      <div className="w-full max-w-3xl px-4 mb-6 mt-20 sm:mt-32 relative z-10">
         <div className="bg-black border border-white/20 text-white rounded-2xl p-3 sm:p-4 flex items-center">
           <input
             type="text"
@@ -57,7 +58,7 @@ export default function ChatInput() {
       </div>
 
       {/* CTA Buttons */}
-      <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 mb-10">
+      <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 mb-10 relative z-10">
         <button className="px-5 py-2 border border-white/20 rounded-full text-white text-xs sm:text-sm tracking-widest font-mono hover:bg-white/10 transition">
           BUILD WITH MOMNTUM
         </button>
@@ -73,16 +74,12 @@ export default function ChatInput() {
       {showCard && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
           <div className="w-full max-w-xl h-[60vh] bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl rounded-2xl p-6 sm:p-8 text-white relative transition-all duration-500">
-
-            {/* Close Button */}
             <button
               onClick={() => setShowCard(false)}
               className="absolute top-4 right-4 text-white hover:text-red-400 transition"
             >
               <X className="w-6 h-6" />
             </button>
-
-            {/* Card Content */}
             <h2 className="text-xl sm:text-2xl font-bold mb-4 text-purple-400">About Momntum</h2>
             <p className="text-sm sm:text-base leading-relaxed text-gray-200">
               MomntumAI is built with a vision to revolutionize how ethical technology interacts

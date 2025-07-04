@@ -77,20 +77,21 @@ export default function Login() {
             </div>
 
             <button
-              type="submit"
-              className="w-full py-2 mt-2 bg-white text-black rounded-md hover:bg-gray-200 transition"
-              disabled={loading}
-            >
-              {loading ? "Logging In..." : "Log In"}
-            </button>
+  type="submit"
+  className="w-full py-2 mt-2 bg-white text-black rounded-md cursor-pointer hover:bg-gray-200 transition duration-300"
+  disabled={loading}
+>
+  {loading ? "Logging In..." : "Log In"}
+</button>
 
-            <button
-              type="button"
-              className="w-full mt-3 flex items-center justify-center gap-2 border py-2 rounded-md hover:bg-[#1e2027] transition"
-            >
-              <FcGoogle className="text-xl" />
-              <span>Login with Google</span>
-            </button>
+<button
+  type="button"
+  className="w-full mt-3 flex items-center justify-center gap-2 border border-gray-500 py-2 rounded-md text-white cursor-pointer hover:bg-[#2a2d34] transition duration-300"
+>
+  <FcGoogle className="text-xl" />
+  <span>Login with Google</span>
+</button>
+
           </form>
 
           <p className="mt-6 text-sm text-gray-400 text-center">
