@@ -17,18 +17,18 @@ export default function ChatInput() {
   };
 
   return (
-    <div className="relative w-full flex flex-col justify-end items-center pt-28 sm:pt-36 overflow-hidden bg-black">
+    <div className="relative w-full h-screen flex flex-col justify-end items-center pt-28 sm:pt-36 overflow-hidden bg-black">
 
       {/* 🔵 Enhanced Top-Left Glow */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-purple-500/30 rounded-full blur-[140px] z-0" />
 
       {/* 🔵 Enhanced Bottom-Right Glow */}
-      <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-blue-500/30 rounded-full blur-[160px] z-0" />
+      <div className="absolute bottom-0 right-0 w-[15rem] h-[20rem] bg-purple-500/30 rounded-full blur-[110px] z-0" />
 
       {/* Intro Text Section */}
-      <div className="mt-10 sm:mt-20 sm:mr-20 px-4 sm:px-0 text-center sm:text-left relative z-10">
+      <div className="mt--20 sm:mt-20 sm:mr-20 px-4 sm:px-0 text-center sm:text-left relative z-10">
         <div className="home-text mb-4 font-bold text-lg sm:text-2xl">
-          <SplitText text="Innovation with a Human Purpose." />
+          <div>Innovation with a Human Purpose.</div>
         </div>
         <div className="home-small font-medium text-2xl sm:text-5xl md:text-7xl leading-tight">
           <ShinyText text="We empower people and organizations to harness AI in ways that are wholly constructive, ethical, and life-enhancing." />
