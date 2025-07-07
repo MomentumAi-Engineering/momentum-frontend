@@ -1,5 +1,6 @@
 @import "tailwindcss";
 /* index.css */
+
 body {
   background: linear-gradient(135deg, #0d0d0d, #000000, #151515);
   margin: 0;
@@ -7,6 +8,9 @@ body {
   font-family: sans-serif;
 }
 
+*{
+  scroll-behavior: smooth;
+}
 
 /* Hide scrollbars for WebKit browsers */
 ::-webkit-scrollbar {
@@ -18,3 +22,5 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+
+
