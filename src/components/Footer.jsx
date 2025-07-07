@@ -53,12 +53,12 @@ const Footer = () => {
         <p className="text-center md:text-left">
           © 2025 MomntumAi, Inc. All rights reserved · Privacy · Terms · Sitemap
         </p>
-        <div className="flex space-x-5 mt-4 md:mt-0 text-lg sm:text-xl">
+        {/* <div className="flex space-x-5 mt-4 md:mt-0 text-lg sm:text-xl">
           <FaXTwitter className="hover:text-white cursor-pointer transition" />
           <FaInstagram className="hover:text-white cursor-pointer transition" />
           <FaLinkedinIn className="hover:text-white cursor-pointer transition" />
           <FaFacebookF className="hover:text-white cursor-pointer transition" />
-        </div>
+        </div> */}
       </div>
 
       {/* Aurora Effect */}
