@@ -24,16 +24,16 @@ export default function ChatInput() {
 
       {/* 🔵 Enhanced Bottom-Right Glow */}
       <div className="absolute bottom-0 right-0 w-[15rem] h-[20rem] bg-purple-500/30 rounded-full blur-[110px] z-0" />
+{/* Intro Text Section */}
+<div className="mt-4 sm:mt-12 sm:mr-20 px-4 sm:px-0 text-center sm:text-left relative z-10">
+  <div className="home-text mb-4 font-bold text-lg sm:text-2xl">
+    <div>Innovation with a Human Purpose.</div>
+  </div>
+  <div className="home-small font-medium text-2xl sm:text-5xl md:text-7xl leading-tight">
+    <ShinyText text="We empower people and organizations to harness AI in ways that are wholly constructive, ethical, and life-enhancing." />
+  </div>
+</div>
 
-      {/* Intro Text Section */}
-      <div className="mt--20 sm:mt-20 sm:mr-20 px-4 sm:px-0 text-center sm:text-left relative z-10">
-        <div className="home-text mb-4 font-bold text-lg sm:text-2xl">
-          <div>Innovation with a Human Purpose.</div>
-        </div>
-        <div className="home-small font-medium text-2xl sm:text-5xl md:text-7xl leading-tight">
-          <ShinyText text="We empower people and organizations to harness AI in ways that are wholly constructive, ethical, and life-enhancing." />
-        </div>
-      </div>
 
       {/* Arrow Down Icon */}
       <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 z-10">
