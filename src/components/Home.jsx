@@ -19,11 +19,11 @@ export default function ChatInput() {
   return (
     <div className="relative w-full flex flex-col justify-end items-center pt-28 sm:pt-36 overflow-hidden bg-black">
 
-      {/* 🔵 Top-Left Glow */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl z-0" />
+      {/* 🔵 Enhanced Top-Left Glow */}
+      <div className="absolute top-0 left-0 w-80 h-80 bg-purple-500/30 rounded-full blur-[140px] z-0" />
 
-      {/* 🔵 Bottom-Right Glow */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl z-0" />
+      {/* 🔵 Enhanced Bottom-Right Glow */}
+      <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-blue-500/30 rounded-full blur-[160px] z-0" />
 
       {/* Intro Text Section */}
       <div className="mt-10 sm:mt-20 sm:mr-20 px-4 sm:px-0 text-center sm:text-left relative z-10">
