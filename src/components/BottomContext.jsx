@@ -17,7 +17,7 @@ const GraphSection = () => {
             </p>
             <p>
               It's more than just AI—it's a powerhouse of automation, decision-making, and optimization designed to help
-              businesses scale effortlessly.
+              users use effortlessly.
             </p>
           </div>
 
@@ -33,7 +33,7 @@ const GraphSection = () => {
                 <h3 className="text-purple-500 font-semibold text-xl">Autonomous</h3>
               </div>
               <p className="text-gray-400 text-sm">
-                AI that thinks and acts so your business runs on autopilot.
+                AI that thinks and acts so your problems may resolve soon.
               </p>
             </div>
 
