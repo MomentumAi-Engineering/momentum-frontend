@@ -47,13 +47,13 @@ const Navbar = () => {
           <div className="flex items-center space-x-8">
             {/* Navigation Links */}
             <div className="flex items-center space-x-10">
-              <a href="#services-section" className="text-white/90 hover:text-white transition-all duration-300 font-medium text-lg hover:scale-105 transform">
+              <a href="#services-section" className="text-white/90 hover:text-white transition-all duration-300 font-light text-lg hover:scale-105 transform">
                 Services
               </a>
-              <a href="/team" className="text-white/90 hover:text-white transition-all duration-300 font-medium text-lg hover:scale-105 transform">
+              <a href="/team" className="text-white/90 hover:text-white transition-all duration-300 font-light text-lg hover:scale-105 transform">
                 Team
               </a>
-              <a href="/contact" className="text-white/90 hover:text-white transition-all duration-300 font-medium text-lg hover:scale-105 transform">
+              <a href="/contact" className="text-white/90 hover:text-white transition-all duration-300 font-light text-lg hover:scale-105 transform">
                 Contact
               </a>
             </div>

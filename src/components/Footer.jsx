@@ -20,7 +20,7 @@ const Footer = () => {
           <h3 className="font-bold text-base sm:text-lg mb-4">COMPANY</h3>
           <ul className="space-y-2 text-sm sm:text-base text-gray-300">
             <li>Service at your home</li>
-            <li>MomntumAI for hosts</li>
+            {/* <li>MomntumAI for hosts</li> */}
             <li>Community forum</li>
             <li>Hosting responsibly</li>
           </ul>

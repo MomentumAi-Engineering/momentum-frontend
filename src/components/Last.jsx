@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import Chart from '../mini-components/Graph';
 
 const Last = () => {
   const [activeTab, setActiveTab] = useState('whyBitcoin');
+
+  const cardClasses =
+    'w-[320px] h-[400px] bg-black bg-opacity-80 border border-gray-700 rounded-xl p-6 shadow-[0_0_20px_#00ffcc66] hover:shadow-[0_0_30px_#00ffccaa] transition-shadow duration-500 flex flex-col justify-between';
 
   const renderThreePanels = () => {
     switch (activeTab) {
       case 'whyBitcoin':
         return (
           <div className="flex flex-wrap justify-center gap-10">
-            <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 p-6 rounded-lg shadow-lg max-w-md border border-gray-700">
+            <div className={cardClasses}>
               <h3 className="text-white text-xl font-semibold mb-4">Why Snapfix?</h3>
               <ul className="text-gray-300 text-lg space-y-3">
                 <li className="flex items-center">
@@ -24,14 +28,10 @@ const Last = () => {
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Decentralized
                 </li>
               </ul>
-              <p className="text-gray-400 text-sm mt-8 text-center">
+              <p className="text-gray-400 text-sm mt-4 text-center">
                 The greatest digital transformation of the 21st century is <br />
                 <span className="text-yellow-400 font-bold">digital capital</span>.
               </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 p-6 rounded-lg shadow-lg max-w-md border border-gray-700 flex justify-center items-center">
-              <h3 className="text-white text-3xl font-bold">RAJ</h3>
             </div>
           </div>
         );
@@ -39,7 +39,7 @@ const Last = () => {
       case 'whyGiftBitcoin':
         return (
           <div className="flex flex-wrap justify-center gap-10">
-            <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 p-6 rounded-lg shadow-lg max-w-md border border-gray-700">
+            <div className={cardClasses}>
               <h3 className="text-white text-xl font-semibold mb-4 text-center">
                 Superior store of value in digital age
               </h3>
@@ -57,10 +57,9 @@ const Last = () => {
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Decentralized
                 </li>
               </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 p-6 rounded-lg shadow-lg max-w-md border border-gray-700 flex justify-center items-center">
-              <h3 className="text-white text-3xl font-bold">RISAV</h3>
+              <p className="text-gray-400 text-sm mt-4 text-center">
+                Safe, anonymous, and smart. That’s <span className="text-yellow-400 font-bold">Snapfix</span>.
+              </p>
             </div>
           </div>
         );
@@ -68,9 +67,9 @@ const Last = () => {
       case 'whyUseBitcoinCard':
         return (
           <div className="flex flex-wrap justify-center gap-10">
-            <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 p-6 rounded-lg shadow-lg max-w-md border border-gray-700">
+            <div className={cardClasses}>
               <h3 className="text-white text-xl font-semibold mb-4 text-center">Largest growing AI Company</h3>
-              <div className="bg-gray-700 p-3 rounded-md text-sm text-gray-300">
+              <div className="bg-gray-700 bg-opacity-40 p-3 rounded-md text-sm text-gray-300">
                 <p className="text-white font-semibold mb-2">Market Cap</p>
                 <div className="flex justify-between py-1"><span>Gold</span><span>$1.935 T</span></div>
                 <div className="flex justify-between py-1"><span>Microsoft</span><span>$1.935 T</span></div>
@@ -81,10 +80,6 @@ const Last = () => {
               <p className="text-gray-400 text-sm mt-4 text-center">
                 <span className="text-yellow-400 font-bold">7th largest market cap</span>
               </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 p-6 rounded-lg shadow-lg max-w-md border border-gray-700 flex justify-center items-center">
-              <h3 className="text-white text-3xl font-bold">JOEL</h3>
             </div>
           </div>
         );
@@ -120,6 +115,10 @@ const Last = () => {
         {/* Tab Content */}
         {renderThreePanels()}
       </div>
+
+          {/* <div>
+            <Chart />
+          </div> */}
     </div>
   );
 };

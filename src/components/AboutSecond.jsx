@@ -36,7 +36,7 @@ const AboutSecond = () => {
       </h2>
 
       {/* Stats */}
-      <div className="bg-gradient-to-r from-[#17023c] via-[#1f0761] to-[#1c003c] py-8 px-6 rounded-lg flex flex-col sm:flex-row justify-around items-center text-center mb-16 gap-8 sm:gap-0">
+      <div className="bg-gradient-to-r from-[#000000] via-[#58259c] to-[#090909] py-8 px-6 rounded-lg flex flex-col sm:flex-row justify-around items-center text-center mb-16 gap-8 sm:gap-0">
         <div>
           <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-1">10k+</h2>
           <span className="text-gray-400 text-sm">Issues Reported</span>
