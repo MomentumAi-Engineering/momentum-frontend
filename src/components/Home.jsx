@@ -28,7 +28,7 @@ export default function ChatInput() {
 
       
 {/* Intro Text Section */}
-<div className="mt-4 sm:mt-12 sm:mr-20 px-4 sm:px-0 text-center sm:text-left relative z-10">
+<div className="mt-4 sm:mt-12 sm:mr-20 px-4 sm:px-0 ml-30 text-center sm:text-left relative z-10">
   <div className="home-text mb-4 font-bold text-lg sm:text-2xl">
     <div>Innovation with a Human Purpose.</div>
   </div>
