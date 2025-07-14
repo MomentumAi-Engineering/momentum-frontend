@@ -1,0 +1,34 @@
+.animated-border-box {
+  background-color: #0f172a;
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 1px #1e293b;
+}
+
+.animated-border-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #6b21a8, #9333ea, #6b21a8);
+  background-size: 400% 400%;
+  animation: animateBorder 6s linear infinite;
+  z-index: -1;
+}
+
+@keyframes animateBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

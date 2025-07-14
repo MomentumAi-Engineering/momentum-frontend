@@ -24,7 +24,7 @@ const teamMembers = [
   },
   {
     name: "Rishav Kumar",
-    role: "Chief Technology Officer",
+    role: "CTO & Co-Founder",
     description:
       "Leading the technology strategy and execution at Momntum AI. Oversee AI-driven platforms, cloud infrastructure, and team innovation.",
     // location: "Toronto, ON",

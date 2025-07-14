@@ -20,7 +20,7 @@ const Footer = () => {
           <h3 className="font-bold text-base sm:text-lg mb-4">COMPANY</h3>
           <ul className="space-y-2 text-sm sm:text-base text-gray-300">
             <li>Service at your home</li>
-            <li>MomntumAI for hosts</li>
+            {/* <li>MomntumAI for hosts</li> */}
             <li>Community forum</li>
             <li>Hosting responsibly</li>
           </ul>
@@ -53,12 +53,12 @@ const Footer = () => {
         <p className="text-center md:text-left">
           © 2025 MomntumAi, Inc. All rights reserved · Privacy · Terms · Sitemap
         </p>
-        <div className="flex space-x-5 mt-4 md:mt-0 text-lg sm:text-xl">
+        {/* <div className="flex space-x-5 mt-4 md:mt-0 text-lg sm:text-xl">
           <FaXTwitter className="hover:text-white cursor-pointer transition" />
           <FaInstagram className="hover:text-white cursor-pointer transition" />
           <FaLinkedinIn className="hover:text-white cursor-pointer transition" />
           <FaFacebookF className="hover:text-white cursor-pointer transition" />
-        </div>
+        </div> */}
       </div>
 
       {/* Aurora Effect */}

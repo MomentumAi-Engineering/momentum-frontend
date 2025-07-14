@@ -21,7 +21,8 @@ import Last from './components/Last.jsx';
 import Snapfix from './pages/Snapfix.jsx';
 import AdminDashboard from './pages/Adminpage.jsx';
 import AuthCallback from './pages/auth/AuthCallback.jsx';
-import BottomContext from './components/BottomContext.jsx';
+import GraphSection from './components/BottomContext.jsx';
+import Ending from './components/Ending.jsx';
 
 const AppWrapper = () => {
   const location = useLocation();
@@ -41,7 +42,8 @@ const AppWrapper = () => {
               <AboutSecond />
               <Moreabout />
               <Last />
-              <BottomContext />
+              <GraphSection/>
+              <Ending />
               <Footer />
             </>
           }

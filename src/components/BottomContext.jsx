@@ -1,69 +1,105 @@
 import React from 'react';
 
-export default function BeautifulUIHero() {
+const GraphSection = () => {
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden flex items-center justify-center">
+    <div className="bg-black min-h-screen px-6 py-20">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+        {/* Left Side */}
+        <div className="flex-1 text-white max-w-2xl">
+          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            The <span className="text-white">Snapfix</span> revolutionizes business automation.
+          </h1>
 
+          <div className="mt-8 space-y-6 text-gray-300 text-lg">
+            <p>
+              We don't just build AI. <span className="text-purple-500 font-semibold">We create an ecosystem</span> — where intelligent
+              systems work together, replacing inefficiency with automation.
+            </p>
+            <p>
+              It's more than just AI—it's a powerhouse of automation, decision-making, and optimization designed to help
+              users use effortlessly.
+            </p>
+          </div>
 
-      {/* Main content */}
-      <div className="relative z-10 text-center px-8 max-w-4xl mx-auto">
-        {/* Main heading */}
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4 leading-tight tracking-tight">
- Click. Report. Resolve.
-</h1>
-<h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-16 leading-tight tracking-tight">
-  Start Today.
-</h2>
+          <div className="mt-10 grid sm:grid-cols-2 gap-8">
+            {/* Feature 1 */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="text-purple-500">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                  </svg>
+                </span>
+                <h3 className="text-purple-500 font-semibold text-xl">Autonomous</h3>
+              </div>
+              <p className="text-gray-400 text-sm">
+                AI that thinks and acts so your problems may resolve soon.
+              </p>
+            </div>
 
-
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <button className="group relative px-6 py-3 text-white border border-gray-600 rounded-lg hover:border-gray-400 transition-all duration-300 flex items-center gap-2 bg-black/30 backdrop-blur-sm">
-            <span>Connect with Us</span>
-            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-          
-          <button  onClick={() => (window.location.href = "/signup")} className="group relative px-8 py-3 bg-white text-black rounded-lg hover:bg-gray-100 transition-all duration-300 font-medium flex items-center gap-2 overflow-hidden">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-            <span>Start Now</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-          </button>
+            {/* Feature 2 */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="text-purple-500">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    <polyline points="3.27,6.96 12,12.01 20.73,6.96" />
+                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                  </svg>
+                </span>
+                <h3 className="text-purple-500 font-semibold text-xl">Scalable</h3>
+              </div>
+              <p className="text-gray-400 text-sm">
+                From startups to enterprises, our AI adapts & grows with you.
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* Description */}
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-          Transform photos and short notes into structured, actionable reports for faster resolution of infrastructure, safety, and environmental issues.
-        </p>
+        {/* Right Side - Chart */}
+        <div className="flex-shrink-0">
+          <div className="bg-[#0f172a] p-8 rounded-2xl border border-[#1e293b] w-[340px] sm:w-[400px] shadow-lg">
+            <h2 className="text-white text-lg font-medium mb-6">
+              Scaling Potential into Performance
+            </h2>
+
+            <div className="relative h-48 w-full">
+              {/* Grid lines */}
+              <div className="absolute inset-0">
+                {[...Array(5)].map((_, i) => (
+                  <div
+                    key={`h-${i}`}
+                    className="absolute w-full border-t border-gray-700"
+                    style={{ top: `${i * 25}%` }}
+                  />
+                ))}
+                {[...Array(5)].map((_, i) => (
+                  <div
+                    key={`v-${i}`}
+                    className="absolute h-full border-l border-gray-700"
+                    style={{ left: `${i * 25}%` }}
+                  />
+                ))}
+              </div>
+
+              {/* Curve */}
+              <div className="absolute inset-0">
+                <svg width="100%" height="100%" viewBox="0 0 350 192">
+                  <path
+                    d="M 25 160 Q 90 145 160 120 Q 230 95 280 70 Q 320 55 325 45"
+                    stroke="white"
+                    strokeWidth="2"
+                    fill="none"
+                    className="drop-shadow"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* Bottom white glow effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-96 z-0">
-  {/* Main purple-blue glow */}
-  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-4xl h-64">
-    <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-purple-400/10 to-transparent blur-3xl"></div>
-    <div className="absolute inset-0 bg-gradient-to-t from-purple-400/15 via-purple-300/5 to-transparent blur-2xl"></div>
-  </div>
-
-  {/* Secondary glow layers */}
-  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-48">
-    <div className="absolute inset-0 bg-gradient-to-t from-purple-500/25 via-transparent to-transparent blur-xl"></div>
-  </div>
-
-  {/* Inner intense glow */}
-  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-32">
-    <div className="absolute inset-0 bg-gradient-to-t from-purple-500/30 to-transparent blur-lg"></div>
-  </div>
-</div>
-
-
-      {/* Custom styles */}
-      <style jsx>{`
-        /* No additional animations needed */
-      `}</style>
     </div>
   );
-}
+};
+
+export default GraphSection;

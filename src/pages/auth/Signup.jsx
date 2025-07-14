@@ -17,7 +17,6 @@ export default function SignupPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Handle Google OAuth callback
   useEffect(() => {
     const handleGoogleCallback = async () => {
       const urlParams = new URLSearchParams(window.location.search);
@@ -51,7 +50,6 @@ export default function SignupPage() {
     handleGoogleCallback();
   }, []);
 
-  // Handle Google OAuth errors
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const error = urlParams.get('error');
@@ -64,15 +62,11 @@ export default function SignupPage() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async () => {
     setError('');
-
     if (formData.password !== formData.confirmPassword) {
       return setError("Passwords don't match!");
     }
@@ -115,29 +109,29 @@ export default function SignupPage() {
   const isFormValid = formData.fullName && formData.email && formData.password && formData.confirmPassword && isPasswordMatch;
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center p-4 relative overflow-hidden">
+    <div className="min-h-[100vh] bg-black flex items-center justify-center py-8 px-4 relative overflow-hidden overflow-y-auto">
       {/* Background gradient effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"></div>
       <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
 
       <div className="relative w-full max-w-md">
-        <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl p-8 shadow-2xl">
-          <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-white mb-2">Sign Up</h1>
+        <div className="bg-gray-900/50 backdrop-blur-xl border border-gray-800/50 rounded-2xl p-6 shadow-2xl">
+          <div className="text-center mb-4">
+            <h1 className="text-3xl font-bold text-white mb-1">Sign Up</h1>
             <p className="text-gray-400">Create your account to get started</p>
           </div>
 
           {error && (
-            <div className="mb-6 p-4 bg-red-900/20 border border-red-500/50 rounded-xl text-red-400 text-sm">
+            <div className="mb-4 p-4 bg-red-900/20 border border-red-500/50 rounded-xl text-red-400 text-sm">
               {error}
             </div>
           )}
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {/* Full Name */}
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -156,7 +150,7 @@ export default function SignupPage() {
 
             {/* Email */}
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -175,7 +169,7 @@ export default function SignupPage() {
 
             {/* Password */}
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-300 mb-2">Password</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">Password</label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -192,7 +186,7 @@ export default function SignupPage() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
                 >
                   {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 </button>
@@ -201,7 +195,7 @@ export default function SignupPage() {
 
             {/* Confirm Password */}
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-300 mb-2">Confirm Password</label>
+              <label className="block text-sm font-medium text-gray-300 mb-1">Confirm Password</label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -218,7 +212,7 @@ export default function SignupPage() {
                 <button
                   type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
                 >
                   {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 </button>
@@ -234,7 +228,7 @@ export default function SignupPage() {
               </div>
             </div>
 
-            {/* Sign Up Button */}
+            {/* Submit */}
             <button
               type="button"
               onClick={handleSubmit}
@@ -254,23 +248,21 @@ export default function SignupPage() {
             </button>
 
             {/* Divider */}
-            <div className="relative flex items-center justify-center py-4">
+            <div className="relative flex items-center justify-center py-3">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-700"></div>
               </div>
-              <div className="relative bg-gray-900 px-4 text-sm text-gray-400">
-                or continue with
-              </div>
+              <div className="relative bg-gray-900 px-4 text-sm text-gray-400">or continue with</div>
             </div>
 
-            {/* Google Signup Button */}
+            {/* Google Signup */}
             <button
               type="button"
               onClick={handleGoogleSignup}
               className="w-full flex items-center justify-center py-3 px-4 border border-gray-700 rounded-xl text-white font-medium transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900 relative overflow-hidden group hover:border-gray-600 hover:bg-gray-800/50 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-500/10"
             >
               <div className="relative z-10 flex items-center justify-center">
-                <svg className="w-5 h-5 mr-3 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-3" viewBox="0 0 24 24">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                   <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                   <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
@@ -281,8 +273,7 @@ export default function SignupPage() {
             </button>
           </div>
 
-          {/* Sign In Link */}
-          <p className="text-center text-gray-400 mt-8">
+          <p className="text-center text-gray-400 mt-6">
             Already have an account?{' '}
             <a href="/signin" className="text-purple-400 hover:text-purple-300 font-medium transition-colors">
               Sign in
