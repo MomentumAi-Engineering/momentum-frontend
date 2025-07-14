@@ -23,7 +23,8 @@ const Ending= () => {
           The best patform u can get
         </p>
 
-        <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-md transition-all duration-200 flex items-center justify-center gap-2 mx-auto">
+        <button    onClick={() => (window.location.href = "/signup")} className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-md transition-all duration-200 flex items-center justify-center gap-2 mx-auto">
+          
           Get Started
           <span className="text-white text-xl">↗</span>
         </button>
