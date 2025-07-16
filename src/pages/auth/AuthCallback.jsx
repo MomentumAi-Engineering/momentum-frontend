@@ -9,7 +9,7 @@ export default function AuthCallback() {
     const code = params.get("code");
 
     if (code) {
-      fetch("http://localhost:5000/api/auth/google", {
+      fetch("https://momentum-backend-p68k.onrender.com/api/auth/google", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code }),
