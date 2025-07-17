@@ -23,22 +23,22 @@ const GraphSection = () => {
 
           <div className="mt-10 grid sm:grid-cols-2 gap-8">
             {/* Feature 1 */}
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <span className="text-purple-500">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                  </svg>
-                </span>
-                <h3 className="text-purple-500 font-semibold text-xl">Autonomous</h3>
-              </div>
-              <p className="text-gray-400 text-sm">
-                AI that thinks and acts so your problems may resolve soon.
-              </p>
-            </div>
+           <div className="space-y-2 w-full border border-gray p-4 rounded-4xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+                  <div className="flex items-center gap-2">
+                    <span className="text-purple-500">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                      </svg>
+                    </span>
+                    <h3 className="text-purple-500 font-semibold text-xl">Autonomous</h3>
+                  </div>
+                  <p className="text-gray-400 text-sm">
+                    AI that thinks and acts so your problems may resolve soon.
+                  </p>
+                </div>
 
             {/* Feature 2 */}
-            <div className="space-y-2">
+            <div className="space-y-2 w-full border border-gray p-4 rounded-4xl shadow-lg transform transition-transform duration-300 hover:scale-105">
               <div className="flex items-center gap-2">
                 <span className="text-purple-500">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

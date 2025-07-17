@@ -16,7 +16,7 @@ import Contact from './pages/Contact.jsx';
 import Signup from './pages/auth/Signup.jsx';
 import Login from './pages/auth/Login.jsx';
 import Moreabout from './components/Moreabout.jsx';
-import Last from './components/Last.jsx';
+import TabSwitching from './components/TabSwitching.jsx';
 // import Pricing from './pages/Pricing.jsx';
 import Snapfix from './pages/Snapfix.jsx';
 import AdminDashboard from './pages/Adminpage.jsx';
@@ -41,7 +41,7 @@ const AppWrapper = () => {
               <About />
               <AboutSecond />
               <Moreabout />
-              <Last />
+              <TabSwitching />
               <GraphSection/>
               <Ending />
               <Footer />

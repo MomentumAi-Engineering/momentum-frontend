@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Chart from '../mini-components/Graph';
 
-const Last = () => {
+const TabSwitching = () => {
   const [activeTab, setActiveTab] = useState('whyBitcoin');
 
   const cardClasses =
-    'w-[320px] h-[400px] bg-black bg-opacity-80 border border-gray-700 rounded-xl p-6 shadow-[0_0_20px_#00ffcc66] hover:shadow-[0_0_30px_#00ffccaa] transition-shadow duration-500 flex flex-col justify-between';
+    'w-[320px] h-[400px] bg-black bg-opacity-80 border border-gray-700 rounded-xl p-6 shadow-[0_0_20px_#a855f766] hover:shadow-[0_0_30px_#a855f7aa] transition-shadow duration-500 flex flex-col justify-between';
 
   const renderThreePanels = () => {
     switch (activeTab) {
@@ -29,8 +29,8 @@ const Last = () => {
                 </li>
               </ul>
               <p className="text-gray-400 text-sm mt-4 text-center">
-                The greatest digital transformation of the 21st century is <br />
-                <span className="text-yellow-400 font-bold">digital capital</span>.
+                A great contribution in the 21st century <br />
+                
               </p>
             </div>
           </div>
@@ -41,20 +41,20 @@ const Last = () => {
           <div className="flex flex-wrap justify-center gap-10">
             <div className={cardClasses}>
               <h3 className="text-white text-xl font-semibold mb-4 text-center">
-                Superior store of value in digital age
+                Great value of products in  digital age.
               </h3>
               <ul className="text-gray-300 text-lg space-y-3">
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>One Photo, Easy Report
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>AI Decision Making
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>AI-Powered Detection
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Advance Analytics
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Anonymous Reporting
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Powerful Insights
                 </li>
                 <li className="flex items-center">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Decentralized
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Enterprise Security
                 </li>
               </ul>
               <p className="text-gray-400 text-sm mt-4 text-center">
@@ -71,7 +71,7 @@ const Last = () => {
               <h3 className="text-white text-xl font-semibold mb-4 text-center">Largest growing AI Company</h3>
               <div className="bg-gray-700 bg-opacity-40 p-3 rounded-md text-sm text-gray-300">
                 <p className="text-white font-semibold mb-2">Market Cap</p>
-                <div className="flex justify-between py-1"><span>Gold</span><span>$1.935 T</span></div>
+                <div className="flex justify-between py-1"><span>Google</span><span>$1.935 T</span></div>
                 <div className="flex justify-between py-1"><span>Microsoft</span><span>$1.935 T</span></div>
                 <div className="flex justify-between py-1"><span>Amazon</span><span>$1.935 T</span></div>
                 <div className="flex justify-between py-1"><span>Alphabet</span><span>$1.935 T</span></div>
@@ -100,15 +100,15 @@ const Last = () => {
         {/* Tab Navigation */}
         <div className="flex justify-center items-center mb-12 mt-20 space-x-4">
           <div className={tabClass('whyBitcoin')} onClick={() => setActiveTab('whyBitcoin')}>
-            Why Snapfix?
+            WHY SNAPFIX?
           </div>
           <span className="h-0.5 w-16 bg-gray-700"></span>
           <div className={tabClass('whyGiftBitcoin')} onClick={() => setActiveTab('whyGiftBitcoin')}>
-            Why Purchase Snapfix?
+            OUR FEATURES
           </div>
           <span className="h-0.5 w-16 bg-gray-700"></span>
           <div className={tabClass('whyUseBitcoinCard')} onClick={() => setActiveTab('whyUseBitcoinCard')}>
-            Why Use Snapfix?
+            WHY USE SNAPFIX?
           </div>
         </div>
 
@@ -116,11 +116,9 @@ const Last = () => {
         {renderThreePanels()}
       </div>
 
-          {/* <div>
-            <Chart />
-          </div> */}
+          
     </div>
   );
 };
 
-export default Last;
+export default TabSwitching;
