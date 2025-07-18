@@ -25,7 +25,7 @@ export default function SignupPage() {
       if (code) {
         try {
           setIsLoading(true);
-          const response = await fetch('http://localhost:5000/api/auth/google/callback', {
+          const response = await fetch('https://momentum-backend-p68k.onrender.com/api/auth/google/callback', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ code })
@@ -73,7 +73,7 @@ export default function SignupPage() {
 
     setIsLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/auth/signup", {
+      const res = await fetch("https://momentum-backend-p68k.onrender.com/api/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -96,7 +96,7 @@ export default function SignupPage() {
   };
 
   const handleGoogleSignup = () => {
-    const redirectUri = "http://localhost:5173/auth/callback/";
+    const redirectUri = "https://momntumai.com/auth/callback/";
     const scope = "openid profile email";
     const responseType = "code";
 
