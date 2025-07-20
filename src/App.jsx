@@ -19,7 +19,7 @@ import Moreabout from './components/Moreabout.jsx';
 import TabSwitching from './components/TabSwitching.jsx';
 // import Pricing from './pages/Pricing.jsx';
 import Snapfix from './pages/Snapfix.jsx';
-import AdminDashboard from './pages/Adminpage.jsx';
+
 import AuthCallback from './pages/auth/AuthCallback.jsx';
 import GraphSection from './components/BottomContext.jsx';
 import Ending from './components/Ending.jsx';
@@ -52,9 +52,9 @@ const AppWrapper = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Login />} />
         <Route path="/team" element={<Team />} />
-        {/* <Route path="/pricing" element={<Pricing />} /> */}
+        
         <Route path="/snapfix" element={<Snapfix />} />
-        <Route path="/admin" element={<AdminDashboard />} />
+        
         <Route path = "/auth/callback" element={<AuthCallback />} />
       </Routes>
     </div>
