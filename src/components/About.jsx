@@ -23,14 +23,14 @@ export default function SnapfixHero() {
       </span>
 
       {/* Try Now Button */}
-      <div className="absolute top-6 right-6 sm:top-8 sm:right-10 z-10">
+      {/* <div className="absolute top-6 right-6 sm:top-8 sm:right-10 z-10">
         <button
           onClick={() => (window.location.href = "/snapfix")}
           className="px-5 py-2 border border-white/20 rounded-full text-white text-xs sm:text-sm tracking-widest font-mono hover:bg-amber-50 hover:text-black transition"
         >
           TRY NOW
         </button>
-      </div>
+      </div> */}
 
       {/* Center Content */}
       <div className="z-10 text-center max-w-lg sm:max-w-2xl">

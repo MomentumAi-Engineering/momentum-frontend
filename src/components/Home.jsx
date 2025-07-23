@@ -39,9 +39,9 @@ export default function ChatInput() {
 
 
       {/* Arrow Down Icon */}
-      <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 z-10">
+      {/* <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 z-10">
         <ArrowDown className="text-white w-5 h-5 sm:w-6 sm:h-6 animate-bounce" />
-      </div>
+      </div> */}
 
       {/* Chat Input Box */}
       <div className="w-full max-w-3xl px-4 mb-6 mt-20 sm:mt-32 relative z-10">
