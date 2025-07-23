@@ -1,11 +1,10 @@
 import { Github, Linkedin, Instagram, X } from "lucide-react";
 
-export default function Footer() {
+export default function Socials() {
   return (
-    <footer className="bg-black text-white py-10 px-6 text-center space-y-6">
-      
+    <div className="flex flex-col gap-y-4 text-left">
       {/* Logo */}
-      <div className="flex justify-center">
+      <div className="flex items-center">
         <div className="relative">
           <div className="w-9 h-9 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-800 rounded-xl flex items-center justify-center shadow-lg">
             <div className="w-3 h-3 bg-white rounded-full"></div>
@@ -17,7 +16,7 @@ export default function Footer() {
       </div>
 
       {/* Social Icons */}
-      <div className="flex justify-center gap-6 text-gray-300 pt-5">
+      <div className="flex gap-4 text-gray-300">
         <a href="#" className="hover:text-white transition">
           <X className="w-5 h-5" />
         </a>
@@ -33,9 +32,9 @@ export default function Footer() {
       </div>
 
       {/* Footer Text */}
-      <p className="text-sm font-light text-gray-400 pt-5">
+      <p className="text-sm font-light text-gray-400">
         © 2025 MomntumAI, All rights reserved
       </p>
-    </footer>
+    </div>
   );
 }
