@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -7,9 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      setIsScrolled(scrollPosition > viewportHeight);
+      setIsScrolled(window.scrollY > 50); // triggers earlier
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -19,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
       isScrolled 
-        ?  'bg-black/15 backdrop-blur-2xl border border-white/10 shadow-2xl mx-0 md:mx-[15%] mt-4 md:rounded-3xl'
+        ? 'bg-black/70 backdrop-blur-lg border border-white/10 shadow-xl mx-0 md:mx-[15%] mt-4 md:rounded-3xl'
         : 'bg-transparent'
     }`}>
       <div className={`transition-all duration-700 ease-out ${
@@ -29,29 +28,23 @@ const Navbar = () => {
       }`}>
         <div className="navbar-css flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="relative">
-              <div className="w-9 h-9 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-800 rounded-xl flex items-center justify-center shadow-lg">
-                <div className="w-3 h-3 bg-white rounded-full"></div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full opacity-80"></div>
-                <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full opacity-80"></div>
-              </div>
-            </div>
-            <span className="text-white font-semibold text-xl tracking-wide">MomntumAI</span>
-          </div>
+          <Link to="/" className="flex items-center space-x-3 cursor-pointer">
+  <div className="relative">
+    <div className="w-9 h-9 bg-gradient-to-br from-blue-300 via-blue-500 to-blue-800 rounded-xl flex items-center justify-center shadow-lg">
+      <div className="w-3 h-3 bg-white rounded-full"></div>
+      <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full opacity-80"></div>
+      <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-blue-400 rounded-full opacity-80"></div>
+    </div>
+  </div>
+  <span className="text-white font-semibold text-xl tracking-wide">MomntumAI</span>
+</Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <div className="flex items-center space-x-10">
-              <a href="#product-section" className="text-white/90 hover:text-white transition-all duration-300 font-light text-base hover:scale-105 transform">
-                Products
-              </a>
-              <a href="/team" className="text-white/90 hover:text-white transition-all duration-300 font-light text-base hover:scale-105 transform">
-                Team
-              </a>
-              <a href="/contact" className="text-white/90 hover:text-white transition-all duration-300 font-light text-base hover:scale-105 transform">
-                Contact
-              </a>
+              <a href="#product-section" className="text-white/90 hover:text-white transition-all duration-300 font-light text-base hover:scale-105 transform">Products</a>
+              <a href="/team" className="text-white/90 hover:text-white transition-all duration-300 font-light text-base hover:scale-105 transform">Team</a>
+              <a href="/contact" className="text-white/90 hover:text-white transition-all duration-300 font-light text-base hover:scale-105 transform">Contact</a>
             </div>
             <a href="/signup">
               <button className="bg-white text-black px-5 py-2 rounded-full font-medium text-base transition-all duration-300 hover:bg-white/90 hover:scale-105 hover:shadow-xl transform">
@@ -78,7 +71,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-6 pb-4">
+        <div className="md:hidden px-6 pb-4 bg-black/70 backdrop-blur-lg">
           <div className="flex flex-col items-start space-y-4">
             <a href="#product-section" className="text-white/90 hover:text-white font-light text-base">Products</a>
             <a href="/team" className="text-white/90 hover:text-white font-light text-base">Team</a>
@@ -90,10 +83,6 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-      )}
-
-      {isScrolled && (
-        <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 rounded-3xl pointer-events-none"></div>
       )}
     </nav>
   );
