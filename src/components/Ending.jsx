@@ -4,25 +4,19 @@ const Ending = () => {
   return (
     <div className="bg-black min-h-screen flex items-center justify-center px-4 py-20">
       <div
-        className="relative rounded-[2rem] max-w-4xl w-full px-6 py-20 text-center overflow-hidden border border-white shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+        className="w-full max-w-3xl px-6 py-16 rounded-[2.5rem] border border-[#1E1E1E] shadow-[0_0_60px_rgba(255,255,255,0.05)] text-center"
         style={{
-          backgroundColor: "#161414",
+          background: 'linear-gradient(145deg, rgba(12,12,12,0.95), rgba(18,18,18,0.95))',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
         }}
       >
-        {/* Main Content */}
-        <h2 className="text-white text-3xl md:text-4xl font-bold mb-4">
-          Start Resolving Issues
+        <h2 className="text-white text-4xl font-bold mb-10">
+          Chains We Support
         </h2>
-        <p className="text-gray-400 text-lg mb-8">
-          The best platform u can get
-        </p>
 
-        <button
-          onClick={() => (window.location.href = "/signup")}
-          className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-md transition-all duration-200 flex items-center justify-center gap-2 mx-auto"
-        >
-          Get Started
-          <span className="text-white text-xl">↗</span>
+        <button className="mt-4 px-6 py-3 rounded-full bg-[rgba(20,20,20,0.9)] border border-[#2a2a2a] text-white text-base font-medium shadow-[inset_0_0_12px_rgba(255,255,255,0.05)] hover:shadow-[0_0_10px_rgba(255,255,255,0.1)] transition duration-300">
+          Get Started &rarr;
         </button>
       </div>
     </div>

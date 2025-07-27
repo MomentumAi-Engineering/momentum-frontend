@@ -19,17 +19,17 @@ const teamMembers = [
       "Joel is a scientist, strategist, and communicator with a vision to humanize AI. At MomntumAi he guides the creation of intuitive, ethical tools that solve real-world problems at scale.",
     // location: "San Francisco, CA",
     expertise: ["AI Strategy", "Nuclear Physics", "Product Vision"],
-    achievements: "PhD in Nuclear Physics, 15+ years in AI research",
+    // achievements: "PhD in Nuclear Physics, 15+ years in AI research",
     social: { github: "#", linkedin: "#", email: "joel@momentum.ai" },
   },
   {
     name: "Rishav Kumar",
-    role: "CTO & Co-Founder",
+    role: "Co Founder & Tech Lead",
     description:
       "Leading the technology strategy and execution at Momntum AI. Oversee AI-driven platforms, cloud infrastructure, and team innovation.",
     // location: "Toronto, ON",
     expertise: ["Cloud Architecture", "ML Engineering", "Team Leadership"],
-    achievements: "Built 3 unicorn startups, 50+ patents filed",
+    // achievements: "Built 3 unicorn startups, 50+ patents filed",
     social: { github: "#", linkedin: "#", email: "rishav@momentum.ai" },
   },
   {
@@ -39,7 +39,7 @@ const teamMembers = [
       "Full-stack developer shaping the UI/UX and backend architecture of MomntumAi. Google Code-in winner, open source contributor.",
     // location: "New York, NY",
     expertise: ["Full-Stack Development", "UI/UX Design", "System Architecture"],
-    achievements: "Google Code-in winner, Open source contributor",
+    // achievements: "Google Code-in winner, Open source contributor",
     social: { github: "#", linkedin: "#", email: "raj@momentum.ai" },
   },
 ];
@@ -69,13 +69,13 @@ export default function TeamPage() {
         </div>
 
         {/* Heading + Paragraph */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight pt-10 text-center">
-          We care deeply about the
-          <span className="block text-gray-300">quality of our work</span>
+        <h1 className="text-4xl sm:text-5xl md:text-4xl font-bold text-white leading-tight pt-10 text-center">
+          Ethical, human-centred AI that turns 
+          <span className="block text-gray-300">real-world problems into elegant solutions.</span>
         </h1>
 
-        <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed text-center mt-6">
-          Momntum has always been a fully remote company. Today, our <span className="text-gray-200 font-semibold">small but mighty team</span> is distributed across North America. What unites us is <span className="text-gray-200 font-semibold">relentless focus</span>, fast execution, and our passion for software craftsmanship.
+        <p className="text-lg sm:text-base text-gray-400 max-w-3xl mx-auto leading-relaxed text-center mt-6">
+          Momntum has always been a fully remote company. Today, our small but mighty team is distributed across North America. What unites us is relentless focus, fast execution, and our passion for software craftsmanship.
         </p>
 
         {/* Stats */}
@@ -129,10 +129,10 @@ export default function TeamPage() {
                 <span className="font-medium text-gray-300">Expertise:</span>{" "}
                 {member.expertise.join(", ")}
               </div>
-              <div className="mt-2 text-xs text-gray-500 text-center z-10 relative">
+              {/* <div className="mt-2 text-xs text-gray-500 text-center z-10 relative">
                 <span className="font-medium text-gray-300">Achievements:</span>{" "}
                 {member.achievements}
-              </div>
+              </div> */}
               <div className="flex justify-center gap-4 mt-4 z-10 relative">
                 <a href={member.social.linkedin}><Linkedin className="w-4 h-4 hover:text-white" /></a>
                 <a href={`mailto:${member.social.email}`}><Mail className="w-4 h-4 hover:text-white" /></a>
@@ -152,12 +152,7 @@ export default function TeamPage() {
             We're always looking for passionate individuals who share our vision of creating ethical, powerful AI solutions that make a real difference.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 border border-gray-600">
-              View Open Positions
-            </button>
-            <button className="border border-gray-600 hover:border-gray-500 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-gray-800/50">
-              Learn About Our Culture
-            </button>
+            
           </div>
         </div>
 

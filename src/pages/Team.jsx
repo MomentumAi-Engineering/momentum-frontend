@@ -24,10 +24,10 @@ const Team = () => {
           <p className="text-xs md:text-sm text-gray-100 tracking-widest uppercase mb-6">
             [ Our Mission ]
           </p>
-          <h1 className="text-5xl md:text-7xl font-light text-gray-400 leading-tight">
-            Understand
-            <br />
-            <span className="text-gray-400">the Problem</span>
+          <h1 className="text-5xl md:text-4xl font-light text-amber-50 leading-tight">
+            Empower people and organizations with 
+           
+            <span className="text-amber-50"> responsible, life-enhancing AI.</span>
           </h1>
         </div>
 
@@ -40,9 +40,10 @@ const Team = () => {
         <TeamIdeas />
       </section>
 
-      <section className="px-6 md:px-20 py-16">
-        <Socials />
+     <section className="px-6 md:px-20 py-16 flex justify-center">
+            <Socials />
       </section>
+
       
     </div>
   );

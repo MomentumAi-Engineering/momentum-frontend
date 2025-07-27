@@ -6,11 +6,11 @@ const GraphSection = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Left Side */}
         <div className="flex-1 text-white max-w-2xl">
-          <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <h1 className="text-2xl md:text-5xl lg:text-5xl font-extralight leading-tight">
             The <span className="text-white">Snapfix</span> revolutionizes business automation.
           </h1>
 
-          <div className="mt-8 space-y-6 text-gray-300 text-lg">
+          <div className="mt-8 space-y-6 text-gray-300 font-extralight text-base">
             <p>
               We don't just build AI. <span className="text-purple-500 font-semibold">We create an ecosystem</span> — where intelligent
               systems work together, replacing inefficiency with automation.
@@ -23,22 +23,22 @@ const GraphSection = () => {
 
           <div className="mt-10 grid sm:grid-cols-2 gap-8">
             {/* Feature 1 */}
-           <div className="space-y-2 w-full border border-gray p-4 rounded-4xl shadow-lg transform transition-transform duration-300 hover:scale-105">
-                  <div className="flex items-center gap-2">
-                    <span className="text-purple-500">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                      </svg>
-                    </span>
-                    <h3 className="text-purple-500 font-semibold text-xl">Autonomous</h3>
-                  </div>
-                  <p className="text-gray-400 text-sm">
-                    AI that thinks and acts so your problems may resolve soon.
-                  </p>
-                </div>
+            <div className="w-full h-32 p-4 rounded-[2rem] border border-white/20 shadow-lg bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="text-purple-500">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                  </svg>
+                </span>
+                <h3 className="text-purple-500 font-semibold text-xl">Autonomous</h3>
+              </div>
+              <p className="text-gray-400 text-sm">
+                AI that thinks and acts so your problems may resolve soon.
+              </p>
+            </div>
 
             {/* Feature 2 */}
-            <div className="space-y-2 w-full border border-gray p-4 rounded-4xl shadow-lg transform transition-transform duration-300 hover:scale-105">
+            <div className="w-full h-32 p-4 rounded-[2rem] border border-white/20 shadow-lg bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] space-y-2">
               <div className="flex items-center gap-2">
                 <span className="text-purple-500">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

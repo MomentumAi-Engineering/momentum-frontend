@@ -32,7 +32,7 @@ export default function Socials() {
       </div>
 
       {/* Footer Text */}
-      <p className="text-sm font-light text-gray-400">
+      <p className="text-sm font-light text-gray-400 flex justify-end">
         © 2025 MomntumAI, All rights reserved
       </p>
     </div>
