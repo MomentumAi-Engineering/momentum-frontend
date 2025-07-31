@@ -35,7 +35,7 @@ export default function SignupPage() {
 
           if (response.ok) {
             localStorage.setItem('token', data.token);
-            window.location.href = data.redirectTo || '/snapfix';
+            window.location.href = "http://localhost:5174/";
           } else {
             setError(data.message || 'Google authentication failed');
           }
