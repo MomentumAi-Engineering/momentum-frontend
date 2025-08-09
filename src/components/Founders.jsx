@@ -20,17 +20,17 @@ const teamMembers = [
     // location: "San Francisco, CA",
     expertise: ["AI Strategy", "Nuclear Physics", "Product Vision"],
     // achievements: "PhD in Nuclear Physics, 15+ years in AI research",
-    social: { github: "#", linkedin: "#", email: "joel@momentum.ai" },
+    social: { github: "#", linkedin: "#", email: "joel@momntumai.com" },
   },
   {
     name: "Rishav Kumar",
-    role: "Co Founder & Tech Lead",
+    role: "Co Founder & CTO",
     description:
-      "Leading the technology strategy and execution at Momntum AI. Oversee AI-driven platforms, cloud infrastructure, and team innovation.",
+      "Driving technology vision and execution at Momntum AI — delivering AI-powered platforms, scaling cloud infrastructure, and cultivating a high-impact culture of innovation.",
     // location: "Toronto, ON",
     expertise: ["Cloud Architecture", "ML Engineering", "Team Leadership"],
     // achievements: "Built 3 unicorn startups, 50+ patents filed",
-    social: { github: "#", linkedin: "#", email: "rishav@momentum.ai" },
+    social: { github: "#", linkedin: "https://www.linkedin.com/in/rishav-kumar-983a5b273/", email: "rishav@momntumai.com" },
   },
   {
     name: "Raj Baidyanath",
@@ -40,7 +40,7 @@ const teamMembers = [
     // location: "New York, NY",
     expertise: ["Full-Stack Development", "UI/UX Design", "System Architecture"],
     // achievements: "Google Code-in winner, Open source contributor",
-    social: { github: "#", linkedin: "#", email: "raj@momentum.ai" },
+    social: { github: "#", linkedin: "#", email: "raj@momntumai.com" },
   },
 ];
 
