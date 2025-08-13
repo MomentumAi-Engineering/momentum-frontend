@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import obj2 from "momentum-frontend/src/assets/Object 02.png";
+import obj2 from "../assets/object-02.png";
 import "./Navbar.css";
 
 const Navbar = () => {
