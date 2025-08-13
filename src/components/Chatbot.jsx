@@ -143,3 +143,5 @@ export default function Chatbot({ showBot, setShowBot }) {
     </AnimatePresence>
   );
 }
+
+// updated

@@ -74,3 +74,5 @@ export default function Socials() {
     </motion.div>
   );
 }
+
+// updated
