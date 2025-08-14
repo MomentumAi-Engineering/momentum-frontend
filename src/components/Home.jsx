@@ -59,6 +59,26 @@ export default function ChatInput() {
 
   return (
     <div className="relative w-full min-h-screen flex flex-col items-center pt-28 sm:pt-36 overflow-hidden bg-black">
+
+
+  {/* ✅ Hidden SEO Content */}
+  <div className="sr-only">
+    <h1>Momntum AI - Innovation with a Human Purpose.</h1>
+    <p>
+      MomntumAI is built with a vision to revolutionize how ethical technology interacts
+      with modern business. We blend innovation with responsibility, ensuring that every
+      solution we offer drives impact not just in productivity, but in people’s lives too.
+    </p>
+    <p>
+      Founded by Joel Girones and Rishav Kumar, Momntum AI is a pioneer in creating AI solutions 
+      that balance technological advancement with ethical responsibility.
+    </p>
+    <a href="https://momntumai.com/about">About Momntum AI</a>
+    <a href="https://momntumai.com/contact">Contact Momntum AI</a>
+  
+      
+  </div>
+
       {/* Glowing blobs */}
       <motion.div
         animate={{ y: [0, 20, 0] }}
@@ -205,5 +225,3 @@ export default function ChatInput() {
     </div>
   );
 }
-
-// updated
