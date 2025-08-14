@@ -2,7 +2,13 @@
 
 .navbar-css {
     font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem; /* Default size for desktop */
 }
 
-
- /* updated */
+/* Media queries for mobile responsiveness */
+@media (max-width: 640px) {
+    .navbar-css {
+        font-size: 0.9rem; /* Reduced size for mobile */
+        line-height: 1.4; /* Improve readability */
+    }
+}
