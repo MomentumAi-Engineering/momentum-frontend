@@ -1,6 +1,6 @@
 import { Github, Linkedin, Instagram, Facebook } from "lucide-react";
 import { SiX } from "react-icons/si";
-import obj2 from "../assets/object-02.png";
+import logo from "../assets/logo.png";
 import { motion } from "framer-motion";
 
 export default function Socials() {

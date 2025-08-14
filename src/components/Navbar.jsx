@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/logo.png"; // Apna logo file ka path
-import obj2 from "../assets/object-02.png"; // Object image (agar use karna ho)
+import logo from "../assets/logo.png"; // Logo image
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -43,7 +42,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 cursor-pointer">
             <motion.img
-              src={logo} // Apne logo ka path
+              src={logo}
               alt="MomentumAI Logo"
               className="h-10 w-auto object-contain"
               whileHover={{ scale: 1.1, rotate: 2 }}
