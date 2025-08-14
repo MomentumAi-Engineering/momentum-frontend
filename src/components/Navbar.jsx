@@ -49,7 +49,7 @@ const Navbar = () => {
               transition={{ type: "spring", stiffness: 300 }}
             />
             <span className="text-white font-semibold text-xl tracking-wide">
-              MomentumAI
+              MomntumAI
             </span>
           </Link>
 
