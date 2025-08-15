@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 export default function Socials() {
   const socials = [
-    { icon: <SiX className="w-5 h-5" />, label: "Twitter / X", link: "#", color: "#000000" },
+    { icon: <SiX className="w-5 h-5" />, label: "Twitter / X", link: "https://x.com/Momntum_Ai", color: "#000000" },
     { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", link: "https://www.linkedin.com/company/momntum-ai-us", color: "#0077B5" },
-    { icon: <Instagram className="w-5 h-5" />, label: "Instagram", link: "#", color: "#E1306C" },
+    { icon: <Instagram className="w-5 h-5" />, label: "Instagram", link: "https://www.instagram.com/momntum.ai/", color: "#E1306C" },
     { icon: <Github className="w-5 h-5" />, label: "GitHub", link: "#", color: "#171515" },
-    { icon: <Facebook className="w-5 h-5" />, label: "Facebook", link: "#", color: "#1877F2" },
+    { icon: <Facebook className="w-5 h-5" />, label: "Facebook", link: "https://www.facebook.com/MomntumAi", color: "#1877F2" },
   ];
 
   return (
