@@ -31,7 +31,7 @@ const teamMembers = [
   },
   {
     name: "Raj Baidyanath",
-    role: "Software Developer",
+    role: "Lead Software Developer",
     description:
       "Full-stack developer shaping the UI/UX and backend architecture of MomntumAi. Google Code-in winner, open source contributor.",
     expertise: ["Full-Stack Development", "UI/UX Design", "System Architecture"],
