@@ -49,23 +49,31 @@ const GrokGrid = () => {
         >
           <div className="max-w-md">
             <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              SnapFix – Transform Visual Inputs
+              EaiserAI – Transform Visual Inputs
             </h2>
             <p className="text-sm text-gray-300 mt-4 leading-relaxed">
-              SnapFix by <span className="text-purple-400 font-semibold">MomntumAI</span> converts photos and brief descriptions into intelligent, structured reports for infrastructure, safety, and environmental issues.
+              Eaiser by <span className="text-purple-400 font-semibold">MomntumAI</span> converts photos and brief descriptions into intelligent, structured reports for infrastructure, safety, and environmental issues.
             </p>
             <p className="text-sm text-gray-300 mt-3 leading-relaxed">
-              Minimize effort, maximize clarity. SnapFix auto-routes cases to the right agency or contractor for swift, accurate resolutions. <span className="italic">One snap. One line. Complete action.</span>
+              Minimize effort, maximize clarity. Eaiser auto-routes cases to the right agency or contractor for swift, accurate resolutions. <span className="italic">One snap. One line. Complete action.</span>
             </p>
-            <motion.button
-              className="mt-6 flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-600 to-blue-600 text-white border border-purple-500/30 hover:border-purple-500/50 transition-all"
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              EXPERIENCE SNAPFIX
-              <ArrowRight className="w-4 h-4" />
-            </motion.button>
+           <motion.a
+  href="https://www.eaiser.ai/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium 
+             bg-gradient-to-r from-purple-600 to-blue-600 text-white 
+             border border-purple-500/30 hover:border-purple-500/50 
+             transition-all w-fit"
+  variants={buttonVariants}
+  whileHover="hover"
+  whileTap="tap"
+>
+  EXPERIENCE EaiserAI
+  <ArrowRight className="w-4 h-4" />
+</motion.a>
+
+
           </div>
         </motion.div>
 
@@ -89,7 +97,7 @@ const GrokGrid = () => {
               <p className="text-green-400 text-sm font-semibold">Intelligent Routing</p>
             </div>
             <p className="text-sm text-gray-300 leading-relaxed">
-              SnapFix instantly identifies the right authority or contractor, automating the handoff process to minimize delays and ensure rapid resolution.
+              Eaiser instantly identifies the right authority or contractor, automating the handoff process to minimize delays and ensure rapid resolution.
             </p>
           </div>
         </motion.div>
@@ -108,17 +116,22 @@ const GrokGrid = () => {
               Zero Complexity, Maximum Clarity
             </h2>
             <p className="text-sm text-gray-300 mt-4 leading-relaxed">
-              Submit a photo and a brief note—SnapFix handles the rest. No forms, no hassle. Generate clean, actionable reports in seconds with AI-driven precision.
+              Submit a photo and a brief note—Eaiser handles the rest. No forms, no hassle. Generate clean, actionable reports in seconds with AI-driven precision.
             </p>
             <motion.button
-              className="mt-6 flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-600 to-blue-600 text-white border border-purple-500/30 hover:border-purple-500/50 transition-all"
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              GET STARTED
-              <Camera className="w-4 h-4" />
-            </motion.button>
+  onClick={() => window.open("https://www.eaiser.ai/report", "_blank")}
+  className="mt-6 flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium 
+             bg-gradient-to-r from-purple-600 to-blue-600 text-white 
+             border border-purple-500/30 hover:border-purple-500/50 
+             transition-all"
+  variants={buttonVariants}
+  whileHover="hover"
+  whileTap="tap"
+>
+  GET STARTED
+  <Camera className="w-4 h-4" />
+</motion.button>
+
           </div>
         </motion.div>
 
@@ -142,7 +155,7 @@ const GrokGrid = () => {
               <p className="text-green-400 text-sm font-semibold">Real-World Impact</p>
             </div>
             <p className="text-sm text-gray-300 leading-relaxed">
-              From broken sidewalks to environmental hazards, SnapFix transforms community concerns into data-driven action plans with measurable, lasting impact.
+              From broken sidewalks to environmental hazards, Eaiser transforms community concerns into data-driven action plans with measurable, lasting impact.
             </p>
           </div>
         </motion.div>

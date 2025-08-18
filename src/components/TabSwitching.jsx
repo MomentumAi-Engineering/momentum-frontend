@@ -13,7 +13,7 @@ const TabSwitching = () => {
         return (
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
             <div className={cardClasses}>
-              <h3 className="text-white text-lg sm:text-xl font-semibold mb-4">Why Snapfix?</h3>
+              <h3 className="text-white text-lg sm:text-xl font-semibold mb-4">Why EaiserAI?</h3>
               <ul className="text-gray-300 text-base sm:text-lg space-y-3">
                 <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>One Photo, Easy Report</li>
                 <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>AI-Powered Detection</li>
@@ -39,7 +39,7 @@ const TabSwitching = () => {
                 <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Enterprise Security</li>
               </ul>
               <p className="text-gray-400 text-sm mt-4 text-center">
-                Safe, anonymous, and smart. That’s <span className="text-yellow-400 font-bold">Snapfix</span>.
+                Safe, anonymous, and smart. That’s <span className="text-yellow-400 font-bold">EaiserAI</span>.
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ const TabSwitching = () => {
                 <div className="flex justify-between py-1"><span>Microsoft</span><span>$1.935 T</span></div>
                 <div className="flex justify-between py-1"><span>Amazon</span><span>$1.935 T</span></div>
                 <div className="flex justify-between py-1"><span>Alphabet</span><span>$1.935 T</span></div>
-                <div className="flex justify-between py-1"><span>Snapfix</span><span className="text-yellow-400 font-bold">$1.93 T</span></div>
+                <div className="flex justify-between py-1"><span>EaiserAI</span><span className="text-yellow-400 font-bold">$1.93 T</span></div>
               </div>
               <p className="text-gray-400 text-sm mt-4 text-center">
                 <span className="text-yellow-400 font-bold">7th largest market cap</span>
@@ -82,11 +82,11 @@ const TabSwitching = () => {
       <div className="max-w-7xl mx-auto">
         {/* Tab Navigation */}
         <div className="flex overflow-x-auto sm:overflow-visible no-scrollbar sm:justify-center items-center mb-12 mt-10 sm:mt-20 space-x-4 sm:space-x-6">
-          <div className={tabClass('whyBitcoin')} onClick={() => setActiveTab('whyBitcoin')}>WHY SNAPFIX?</div>
+          <div className={tabClass('whyBitcoin')} onClick={() => setActiveTab('whyBitcoin')}>WHY EaiserAI?</div>
           <div className="hidden sm:block h-0.5 w-10 bg-gray-700"></div>
           <div className={tabClass('whyGiftBitcoin')} onClick={() => setActiveTab('whyGiftBitcoin')}>OUR FEATURES</div>
           <div className="hidden sm:block h-0.5 w-10 bg-gray-700"></div>
-          <div className={tabClass('whyUseBitcoinCard')} onClick={() => setActiveTab('whyUseBitcoinCard')}>WHY USE SNAPFIX?</div>
+          <div className={tabClass('whyUseBitcoinCard')} onClick={() => setActiveTab('whyUseBitcoinCard')}>WHY USE EaiserAI?</div>
         </div>
 
         {/* Tab Content */}
