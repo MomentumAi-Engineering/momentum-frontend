@@ -24,6 +24,8 @@ import AuthCallback from './pages/auth/AuthCallback.jsx';
 import GraphSection from './components/BottomContext.jsx';
 import Ending from './components/Ending.jsx';
 
+import { Toaster } from "react-hot-toast";
+
 const AppWrapper = () => {
   const location = useLocation();
   const hideNavbar = location.pathname === '/snapfix';
@@ -32,6 +34,9 @@ const AppWrapper = () => {
     <div className="h-screen">
       {!hideNavbar && <Navbar />}
 
+
+      <Toaster position="top-right" reverseOrder={false} />
+      
       <Routes>
         <Route
           path="/"

@@ -34,11 +34,12 @@ export default function SignupPage() {
           const data = await response.json();
 
           if (response.ok) {
-            localStorage.setItem('token', data.token);
-            window.location.href = "http://localhost:5174/";
-          } else {
-            setError(data.message || 'Google authentication failed');
-          }
+  localStorage.setItem('token', data.token);
+  window.location.href = "https://eaiser.ai";  // 🌍 external redirect
+} else {
+  setError(data.message || 'Google authentication failed');
+}
+
         } catch (err) {
           setError('Google authentication failed: ' + err.message);
         } finally {
@@ -84,15 +85,18 @@ export default function SignupPage() {
       });
 
       const data = await res.json();
-      if (!res.ok) throw new Error(data.message || "Signup failed");
+    if (!res.ok) throw new Error(data.message || "Signup failed");
 
-      localStorage.setItem("token", data.token);
-      window.location.href = "http://localhost:5174/";
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setIsLoading(false);
-    }
+localStorage.setItem("token", data.token);
+
+// 🌍 external redirect
+window.location.href = "https://eaiser.ai";  
+} catch (err) {
+  setError(err.message);
+} finally {
+  setIsLoading(false);
+}
+
   };
 
   const handleGoogleSignup = () => {

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import "./Home.css";
 import ShinyText from "../mini-components/Shiny-text";
+import { Link } from "react-router-dom";
 
 export default function ChatInput() {
   const [message, setMessage] = useState("");
@@ -142,12 +143,14 @@ export default function ChatInput() {
 
       {/* CTA Buttons */}
       <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 mb-10 relative z-10">
+        <Link to='/signup'>
         <motion.button
           whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
           className="px-5 py-2 border border-white/20 rounded-full text-white text-xs sm:text-sm tracking-widest font-mono transition"
         >
           BUILD WITH MOMNTUM
         </motion.button>
+        </Link>
         <motion.button
           whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
           onClick={() => setShowBot(true)}
