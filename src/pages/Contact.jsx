@@ -92,7 +92,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="font-semibold">Office</p>
-                <p>MomentumAi Headquarters</p>
+                <p>MomntumAi Headquarters</p>
                 <p>Nashville, Tennessee</p>
                 <p>United States</p>
               </div>
