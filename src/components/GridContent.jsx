@@ -57,15 +57,23 @@ const GrokGrid = () => {
             <p className="text-sm text-gray-300 mt-3 leading-relaxed">
               Minimize effort, maximize clarity. Eaiser auto-routes cases to the right agency or contractor for swift, accurate resolutions. <span className="italic">One snap. One line. Complete action.</span>
             </p>
-            <motion.button
-              className="mt-6 flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-600 to-blue-600 text-white border border-purple-500/30 hover:border-purple-500/50 transition-all"
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              EXPERIENCE EaiserAI
-              <ArrowRight className="w-4 h-4" />
-            </motion.button>
+           <motion.a
+  href="https://www.eaiser.ai/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium 
+             bg-gradient-to-r from-purple-600 to-blue-600 text-white 
+             border border-purple-500/30 hover:border-purple-500/50 
+             transition-all w-fit"
+  variants={buttonVariants}
+  whileHover="hover"
+  whileTap="tap"
+>
+  EXPERIENCE EaiserAI
+  <ArrowRight className="w-4 h-4" />
+</motion.a>
+
+
           </div>
         </motion.div>
 
@@ -111,14 +119,19 @@ const GrokGrid = () => {
               Submit a photo and a brief note—Eaiser handles the rest. No forms, no hassle. Generate clean, actionable reports in seconds with AI-driven precision.
             </p>
             <motion.button
-              className="mt-6 flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-600 to-blue-600 text-white border border-purple-500/30 hover:border-purple-500/50 transition-all"
-              variants={buttonVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              GET STARTED
-              <Camera className="w-4 h-4" />
-            </motion.button>
+  onClick={() => window.open("https://www.eaiser.ai/report", "_blank")}
+  className="mt-6 flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium 
+             bg-gradient-to-r from-purple-600 to-blue-600 text-white 
+             border border-purple-500/30 hover:border-purple-500/50 
+             transition-all"
+  variants={buttonVariants}
+  whileHover="hover"
+  whileTap="tap"
+>
+  GET STARTED
+  <Camera className="w-4 h-4" />
+</motion.button>
+
           </div>
         </motion.div>
 
