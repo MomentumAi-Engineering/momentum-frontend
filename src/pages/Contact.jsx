@@ -165,22 +165,40 @@ const Contact = () => {
             <div>
               <p className="text-sm font-medium mb-2">Reason for Contact</p>
               <div className="flex flex-wrap gap-4 text-sm">
-                {["General Inquiry", "Technical Support", "Sales", "Other"].map(
-                  (r) => (
-                    <label key={r} className="flex items-center gap-2">
-                      <input
-                        type="radio"
-                        name="reason"
-                        value={r}
-                        checked={reason === r}
-                        onChange={(e) => setReason(e.target.value)}
-                        className="accent-white"
-                        required
-                      />
-                      {r}
-                    </label>
-                  )
-                )}
+                {["General Inquiry", "Technical Support", "Sales", "Other"].map((r) => (
+                  <label
+                    key={r}
+                    className="flex items-center gap-2 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="reason"
+                      value={r}
+                      checked={reason === r}
+                      onChange={(e) => setReason(e.target.value)}
+                      className="hidden peer"
+                      required
+                    />
+                    {/* Circle with tick and green fill when checked */}
+                    <span className="w-5 h-5 flex items-center justify-center rounded-full border-2 border-gray-400 peer-checked:border-green-500 peer-checked:bg-green-500 transition-colors">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-3 w-3 text-white hidden peer-checked:block"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M5 10l3 3 7-7"
+                        />
+                      </svg>
+                    </span>
+                    {r}
+                  </label>
+                ))}
               </div>
             </div>
 
@@ -202,13 +220,27 @@ const Contact = () => {
 
             {/* Privacy Checkbox */}
             <div className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                checked={privacyAccepted}
-                onChange={(e) => setPrivacyAccepted(e.target.checked)}
-                className="accent-white"
-                required
-              />
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={privacyAccepted}
+                  onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                  className="hidden peer"
+                  required
+                />
+                <span className="w-5 h-5 flex items-center justify-center rounded border-2 border-gray-400 peer-checked:border-green-500 peer-checked:bg-green-500 transition-colors">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 text-white hidden peer-checked:block"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+              </label>
               <span className="text-sm text-gray-400">
                 I agree to the processing of my personal data according to the{" "}
                 <span className="underline cursor-pointer text-white">
@@ -235,3 +267,4 @@ const Contact = () => {
 };
 
 export default Contact;
+    
