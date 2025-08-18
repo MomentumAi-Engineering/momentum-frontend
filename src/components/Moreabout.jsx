@@ -16,7 +16,7 @@ const Moreabout = () => {
 
       {/* Main Heading */}
       <h1 className="my-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium mb-4 text-white">
-        Snapfix is the easiest place <br className="hidden sm:block" /> to automate work with AI
+        Eaiser is the easiest place <br className="hidden sm:block" /> to automate work with AI
       </h1>
 
       {/* Tab Selector */}

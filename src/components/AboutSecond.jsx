@@ -57,7 +57,7 @@ const AboutSecond = () => {
         viewport={{ once: true }}
         className="text-4xl sm:text-5xl md:text-6xl font-medium mb-4"
       >
-        Snapfix for all humanity
+        Eaiser for all humanity
       </motion.h1>
 
       <motion.h2
