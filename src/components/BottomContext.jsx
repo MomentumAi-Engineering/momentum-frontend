@@ -43,7 +43,7 @@ const GraphSection = () => {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight">
-            The <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">Snapfix</span> revolutionizes business automation
+            The <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">Eaiser</span> revolutionizes business automation
           </h1>
 
           <div className="mt-8 space-y-6 text-gray-200 font-light text-base leading-relaxed">
