@@ -179,11 +179,11 @@ const Contact = () => {
                       className="hidden peer"
                       required
                     />
-                    {/* Circle with tick and green fill when checked */}
-                    <span className="w-5 h-5 flex items-center justify-center rounded-full border-2 border-gray-400 peer-checked:border-green-500 peer-checked:bg-green-500 transition-colors">
+                    {/* Smaller circle with tick and green fill when checked */}
+                    <span className="w-4 h-4 flex items-center justify-center rounded-full border-2 border-gray-400 peer-checked:border-green-500 peer-checked:bg-green-500 transition-colors">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-3 w-3 text-white hidden peer-checked:block"
+                        className="h-2.5 w-2.5 text-white hidden peer-checked:block"
                         viewBox="0 0 20 20"
                         fill="none"
                         stroke="currentColor"
@@ -228,10 +228,11 @@ const Contact = () => {
                   className="hidden peer"
                   required
                 />
-                <span className="w-5 h-5 flex items-center justify-center rounded border-2 border-gray-400 peer-checked:border-green-500 peer-checked:bg-green-500 transition-colors">
+                {/* Smaller box with green fill and white check when checked */}
+                <span className="w-4 h-4 flex items-center justify-center rounded border-2 border-gray-400 peer-checked:border-green-500 peer-checked:bg-green-500 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 text-white hidden peer-checked:block"
+                    className="h-3 w-3 text-white hidden peer-checked:block"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -267,4 +268,3 @@ const Contact = () => {
 };
 
 export default Contact;
-    
