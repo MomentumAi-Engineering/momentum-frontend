@@ -1,6 +1,16 @@
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, User, MessageSquareText, SendHorizonal } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  User,
+  MessageSquareText,
+  SendHorizonal,
+} from "lucide-react";
 import toast from "react-hot-toast";
+
+// ✅ use env variable for backend API
+const API_BASE = import.meta.env.VITE_API_URL;
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -22,7 +32,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch(`${API_BASE}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -155,20 +165,22 @@ const Contact = () => {
             <div>
               <p className="text-sm font-medium mb-2">Reason for Contact</p>
               <div className="flex flex-wrap gap-4 text-sm">
-                {["General Inquiry", "Technical Support", "Sales", "Other"].map((r) => (
-                  <label key={r} className="flex items-center gap-2">
-                    <input
-                      type="radio"
-                      name="reason"
-                      value={r}
-                      checked={reason === r}
-                      onChange={(e) => setReason(e.target.value)}
-                      className="accent-white"
-                      required
-                    />
-                    {r}
-                  </label>
-                ))}
+                {["General Inquiry", "Technical Support", "Sales", "Other"].map(
+                  (r) => (
+                    <label key={r} className="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="reason"
+                        value={r}
+                        checked={reason === r}
+                        onChange={(e) => setReason(e.target.value)}
+                        className="accent-white"
+                        required
+                      />
+                      {r}
+                    </label>
+                  )
+                )}
               </div>
             </div>
 
@@ -199,7 +211,10 @@ const Contact = () => {
               />
               <span className="text-sm text-gray-400">
                 I agree to the processing of my personal data according to the{" "}
-                <span className="underline cursor-pointer text-white">Privacy Policy</span>.
+                <span className="underline cursor-pointer text-white">
+                  Privacy Policy
+                </span>
+                .
               </span>
             </div>
 
