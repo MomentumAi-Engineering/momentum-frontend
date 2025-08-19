@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Solu from '../assets/solutions-card.webp';
+import Solu from '../assets/new_img.png';
 
 const FormlessUI = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -50,14 +50,14 @@ const FormlessUI = () => {
         {/* Sticky Left Side */}
 <div className="w-full md:w-1/2 hidden md:block">
   <div className="h-screen sticky top-0 flex items-center justify-center bg-black">
-    <div className="w-80 h-80 bg-gray-900 rounded-lg flex items-center justify-center overflow-hidden">
-      <img 
-  src={Solu} 
-  alt="Team visual" 
-  className="object-cover w-full h-full rounded-lg"
-/>
+   <div className="w-[28rem] h-[28rem] bg-gray-900 rounded-lg flex items-center justify-center overflow-hidden">
+  <img 
+    src={Solu} 
+    alt="Team visual" 
+    className="object-cover w-full h-full rounded-lg"
+  />
+</div>
 
-    </div>
   </div>
 </div>
 
