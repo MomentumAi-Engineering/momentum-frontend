@@ -44,42 +44,43 @@ const Footer = () => {
         {/* Product */}
         <motion.div variants={containerVariants}>
           <h3 className="font-bold text-base sm:text-lg mb-4 text-teal-300">Product</h3>
-          
 <ul className="space-y-3 text-xs sm:text-base text-gray-300">
   {[
-    { label: 'Features', href: '#product-section' },
-    { label: 'Pricing', href: '#' },
-    { label: 'Early Access', href: '#' }
+    { label: "Features", sectionId: "product-section" },
+    { label: "Pricing", sectionId: null },
+    { label: "Early Access", sectionId: null },
   ].map((item, index) => (
     <motion.li
       key={index}
       variants={itemVariants}
       whileHover="hover"
       className="cursor-pointer hover:text-teal-200 transition-colors duration-300"
+      onClick={() => {
+        if (item.sectionId) {
+          const el = document.getElementById(item.sectionId);
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }
+      }}
     >
-      <a
-        href={item.href}
-        target={item.label === 'Features' ? '_self' : '_blank'}
-        rel={item.label === 'Features' ? undefined : 'noopener noreferrer'}
-      >
-        {item.label === 'Pricing' ? (
-          <>
-            {item.label}{' '}
-            <span className="italic text-gray-400">(Coming soon)</span>
-          </>
-        ) : (
-          item.label
-        )}
-      </a>
+      {item.label === "Pricing" ? (
+        <>
+          {item.label}{" "}
+          <span className="italic text-gray-400">(Coming soon)</span>
+        </>
+      ) : (
+        item.label
+      )}
+
       <motion.div
         className="h-0.5 bg-teal-500 rounded-full"
         initial={{ width: 0 }}
-        whileHover={{ width: '100%' }}
+        whileHover={{ width: "100%" }}
         transition={{ duration: 0.3 }}
       />
     </motion.li>
   ))}
 </ul>
+
         </motion.div>
 
         {/* Legal */}
