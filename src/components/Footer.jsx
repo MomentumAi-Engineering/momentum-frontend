@@ -119,7 +119,8 @@ const Footer = () => {
             {[
               { label: 'About Us', href: 'https://momntumai.com/team' },
               { label: 'Careers', href: '#' },
-              { label: 'Contact', href: 'https://momntumai.com/contact' }
+              { label: 'Contact', href: 'https://momntumai.com/contact' },
+              { label: 'Blogs', href: '/Blogs' }
             ].map((item, index) => (
               <motion.li
                 key={index}
