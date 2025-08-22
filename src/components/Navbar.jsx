@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/logo.png"; // Logo image
+import logo from "../assets/logo.png"; 
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +17,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleScrollTo = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const navLinks = [
-    { name: "Products", href: "#product-section" },
-    { name: "Team", href: "/team" },
-    { name: "Contact", href: "/contact" },
+    { name: "Products", type: "scroll", target: "product-section" },
+    { name: "Team", type: "link", target: "/team" },
+    { name: "Contact", type: "link", target: "/contact" },
   ];
 
   return (
@@ -55,21 +63,37 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={index}
-                href={link.href}
-                className="relative text-white/90 font-light text-base hover:text-white transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-              >
-                {link.name}
-                <motion.span
-                  className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white"
-                  whileHover={{ width: "100%" }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.a>
-            ))}
+            {navLinks.map((link, index) =>
+              link.type === "scroll" ? (
+                <motion.button
+                  key={index}
+                  onClick={() => handleScrollTo(link.target)}
+                  className="relative text-white/90 font-light text-base hover:text-white transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {link.name}
+                  <motion.span
+                    className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white"
+                    whileHover={{ width: "100%" }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.button>
+              ) : (
+                <motion.button
+                  key={index}
+                  onClick={() => navigate(link.target)}
+                  className="relative text-white/90 font-light text-base hover:text-white transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {link.name}
+                  <motion.span
+                    className="absolute left-0 -bottom-1 w-0 h-[2px] bg-white"
+                    whileHover={{ width: "100%" }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.button>
+              )
+            )}
             <a href="/signup">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -121,16 +145,29 @@ const Navbar = () => {
             className="md:hidden px-6 pb-4 bg-black/70 backdrop-blur-lg border-t border-white/10"
           >
             <div className="flex flex-col items-start space-y-4">
-              {navLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  className="text-white/90 hover:text-white font-light text-base transition-all duration-300"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navLinks.map((link, index) =>
+                link.type === "scroll" ? (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      handleScrollTo(link.target);
+                      setMenuOpen(false);
+                    }}
+                    className="text-white/90 hover:text-white font-light text-base transition-all duration-300"
+                  >
+                    {link.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={index}
+                    to={link.target}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-white/90 hover:text-white font-light text-base transition-all duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                )
+              )}
               <a href="/signup" className="w-full">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
