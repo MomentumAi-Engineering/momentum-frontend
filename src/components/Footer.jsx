@@ -4,7 +4,7 @@ import Aurora from '../mini-components/Aurora.jsx';
 import Socials from '../mini-components/Socials.jsx';
 
 const Footer = () => {
-  // Animation variants for fade-in and hover effects
+  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -44,44 +44,63 @@ const Footer = () => {
         {/* Product */}
         <motion.div variants={containerVariants}>
           <h3 className="font-bold text-base sm:text-lg mb-4 text-teal-300">Product</h3>
-          <ul className="space-y-3 text-xs sm:text-base text-gray-300">
-            {['Features', 'Pricing', 'Early Access'].map((item, index) => (
-              <motion.li
-                key={index}
-                variants={itemVariants}
-                whileHover="hover"
-                className="cursor-pointer hover:text-teal-200 transition-colors duration-300"
-              >
-                {item === 'Pricing' ? (
-                  <>
-                    {item} <span className="italic text-gray-400">(Coming soon)</span>
-                  </>
-                ) : (
-                  item
-                )}
-                <motion.div
-                  className="h-0.5 bg-teal-500 rounded-full"
-                  initial={{ width: 0 }}
-                  whileHover={{ width: '100%' }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.li>
-            ))}
-          </ul>
+<ul className="space-y-3 text-xs sm:text-base text-gray-300">
+  {[
+    { label: "Features", sectionId: "product-section" },
+    { label: "Pricing", sectionId: null },
+    { label: "Early Access", sectionId: null },
+  ].map((item, index) => (
+    <motion.li
+      key={index}
+      variants={itemVariants}
+      whileHover="hover"
+      className="cursor-pointer hover:text-teal-200 transition-colors duration-300"
+      onClick={() => {
+        if (item.sectionId) {
+          const el = document.getElementById(item.sectionId);
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }
+      }}
+    >
+      {item.label === "Pricing" ? (
+        <>
+          {item.label}{" "}
+          <span className="italic text-gray-400">(Coming soon)</span>
+        </>
+      ) : (
+        item.label
+      )}
+
+      <motion.div
+        className="h-0.5 bg-teal-500 rounded-full"
+        initial={{ width: 0 }}
+        whileHover={{ width: "100%" }}
+        transition={{ duration: 0.3 }}
+      />
+    </motion.li>
+  ))}
+</ul>
+
         </motion.div>
 
         {/* Legal */}
         <motion.div variants={containerVariants}>
           <h3 className="font-bold text-base sm:text-lg mb-4 text-teal-300">Legal</h3>
           <ul className="space-y-3 text-xs sm:text-base text-gray-300">
-            {['Terms', 'Privacy', 'Cookie Policy'].map((item, index) => (
+            {[
+              { label: 'Terms', href: '#' },
+              { label: 'Privacy', href: '#' },
+              { label: 'Cookie Policy', href: '#' }
+            ].map((item, index) => (
               <motion.li
                 key={index}
                 variants={itemVariants}
                 whileHover="hover"
                 className="cursor-pointer hover:text-teal-200 transition-colors duration-300"
               >
-                {item}
+                <a href={item.href} target="_blank" rel="noopener noreferrer">
+                  {item.label}
+                </a>
                 <motion.div
                   className="h-0.5 bg-teal-500 rounded-full"
                   initial={{ width: 0 }}
@@ -97,20 +116,27 @@ const Footer = () => {
         <motion.div variants={containerVariants}>
           <h3 className="font-bold text-base sm:text-lg mb-4 text-teal-300">MomntumAi</h3>
           <ul className="space-y-3 text-xs sm:text-base text-gray-300">
-            {['About Us', 'Careers', 'Contact'].map((item, index) => (
+            {[
+              { label: 'About Us', href: 'https://momntumai.com/team' },
+              { label: 'Careers', href: '#' },
+              { label: 'Contact', href: 'https://momntumai.com/contact' }
+            ].map((item, index) => (
               <motion.li
                 key={index}
                 variants={itemVariants}
                 whileHover="hover"
                 className="cursor-pointer hover:text-teal-200 transition-colors duration-300"
               >
-                {item === 'Careers' ? (
-                  <>
-                    {item} <span className="italic text-gray-400">(Open roles coming soon)</span>
-                  </>
-                ) : (
-                  item
-                )}
+                <a href={item.href} target="_blank" rel="noopener noreferrer">
+                  {item.label === 'Careers' ? (
+                    <>
+                      {item.label}{' '}
+                      <span className="italic text-gray-400">(Open roles coming soon)</span>
+                    </>
+                  ) : (
+                    item.label
+                  )}
+                </a>
                 <motion.div
                   className="h-0.5 bg-teal-500 rounded-full"
                   initial={{ width: 0 }}
@@ -132,9 +158,9 @@ const Footer = () => {
       >
         <p className="text-center md:text-left">
           © 2025 MomntumAi, Inc. All rights reserved ·{' '}
-          <span className="hover:text-teal-300 cursor-pointer transition-colors duration-300">Privacy</span> ·{' '}
-          <span className="hover:text-teal-300 cursor-pointer transition-colors duration-300">Terms</span> ·{' '}
-          <span className="hover:text-teal-300 cursor-pointer transition-colors duration-300">Sitemap</span>
+          <a href="#" className="hover:text-teal-300 transition-colors duration-300">Privacy</a> ·{' '}
+          <a href="#" className="hover:text-teal-300 transition-colors duration-300">Terms</a> ·{' '}
+          <a href="#" className="hover:text-teal-300 transition-colors duration-300">Sitemap</a>
         </p>
       </motion.div>
 

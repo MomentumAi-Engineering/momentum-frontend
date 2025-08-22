@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram, Facebook } from "lucide-react";
+import { Linkedin, Instagram, Facebook } from "lucide-react";
 import { SiX } from "react-icons/si";
 import logo from "../assets/logo.png";
 import { motion } from "framer-motion";
@@ -8,7 +8,6 @@ export default function Socials() {
     { icon: <SiX className="w-5 h-5" />, label: "Twitter / X", link: "https://x.com/Momntum_Ai", color: "#000000" },
     { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", link: "https://www.linkedin.com/company/momntum-ai-us", color: "#0077B5" },
     { icon: <Instagram className="w-5 h-5" />, label: "Instagram", link: "https://www.instagram.com/momntum.ai/", color: "#E1306C" },
-    { icon: <Github className="w-5 h-5" />, label: "GitHub", link: "#", color: "#171515" },
     { icon: <Facebook className="w-5 h-5" />, label: "Facebook", link: "https://www.facebook.com/MomntumAi", color: "#1877F2" },
   ];
 
@@ -49,6 +48,8 @@ export default function Socials() {
             key={social.label}
             href={social.link}
             aria-label={social.label}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center text-gray-400"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,5 +75,3 @@ export default function Socials() {
     </motion.div>
   );
 }
-
-// updated

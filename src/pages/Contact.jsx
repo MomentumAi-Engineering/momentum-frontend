@@ -74,7 +74,7 @@ const Contact = () => {
       <div className="grid md:grid-cols-2 gap-12">
         {/* Left: Get in Touch */}
         <div>
-          <h2 className="text-3xl font-semibold mb-8">Get in Touch</h2>
+          <h2 className="text-3xl font-semibold mb-8">Get in Touch -</h2>
           <div className="space-y-6 text-gray-300">
             <div className="flex items-start space-x-4">
               <div className="bg-gray-800 p-3 rounded-xl">
@@ -92,9 +92,9 @@ const Contact = () => {
               </div>
               <div>
                 <p className="font-semibold">Office</p>
-                <p>MomntumAi Headquarters</p>
-                <p>Nashville, Tennessee</p>
-                <p>United States</p>
+                <p className="font-extralight ">MOMNTUMAI HEADQUARTERS</p>
+                <p className="font-extralight">Nashville, Tennessee</p>
+                <p className="font-extralight">United States</p>
               </div>
             </div>
           </div>
