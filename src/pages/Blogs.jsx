@@ -2,6 +2,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
+
 
 const Blogs = () => {
   const [email, setEmail] = useState('');
@@ -57,7 +59,7 @@ const Blogs = () => {
   const featuredBlog = {
     id: 'featured',
     title: "Why Ethical AI Will Define the Future of Business",
-    excerpt: "Artificial Intelligence is no longer optional—it's at the core of how companies innovate. But without ethics, AI risks trust and adoption. At EaiserAI, we believe the future belongs to businesses that innovate responsibly.",
+    excerpt: "Artificial Intelligence is no longer optional—it's at the core of how companies innovate. But without ethics, AI risks trust and adoption. At MomntumAi, we believe the future belongs to businesses that innovate responsibly.",
     content: "Full article content would go here...",
     author: "Dr. Sarah Johnson",
     authorImage: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=200&q=80",
@@ -339,7 +341,7 @@ const Blogs = () => {
   const testimonials = [
     {
       id: 1,
-      quote: "EaiserAI's approach to ethical AI has transformed how we think about technology in our business. Their insights are invaluable.",
+      quote: "AiserAI's approach to ethical AI has transformed how we think about technology in our business. Their insights are invaluable.",
       author: "Sarah Johnson",
       role: "CEO, TechVision Inc.",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80"
@@ -353,7 +355,7 @@ const Blogs = () => {
     },
     {
       id: 3,
-      quote: "The future of AI is ethical, and EaiserAI is leading the conversation. Their blog is a must-read for anyone in tech.",
+      quote: "The future of AI is ethical, and MatrixAi is leading the conversation. Their blog is a must-read for anyone in tech.",
       author: "Elena Rodriguez",
       role: "AI Research Director",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80"
@@ -542,6 +544,32 @@ const Blogs = () => {
       className="min-h-screen relative overflow-hidden transition-colors duration-300" 
       style={{ backgroundColor: theme.background }}
     >
+      <Helmet>
+      <title>Momntum AI Blogs | Ethical AI Insights & Case Studies</title>
+      <meta 
+        name="description" 
+        content="Explore Momntum AI blogs covering Ethical AI, automation, healthcare case studies, small business growth, and the future of work. Stay informed with responsible innovation." 
+      />
+      <link rel="canonical" href="https://momntumai.com/blogs" />
+
+      <meta property="og:title" content="Momntum AI Blogs | Ethical AI Insights & Case Studies" />
+      <meta property="og:description" content="Explore blogs on Ethical AI, automation, healthcare case studies, and responsible innovation shaping the future." />
+      <meta property="og:image" content="https://momntumai.com/logo.png" />
+      <meta property="og:url" content="https://momntumai.com/blogs" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Momntum AI" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Momntum AI Blogs | Ethical AI Insights & Case Studies" />
+      <meta name="twitter:description" content="Read the latest blogs on Ethical AI and responsible business innovation." />
+      <meta name="twitter:image" content="https://momntumai.com/logo.png" />
+      <meta name="twitter:site" content="@Momntum_Ai" />
+      <meta name="twitter:creator" content="@Momntum_Ai" />
+
+      <meta name="keywords" content="Ethical AI blogs, AI case studies, AI in healthcare, AI automation, AI business growth, Momntum AI insights" />
+      <meta name="author" content="Momntum AI" />
+    </Helmet>
+
       {/* Animated background particles */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(50)].map((_, i) => (
