@@ -88,9 +88,9 @@ const Footer = () => {
           <h3 className="font-bold text-base sm:text-lg mb-4 text-teal-300">Legal</h3>
           <ul className="space-y-3 text-xs sm:text-base text-gray-300">
             {[
-              { label: 'Terms', href: '#' },
-              { label: 'Privacy', href: '#' },
-              { label: 'Cookie Policy', href: '#' }
+              { label: 'Terms and Privacy ', href: '/TERMSand.pdf' },
+              // { label: 'Privacy', href: '#' },
+              { label: 'Cookie Policy', href: '/COOKIE.pdf' }
             ].map((item, index) => (
               <motion.li
                 key={index}
