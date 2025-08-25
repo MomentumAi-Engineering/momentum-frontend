@@ -7,12 +7,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://momntumai.com/#product-section</loc>
-    <lastmod>2025-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://momntumai.com/team</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -24,4 +18,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://momntumai.com/blogs</loc>
+    <lastmod>2025-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+</url>
+
 </urlset>

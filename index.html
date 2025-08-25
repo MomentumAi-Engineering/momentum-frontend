@@ -79,7 +79,7 @@
     <meta name="msvalidate.01" content="D3BDF96B60894B0B512AE837BBD0F98F" />
     
     <!-- Structured Data for Organization -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -147,7 +147,14 @@
     {
       "@type": "Product",
       "name": "Eaiser AI",
-      "provider": { "@type": "Organization", "name": "Momntum AI" },
+      "image": [
+        "https://momntumai.com/logo.png",
+        "https://momntumai.com/product-banner.png"
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "Momntum AI"
+      },
       "category": "AI Software",
       "areaServed": "Worldwide",
       "description": "Ethical AI solutions for businesses focusing on innovation with responsibility",
@@ -155,11 +162,19 @@
         "@type": "AggregateRating",
         "ratingValue": "4.9",
         "reviewCount": "15"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://momntumai.com",
+        "price": "0.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
       }
     }
   ]
 }
 </script>
+
 
     
     <!-- Web App Manifest -->
@@ -169,6 +184,13 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- NoScript Fallback for SEO -->
+  <noscript>
+    <h1>Momntum AI - Ethical AI Solutions</h1>
+    <p>Momntum AI provides ethical, AI-powered solutions for startups and enterprises. We focus on transparency, innovation, and business growth.</p>
+  </noscript>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
