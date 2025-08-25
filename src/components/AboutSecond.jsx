@@ -67,9 +67,9 @@ const AboutSecond = () => {
         viewport={{ once: true }}
         className="about-second text-lg sm:text-xl md:text-2xl font-light text-center text-gray-200 mb-12 mt-10 sm:mt-16"
       >
-        Powering the world’s best product teams.
+        Powering the  best product.
         <br />
-        From next-gen startups to established enterprises.
+        With Design, Development, and Innovation Combined.
       </motion.h2>
 
       {/* Stats */}

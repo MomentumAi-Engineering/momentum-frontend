@@ -198,39 +198,48 @@ window.location.href = "https://eaiser.ai";
             </div>
 
             {/* Confirm Password */}
-            <div className="relative">
-              <label className="block text-sm font-medium text-gray-300 mb-1">Confirm Password</label>
-              <div className="relative">
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type={showConfirmPassword ? 'text' : 'password'}
-                  name="confirmPassword"
-                  value={formData.confirmPassword}
-                  onChange={handleInputChange}
-                  onFocus={() => setFocusedField('confirmPassword')}
-                  onBlur={() => setFocusedField('')}
-                  className={`w-full pl-12 pr-12 py-3 bg-gray-800/50 border rounded-xl text-white placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent ${focusedField === 'confirmPassword' ? 'border-purple-500 bg-gray-800/70' : 'border-gray-700'}`}
-                  placeholder="Confirm your password"
-                  required
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
-                >
-                  {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                </button>
-                {formData.confirmPassword && (
-                  <div className="absolute right-12 top-1/2 transform -translate-y-1/2">
-                    {isPasswordMatch ? (
-                      <Check className="w-5 h-5 text-green-400" />
-                    ) : (
-                      <div className="w-5 h-5 rounded-full border-2 border-red-400"></div>
-                    )}
-                  </div>
-                )}
-              </div>
-            </div>
+           {/* Confirm Password */}
+<div className="relative">
+  <label className="block text-sm font-medium text-gray-300 mb-1">Confirm Password</label>
+  <div className="relative">
+    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+    <input
+      type={showConfirmPassword ? 'text' : 'password'}
+      name="confirmPassword"
+      value={formData.confirmPassword}
+      onChange={handleInputChange}
+      onFocus={() => setFocusedField('confirmPassword')}
+      onBlur={() => setFocusedField('')}
+      className={`w-full pl-12 pr-12 py-3 bg-gray-800/50 border rounded-xl text-white placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent ${
+        focusedField === 'confirmPassword' ? 'border-purple-500 bg-gray-800/70' : 'border-gray-700'
+      }`}
+      placeholder="Confirm your password"
+      required
+    />
+    <button
+      type="button"
+      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+    >
+      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+    </button>
+    {formData.confirmPassword && (
+      <div className="absolute right-12 top-1/2 transform -translate-y-1/2">
+        {isPasswordMatch ? (
+          <Check className="w-5 h-5 text-green-400" />
+        ) : (
+          <div className="w-5 h-5 rounded-full border-2 border-red-400"></div>
+        )}
+      </div>
+    )}
+  </div>
+
+  {/* Show error text if passwords don't match */}
+  {formData.confirmPassword && !isPasswordMatch && (
+    <p className="mt-2 text-sm text-red-400">Passwords don’t match</p>
+  )}
+</div>
+
 
             {/* Submit */}
             <button

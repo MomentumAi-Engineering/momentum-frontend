@@ -74,7 +74,7 @@ const Contact = () => {
       <div className="grid md:grid-cols-2 gap-12">
         {/* Left: Get in Touch */}
         <div>
-          <h2 className="text-3xl font-semibold mb-8">Get in Touch -</h2>
+          <h2 className="text-4xl font-extralight mb-8 pt-10">Get in Touch -</h2>
           <div className="space-y-6 text-gray-300">
             <div className="flex items-start space-x-4">
               <div className="bg-gray-800 p-3 rounded-xl">
@@ -102,7 +102,7 @@ const Contact = () => {
 
         {/* Right: Send Message */}
         <div>
-          <h2 className="text-3xl font-semibold mb-8">Send Us a Message</h2>
+          <h2 className="text-4xl font-extralight mb-8 pt-10">Send Us a Message</h2>
           <form className="space-y-5" onSubmit={handleSubmit}>
             {/* Name & Email */}
             <div className="grid md:grid-cols-2 gap-4">
