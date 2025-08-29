@@ -14,15 +14,20 @@ const Ending = () => {
         <h2 className="text-white text-4xl font-bold mb-10">
           Chains We Support
         </h2>
+<a
+  href="https://www.eaiser.ai/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 inline-block px-6 py-3 rounded-full bg-[rgba(20,20,20,0.9)] border border-[#2a2a2a] text-white text-base font-medium shadow-[inset_0_0_12px_rgba(255,255,255,0.05)] hover:shadow-[0_0_10px_rgba(255,255,255,0.1)] transition duration-300"
+>
+  Get Started &rarr;
+</a>
 
-        <button className="mt-4 px-6 py-3 rounded-full bg-[rgba(20,20,20,0.9)] border border-[#2a2a2a] text-white text-base font-medium shadow-[inset_0_0_12px_rgba(255,255,255,0.05)] hover:shadow-[0_0_10px_rgba(255,255,255,0.1)] transition duration-300">
-          Get Started &rarr;
-        </button>
 
         {/* Cards Section */}
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="p-6 rounded-2xl border border-[#2a2a2a] shadow-[0_0_15px_rgba(255,255,255,0.05)] bg-[rgba(20,20,20,0.9)] text-white min-h-[150px] flex flex-col">
-            <h3 className="text-lg font-extralight mb-2">How it Works</h3>
+            <h3 className="text-lg font-extralight mb-2 ">How it Works</h3>
             <p className="text-base font-mono text-gray-400 pt-5">
               Snap a photo → AI detects the issue and auto-geolocates (with 95%+ accuracy) → You review and submit the prefilled report → Smart routing to the right city crew or vetted local pro → Real-time updates to “Fixed,” with private chat when needed.
             </p>
