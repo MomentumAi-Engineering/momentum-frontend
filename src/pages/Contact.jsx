@@ -80,10 +80,16 @@ const Contact = () => {
               <div className="bg-gray-800 p-3 rounded-xl">
                 <Mail className="text-white" />
               </div>
-              <div>
-                <p className="font-semibold">Email</p>
-                <p>momntum@gmail.com</p>
-              </div>
+             <a 
+  href="https://mail.google.com/mail/?view=cm&to=contactus@momntumai.com" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="text-blue-500 hover:underline pt-5"
+>
+  contactus@momntumai.com
+</a>
+
+
             </div>
 
             <div className="flex items-start space-x-4">
