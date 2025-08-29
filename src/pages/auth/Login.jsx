@@ -80,30 +80,42 @@ export default function Login() {
             </div>
 
             {/* Password Field */}
-            <div className="relative">
-              <label className="block text-sm font-medium text-gray-300 mb-2">Password</label>
-              <div className="relative">
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type={showPassword ? "text" : "password"}
-                  id="password"
-                  value={form.password}
-                  onChange={handleChange}
-                  onFocus={() => setFocusedField("password")}
-                  onBlur={() => setFocusedField("")}
-                  className={`w-full pl-12 pr-12 py-3 bg-gray-800/50 border rounded-xl text-white placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent ${focusedField === "password" ? "border-purple-500 bg-gray-800/70" : "border-gray-700"}`}
-                  placeholder="Enter your password"
-                  required
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-                >
-                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                </button>
-              </div>
-            </div>
+           {/* Password Field */}
+<div className="relative">
+  <label className="block text-sm font-medium text-gray-300 mb-2">Password</label>
+  <div className="relative">
+    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+    <input
+      type={showPassword ? "text" : "password"}
+      id="password"
+      value={form.password}
+      onChange={handleChange}
+      onFocus={() => setFocusedField("password")}
+      onBlur={() => setFocusedField("")}
+      className={`w-full pl-12 pr-12 py-3 bg-gray-800/50 border rounded-xl text-white placeholder-gray-400 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent ${focusedField === "password" ? "border-purple-500 bg-gray-800/70" : "border-gray-700"}`}
+      placeholder="Enter your password"
+      required
+    />
+    <button
+      type="button"
+      onClick={() => setShowPassword(!showPassword)}
+      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+    >
+      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+    </button>
+  </div>
+
+  {/* Forgot Password Link */}
+  <div className="text-right mt-2">
+    <a
+      href="/forgot-password"
+      className="text-sm text-purple-400 hover:text-purple-300 transition-colors"
+    >
+      Forgot Password?
+    </a>
+  </div>
+</div>
+
 
             {/* Login Button */}
             <button

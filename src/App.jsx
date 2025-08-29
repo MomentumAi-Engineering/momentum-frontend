@@ -26,6 +26,7 @@ import GraphSection from './components/BottomContext.jsx';
 import Ending from './components/Ending.jsx';
 
 import { Toaster } from "react-hot-toast";
+import ForgotPassword from './pages/auth/ForgotPassword.jsx'
 
 const AppWrapper = () => {
   const location = useLocation();
@@ -60,7 +61,7 @@ const AppWrapper = () => {
         <Route path="/team" element={<Team />} />
         <Route path="/Blogs" element={<Blogs/>}/>        
         <Route path="/snapfix" element={<Snapfix />} />
-        
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path = "/auth/callback" element={<AuthCallback />} />
       </Routes>
     </div>
