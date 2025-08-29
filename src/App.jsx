@@ -27,6 +27,8 @@ import Ending from './components/Ending.jsx';
 
 import { Toaster } from "react-hot-toast";
 import ForgotPassword from './pages/auth/ForgotPassword.jsx'
+import ResetPassword from "./pages/auth/ResetPassword";
+import NewPassword from "./pages/auth/NewPassword.jsx";
 
 const AppWrapper = () => {
   const location = useLocation();
@@ -62,6 +64,8 @@ const AppWrapper = () => {
         <Route path="/Blogs" element={<Blogs/>}/>        
         <Route path="/snapfix" element={<Snapfix />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
+        <Route path="/reset-password/:token" element={<NewPassword />} />
         <Route path = "/auth/callback" element={<AuthCallback />} />
       </Routes>
     </div>

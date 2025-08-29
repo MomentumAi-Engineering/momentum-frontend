@@ -14,16 +14,23 @@ export default function ForgotPassword() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://momentum-backend-p68k.onrender.com/api/auth/forgot-password", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
+      const res = await fetch(
+        "https://momentum-backend-p68k.onrender.com/api/auth/forgot-password",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        }
+      );
+
       const data = await res.json();
 
-      if (!res.ok) throw new Error(data.message || "Something went wrong");
+      if (!res.ok) {
+        throw new Error(data.message || "Something went wrong");
+      }
 
-      setMessage("Password reset link sent to your email!");
+      // ✅ backend response comes here
+      setMessage(data.message || "Password reset link sent to your email!");
     } catch (err) {
       setError(err.message);
     } finally {
@@ -60,7 +67,9 @@ export default function ForgotPassword() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Email Field */}
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Email Address
+              </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
