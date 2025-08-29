@@ -28,12 +28,12 @@ export default function Socials() {
         <motion.img
           src={logo}
           alt="MomentumAI Logo"
-          className="h-10 w-auto object-contain drop-shadow-lg"
+          className="h-7 w-auto object-contain drop-shadow-lg"
           whileHover={{ scale: 1.1, rotate: 5 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
         <motion.span
-          className="ml-3 text-xl font-semibold text-white tracking-wide"
+          className="ml-3 text-base font-extralight text-white tracking-wide"
           whileHover={{ color: "#60A5FA" }}
           transition={{ duration: 0.2 }}
         >

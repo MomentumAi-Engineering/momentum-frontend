@@ -29,6 +29,10 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-gradient-to-b from-black to-gray-900 text-white px-6 sm:px-10 md:px-20 pt-24 pb-40 overflow-hidden">
+      
+      {/* 🔹 Top Divider before links */}
+      <div className="border-t border-gray-700 mb-12" />
+
       {/* Links Section */}
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12 items-start"
@@ -44,43 +48,41 @@ const Footer = () => {
         {/* Product */}
         <motion.div variants={containerVariants}>
           <h3 className="font-bold text-base sm:text-lg mb-4 text-teal-300">Product</h3>
-<ul className="space-y-3 text-xs sm:text-base text-gray-300">
-  {[
-    { label: "Features", sectionId: "product-section" },
-    { label: "Pricing", sectionId: null },
-    { label: "Early Access", sectionId: null },
-  ].map((item, index) => (
-    <motion.li
-      key={index}
-      variants={itemVariants}
-      whileHover="hover"
-      className="cursor-pointer hover:text-teal-200 transition-colors duration-300"
-      onClick={() => {
-        if (item.sectionId) {
-          const el = document.getElementById(item.sectionId);
-          if (el) el.scrollIntoView({ behavior: "smooth" });
-        }
-      }}
-    >
-      {item.label === "Pricing" ? (
-        <>
-          {item.label}{" "}
-          <span className="italic text-gray-400">(Coming soon)</span>
-        </>
-      ) : (
-        item.label
-      )}
-
-      <motion.div
-        className="h-0.5 bg-teal-500 rounded-full"
-        initial={{ width: 0 }}
-        whileHover={{ width: "100%" }}
-        transition={{ duration: 0.3 }}
-      />
-    </motion.li>
-  ))}
-</ul>
-
+          <ul className="space-y-3 text-xs sm:text-base text-gray-300">
+            {[
+              { label: "Features", sectionId: "product-section" },
+              { label: "Pricing", sectionId: null },
+              { label: "Early Access", sectionId: null },
+            ].map((item, index) => (
+              <motion.li
+                key={index}
+                variants={itemVariants}
+                whileHover="hover"
+                className="cursor-pointer hover:text-teal-200 transition-colors duration-300"
+                onClick={() => {
+                  if (item.sectionId) {
+                    const el = document.getElementById(item.sectionId);
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                {item.label === "Pricing" ? (
+                  <>
+                    {item.label}{" "}
+                    <span className="italic text-gray-400">(Coming soon)</span>
+                  </>
+                ) : (
+                  item.label
+                )}
+                <motion.div
+                  className="h-0.5 bg-teal-500 rounded-full"
+                  initial={{ width: 0 }}
+                  whileHover={{ width: "100%" }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.li>
+            ))}
+          </ul>
         </motion.div>
 
         {/* Legal */}
@@ -89,7 +91,6 @@ const Footer = () => {
           <ul className="space-y-3 text-xs sm:text-base text-gray-300">
             {[
               { label: 'Terms and Privacy ', href: '/TERMSand.pdf' },
-              // { label: 'Privacy', href: '#' },
               { label: 'Cookie Policy', href: '/COOKIE.pdf' }
             ].map((item, index) => (
               <motion.li
