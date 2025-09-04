@@ -100,7 +100,7 @@ window.location.href = "https://eaiser.ai";
   };
 
   const handleGoogleSignup = () => {
-    const redirectUri = "https://momntumai.com/auth/callback/";
+    const redirectUri = "https://momntumai.com/api/auth/google/callback"; // <-- updated
     const scope = "openid profile email";
     const responseType = "code";
 

@@ -6,26 +6,17 @@ export default function AuthCallback() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const code = params.get("code");
+    const token = params.get("token");
 
-    if (code) {
-      fetch("https://momentum-backend-p68k.onrender.com/api/auth/google", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code }),
-      })
-        .then(res => res.json())
-        .then(data => {
-          console.log("Google user info:", data);
-          localStorage.setItem("token", data.token); // if your backend returns a token
-          navigate("/snapfix");
-        })
-        .catch(err => {
-          console.error("Google login failed:", err);
-          alert("Login failed");
-        });
+    if (token) {
+      localStorage.setItem("token", token);
+      console.log("Google user token:", token);
+      navigate("/snapfix");
+    } else {
+      alert("Login failed");
+      navigate("/");
     }
-  }, []);
+  }, [navigate]);
 
   return <h2 className="text-white text-center mt-20">Logging in with Google...</h2>;
 }
