@@ -24,11 +24,12 @@ const Navbar = () => {
     }
   };
 
-  const navLinks = [
-    { name: "Products", type: "scroll", target: "product-section" },
-    { name: "Team", type: "link", target: "/team" },
-    { name: "Contact", type: "link", target: "/contact" },
-  ];
+ const navLinks = [
+  { name: "Product", type: "link", target: "/product" },
+  { name: "Team", type: "link", target: "/team" },
+  { name: "Contact", type: "link", target: "/contact" },
+];
+
 
   return (
     <motion.nav
@@ -56,7 +57,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.1, rotate: 2 }}
               transition={{ type: "spring", stiffness: 300 }}
             />
-            <span className="text-white font-semibold text-xl tracking-wide">
+            <span className="text-white font-extralight text-xl tracking-wide">
               MomntumAI
             </span>
           </Link>

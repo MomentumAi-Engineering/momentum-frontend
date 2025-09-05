@@ -20,6 +20,7 @@ import TabSwitching from './components/TabSwitching.jsx';
 // import Pricing from './pages/Pricing.jsx';
 import Snapfix from './pages/Snapfix.jsx';
 import Blogs from './pages/Blogs.jsx';
+import Product from "./pages/Product.jsx"
 
 import AuthCallback from './pages/auth/AuthCallback.jsx';
 import GraphSection from './components/BottomContext.jsx';
@@ -58,6 +59,7 @@ const AppWrapper = () => {
           }
         />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Login />} />
         <Route path="/team" element={<Team />} />
