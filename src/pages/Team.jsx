@@ -25,9 +25,9 @@ const Team = () => {
             [ Our Mission ]
           </p>
           <h1 className="text-5xl md:text-4xl font-light text-amber-50 leading-tight">
-            Empower people and organizations with 
+            Massive problems × AI velocity = MomntumAi.
            
-            <span className="text-amber-50"> responsible, life-enhancing AI.</span>
+            {/* <span className="text-amber-50"> responsible, life-enhancing AI.</span> */}
           </h1>
         </div>
 

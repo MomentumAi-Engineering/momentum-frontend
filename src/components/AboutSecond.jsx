@@ -2,9 +2,12 @@ import React from "react";
 import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import "./AboutSecond.css";
-import picOne from "../assets/pic-one.jpg";
-import picTwo from "../assets/pic-two.jpg";
-import picThree from "../assets/pic-three.jpg";
+// import picOne from "../assets/pic-one.jpg";
+// import picTwo from "../assets/pic-two.jpg";
+// import picThree from "../assets/pic-three.jpg";
+import picOne from "../assets/pic-mew.png"
+import picTwo from "../assets/pic-new2.png"
+import picThree from "../assets/pic-new3.png"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },

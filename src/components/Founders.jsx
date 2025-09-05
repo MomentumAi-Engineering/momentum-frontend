@@ -84,10 +84,10 @@ export default function TeamPage() {
         {/* Stats Section */}
         <div className="flex flex-wrap justify-center gap-6 mt-12">
           {[
-            { icon: Users, label: "Team Members", value: "12+" },
-            { icon: MapPin, label: "Countries", value: "5" },
-            { icon: Zap, label: "Projects Delivered", value: "150+" },
-            { icon: Award, label: "Awards Won", value: "8" },
+            { icon: Users, label: "Building Real Solutions", value: "Focused on Impact" },
+            { icon: MapPin, label: "MVP in Development", value: "First Release Soon" },
+            { icon: Zap, label: "Collaboration", value: "Open for Partnerships" },
+            
           ].map((stat, index) => (
             <motion.div
               key={index}
