@@ -1,30 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Clock, DollarSign, TrendingDown, AlertTriangle, CheckCircle, Zap, Target, BarChart3, Layers, Shield, Activity, ArrowRight } from 'lucide-react';
-import Socials from '../mini-components/Socials.jsx'; 
-
+import Socials from '../mini-components/Socials.jsx';
+import { useNavigate } from "react-router-dom"; 
 const ProductPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
-  // Carousel data for integrations
+  const navigate = useNavigate();
+
+  // Carousel data (replaced with real users/stakeholders)
   const integrationSlides = [
     [
-      { name: 'Linear', color: 'bg-blue-500', icon: '📋' },
-      { name: 'Gingerbread', color: 'bg-yellow-500', icon: '🍪' },
-      { name: 'NotionHQ', color: 'bg-orange-600', icon: '🌞' },
-      { name: 'Figma', color: 'bg-purple-500', icon: '🎨' },
-      { name: 'Microsoft', color: 'bg-blue-600', icon: '🏢' },
-      { name: 'PopSQL', color: 'bg-pink-500', icon: '🔗' },
-      { name: 'LangChain', color: 'bg-gray-600', icon: '🔗' },
-      { name: 'LangChain', color: 'bg-green-600', icon: '🔗' },
-      { name: 'OpenAI', color: 'bg-gray-800', icon: '🤖' }
+      { name: "Citizens", color: "bg-blue-500", icon: "👥" },
+      { name: "City Authorities", color: "bg-yellow-500", icon: "🏛️" },
+      { name: "Utility Services", color: "bg-green-600", icon: "💡" },
+      { name: "Emergency Services", color: "bg-red-600", icon: "🚨" },
+      { name: "NGOs & Volunteers", color: "bg-purple-500", icon: "🤝" },
     ],
     [
-      { name: 'Salesforce', color: 'bg-blue-700', icon: '☁️' },
-      { name: 'Gingerbread', color: 'bg-yellow-500', icon: '🍪' },
-      { name: 'NotionHQ', color: 'bg-orange-600', icon: '🌞' },
-      { name: 'Figma', color: 'bg-purple-500', icon: '🎨' },
-      { name: 'Microsoft', color: 'bg-blue-600', icon: '🏢' }
-    ]
+      { name: "Citizens", color: "bg-blue-500", icon: "👥" },
+      { name: "City Authorities", color: "bg-yellow-500", icon: "🏛️" },
+      { name: "Utility Services", color: "bg-green-600", icon: "💧" },
+      { name: "Emergency Services", color: "bg-red-600", icon: "🚒" },
+      { name: "NGOs & Volunteers", color: "bg-purple-500", icon: "🌍" },
+    ],
   ];
 
   // Auto-advance carousel
@@ -33,18 +30,24 @@ const ProductPage = () => {
       setCurrentSlide((prev) => (prev + 1) % integrationSlides.length);
     }, 3000);
     return () => clearInterval(timer);
-  }, []);
+  }, [integrationSlides.length]);
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Section 1: Integrations Carousel */}
-      <section className="py-16 px-4">
+      {/* Background glow effects */}
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-purple-700 opacity-40 blur-[180px] rounded-full"></div>
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-700 opacity-40 blur-[180px] rounded-full"></div>
+
+      {/* Section: Who is it For */}
+      <section className="py-16 px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold mb-4">Who is it For</h1>
-          <p className="text-gray-400 text-xl mb-12">Built for everyone—citizens, city crews, and local pros.</p>
-          
+          <p className="text-gray-400 text-xl mb-12">
+            Built for everyone—citizens, city crews, and local pros.
+          </p>
+
           <div className="relative overflow-hidden">
-            <div 
+            <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
@@ -52,24 +55,33 @@ const ProductPage = () => {
                 <div key={slideIndex} className="w-full flex-shrink-0">
                   <div className="grid grid-cols-3 md:grid-cols-5 gap-8 justify-items-center">
                     {slide.map((integration, index) => (
-                      <div key={index} className="flex flex-col items-center space-y-3">
-                        <div className={`w-16 h-16 ${integration.color} rounded-lg flex items-center justify-center text-2xl`}>
+                      <div
+                        key={index}
+                        className="flex flex-col items-center space-y-3"
+                      >
+                        <div
+                          className={`w-16 h-16 ${integration.color} rounded-lg flex items-center justify-center text-2xl`}
+                        >
                           {integration.icon}
                         </div>
-                        <span className="text-sm text-gray-400">{integration.name}</span>
+                        <span className="text-sm text-gray-400">
+                          {integration.name}
+                        </span>
                       </div>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
-            
+
             {/* Carousel indicators */}
             <div className="flex justify-center space-x-2 mt-8">
               {integrationSlides.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-2 h-2 rounded-full ${currentSlide === index ? 'bg-white' : 'bg-gray-600'}`}
+                  className={`w-2 h-2 rounded-full ${
+                    currentSlide === index ? "bg-white" : "bg-gray-600"
+                  }`}
                   onClick={() => setCurrentSlide(index)}
                 />
               ))}
@@ -346,16 +358,18 @@ const ProductPage = () => {
           
           <div className="text-center">
             <p className="text-gray-400 text-lg mb-8">Ready to experience these advantages for your business?</p>
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg">
+            <button 
+             onClick={() => navigate("/contact")}
+             className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg">
               Schedule Your Strategy Call
             </button>
           </div>
         </div>
       </section>
 
-           <section className="px-6 md:px-20 py-16 flex justify-center">
-                  <Socials />
-            </section>
+      <section className="px-6 md:px-20 py-16 flex justify-center">
+        <Socials />
+      </section>
     </div>
   );
 };
