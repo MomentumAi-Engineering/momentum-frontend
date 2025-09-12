@@ -11,10 +11,10 @@ const FormlessUI = () => {
     { number: "03", title: "Technical Integrity", description: "Grounded in transparency, rigor, and measurable results." },
     { number: "04", title: "Simplicity & Impact", description: "Complex problems deserve clear, elegant solutions." },
     { number: "05", title: "Courageous Curiosity", description: "We ask the bold questions others avoid, always in service ofpeople." },
-    { number: "06", title: "Ethical Responsibility", description: "If we can’t stand behind it with pride, we don’t build it" },
-    { number: "07", title: "Reveal the Unseen", description: "We seek out hidden challenges and bring them into the light." },
-    { number: "08", title: "Scalable Vision", description: "Start responsibly, grow exponentially." },
-    { number: "09", title: "Accessible AI", description: "Ensure advanced AI is not exclusive, but inclusive for everyone." }
+    // { number: "06", title: "Ethical Responsibility", description: "If we can’t stand behind it with pride, we don’t build it" },
+    // { number: "07", title: "Reveal the Unseen", description: "We seek out hidden challenges and bring them into the light." },
+    // { number: "08", title: "Scalable Vision", description: "Start responsibly, grow exponentially." },
+    // { number: "09", title: "Accessible AI", description: "Ensure advanced AI is not exclusive, but inclusive for everyone." }
   ];
 
   useEffect(() => {
