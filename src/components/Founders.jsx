@@ -130,7 +130,7 @@ export default function TeamPage() {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="group bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-full text-base font-semibold flex items-center gap-2 mx-auto mt-10 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600"
         >
-          <span>We're hiring amazing talent</span>
+          {/* <span>We're hiring amazing talent</span> */}
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </motion.button>
 
