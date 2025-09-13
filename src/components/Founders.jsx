@@ -5,10 +5,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  MapPin,
-  Users,
-  Zap,
-  Award,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -27,7 +23,11 @@ const teamMembers = [
     description:
       "Driving technology vision and execution at Momntum AI — delivering AI-powered platforms, scaling cloud infrastructure, and cultivating a high-impact culture of innovation.",
     expertise: ["Cloud Architecture", "ML Engineering", "Team Leadership"],
-    social: { github: "#", linkedin: "https://www.linkedin.com/in/rishav-kumar-983a5b273/", email: "rishav@momntumai.com" },
+    social: {
+      github: "#",
+      linkedin: "https://www.linkedin.com/in/rishav-kumar-983a5b273/",
+      email: "rishav@momntumai.com",
+    },
   },
   {
     name: "Raj Baidyanath",
@@ -47,7 +47,6 @@ export default function TeamPage() {
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/20 blur-[150px] rounded-full animate-pulse" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        
         {/* Title Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -57,7 +56,9 @@ export default function TeamPage() {
         >
           <div className="inline-flex items-center gap-2 bg-gray-900/80 backdrop-blur-lg rounded-full px-6 py-3 border border-gray-700">
             <Sparkles className="w-4 h-4 text-gray-400" />
-            <span className="text-sm font-medium text-gray-300">Meet Our Visionaries</span>
+            <span className="text-sm font-medium text-gray-300">
+              Meet Our Visionaries
+            </span>
             <Sparkles className="w-4 h-4 text-gray-400" />
           </div>
         </motion.div>
@@ -68,8 +69,10 @@ export default function TeamPage() {
           transition={{ duration: 0.8 }}
           className="text-4xl sm:text-5xl md:text-4xl font-bold text-white leading-tight pt-10 text-center"
         >
-          Ethical, human-centred AI that turns 
-          <span className="block text-gray-300">real-world problems into elegant solutions.</span>
+          Ethical, human-centred AI that turns
+          <span className="block text-gray-300">
+            real-world problems into elegant solutions.
+          </span>
         </motion.h1>
 
         <motion.p
@@ -78,30 +81,44 @@ export default function TeamPage() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-lg sm:text-base text-gray-400 max-w-3xl mx-auto leading-relaxed text-center mt-6"
         >
-          Momntum has always been a fully remote company. Today, our small but mighty team is distributed across North America. What unites us is relentless focus, fast execution, and our passion for software craftsmanship.
+          Momntum has always been a fully remote company. Today, our small but
+          mighty team is distributed across North America. What unites us is
+          relentless focus, fast execution, and our passion for software
+          craftsmanship.
         </motion.p>
 
-        {/* Stats Section */}
-        <div className="flex flex-wrap justify-center gap-6 mt-12">
+        {/* Purpose & Mission Section */}
+        <div className="flex flex-wrap justify-center gap-6 mt-16">
           {[
-            { icon: Users, label: "Building Real Solutions", value: "Focused on Impact" },
-            { icon: MapPin, label: "MVP in Development", value: "First Release Soon" },
-            { icon: Zap, label: "Collaboration", value: "Open for Partnerships" },
-            
-          ].map((stat, index) => (
+            {
+              title: "Purpose",
+              content:
+                "Empower people and organizations through life-enhancing, responsible, and wholly constructive AI.",
+            },
+            {
+              title: "Mission",
+              content:
+                "Transform weighty, overlooked needs into AI products that generate lasting momentum.",
+            },
+          ].map((item, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.4 }}
-              className="text-center group hover:scale-110 transition-transform duration-300 bg-black/40 border border-gray-700 rounded-2xl px-6 py-5"
+              transition={{ delay: index * 0.15, duration: 0.5 }}
+              className="max-w-sm text-center group hover:scale-105 transition-transform duration-300 bg-black/40 border border-gray-700 rounded-2xl px-8 py-6 relative overflow-hidden"
             >
-              <div className="w-16 h-16 bg-gray-800/60 rounded-2xl flex items-center justify-center mx-auto mb-3 backdrop-blur-sm border border-gray-700">
-                <stat.icon className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" />
-              </div>
-              <div className="text-2xl font-bold text-white">{stat.value}</div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
+              {/* Glowing accent */}
+              <div className="absolute -top-10 -left-10 w-24 h-24 bg-purple-500/10 blur-2xl rounded-full" />
+              <div className="absolute -bottom-10 -right-10 w-28 h-28 bg-blue-500/10 blur-2xl rounded-full" />
+
+              <h3 className="text-2xl font-bold text-white mb-3 relative z-10">
+                {item.title}
+              </h3>
+              <p className="text-gray-400 leading-relaxed text-sm sm:text-base relative z-10">
+                {item.content}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -131,19 +148,30 @@ export default function TeamPage() {
               <div className="absolute top-0 left-0 w-20 h-20 bg-purple-500/10 blur-2xl rounded-full" />
               <div className="absolute bottom-0 right-0 w-24 h-24 bg-blue-500/10 blur-2xl rounded-full" />
 
-              <h3 className="text-xl font-semibold text-center">{member.name}</h3>
+              <h3 className="text-xl font-semibold text-center">
+                {member.name}
+              </h3>
               <p className="text-sm text-gray-400 text-center">{member.role}</p>
-              <p className="mt-4 text-sm text-gray-300 text-center">{member.description}</p>
+              <p className="mt-4 text-sm text-gray-300 text-center">
+                {member.description}
+              </p>
 
               <div className="mt-4 text-xs text-gray-500 text-center">
-                <span className="font-medium text-gray-300">Expertise:</span> {member.expertise.join(", ")}
+                <span className="font-medium text-gray-300">Expertise:</span>{" "}
+                {member.expertise.join(", ")}
               </div>
 
               <div className="flex justify-center gap-4 mt-4">
-                <motion.a whileHover={{ scale: 1.2, color: "#0077B5" }} href={member.social.linkedin}>
+                <motion.a
+                  whileHover={{ scale: 1.2, color: "#0077B5" }}
+                  href={member.social.linkedin}
+                >
                   <Linkedin className="w-4 h-4" />
                 </motion.a>
-                <motion.a whileHover={{ scale: 1.2, color: "#D44638" }} href={`mailto:${member.social.email}`}>
+                <motion.a
+                  whileHover={{ scale: 1.2, color: "#D44638" }}
+                  href={`mailto:${member.social.email}`}
+                >
                   <Mail className="w-4 h-4" />
                 </motion.a>
               </div>
@@ -154,5 +182,3 @@ export default function TeamPage() {
     </div>
   );
 }
-
-// updated
