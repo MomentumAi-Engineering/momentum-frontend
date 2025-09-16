@@ -51,12 +51,13 @@ const GrokGrid = () => {
             <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               EaiserAI – Transform Visual Inputs
             </h2>
-            <p className="text-sm text-gray-300 mt-4 leading-relaxed">
-              Eaiser by <span className="text-purple-400 font-semibold">MomntumAI</span> converts photos and brief descriptions into intelligent, structured reports for infrastructure, safety, and environmental issues.
-            </p>
-            <p className="text-sm text-gray-300 mt-3 leading-relaxed">
-              Minimize effort, maximize clarity. Eaiser auto-routes cases to the right agency or contractor for swift, accurate resolutions. <span className="italic">One snap. One line. Complete action.</span>
-            </p>
+             <ul className="list-disc list-inside text-sm text-gray-300 mt-4 space-y-2">
+    <li>Spot an issue—Broken sidewalk, pothole, safety hazard, you name it</li>
+    <li>Take a photo—EAiSER’s AI detects the type of issue and where it is, with over 95% accuracy</li>
+    <li>Review & submit—The app pre-fills your report. Confirm and hit send.</li>
+     <li>Track the fix—Get real-time updates until your issue is resolved—no calls, no forms.</li>
+    
+  </ul>
            <motion.a
   href="https://www.eaiser.ai/"
   target="_blank"

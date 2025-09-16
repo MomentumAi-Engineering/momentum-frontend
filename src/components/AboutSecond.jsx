@@ -84,9 +84,9 @@ const AboutSecond = () => {
         className="bg-gradient-to-r from-[#000000] via-[#58259c] to-[#090909] py-8 px-6 rounded-lg flex flex-col sm:flex-row justify-around items-center text-center mb-16 gap-8 sm:gap-0 shadow-lg shadow-purple-900/20"
       >
         {[
-          { num: "100+", label: "Issues Reported" },
+          { num: "Report in under 30 seconds", },
           { num: "95%", label: "Accuracy Rate" },
-          { num: "24h", label: "Average Response Time" },
+          { num: "Free for all residents" },
         ].map((stat, i) => (
           <motion.div
             key={i}

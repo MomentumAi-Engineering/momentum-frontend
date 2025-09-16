@@ -81,10 +81,7 @@ export default function TeamPage() {
           transition={{ delay: 0.2, duration: 0.8 }}
           className="text-lg sm:text-base text-gray-400 max-w-3xl mx-auto leading-relaxed text-center mt-6"
         >
-          Momntum has always been a fully remote company. Today, our small but
-          mighty team is distributed across North America. What unites us is
-          relentless focus, fast execution, and our passion for software
-          craftsmanship.
+          We find substantial issues—the “mass”—and give them velocity through bold, rigorous AI. The result is forward force that disrupt industries and improves lives..
         </motion.p>
 
         {/* Purpose & Mission Section */}

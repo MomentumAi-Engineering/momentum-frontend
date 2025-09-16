@@ -10,17 +10,17 @@ export default function SnapfixHero() {
       className="min-h-screen w-full bg-black relative overflow-hidden flex flex-col justify-between items-center pt-24 pb-10 px-4 sm:px-6 md:px-12"
     >
       {/* Big Background Text */}
-      <span
-        className="absolute text-[10vw] font-extrabold text-white/5 left-1/2 top-1/2 -translate-x-1/2 pt-13 -translate-y-1/2 z-0 select-none pointer-events-none"
-        style={{
-          WebkitTextStroke: "1px rgba(255,255,255,0.08)",
-          textShadow: "0 0 20px rgba(255, 255, 255, 0.05)",
-          fontFamily: "sans-serif",
-          letterSpacing: "-0.05em",
-        }}
-      >
-        Eaiser AI
-      </span>
+<span
+  className="absolute text-[15vw] font-extrabold text-white/5 left-1/2 top-1/2 -translate-x-1/2 pt-13 -translate-y-1/2 z-0 select-none pointer-events-none whitespace-nowrap"
+  style={{
+    WebkitTextStroke: "1px rgba(255,255,255,0.08)",
+    textShadow: "0 0 20px rgba(255, 255, 255, 0.05)",
+    fontFamily: "sans-serif",
+    letterSpacing: "-0.05em",
+  }}
+>
+  Eaiser AI
+</span>
 
       {/* Try Now Button */}
       {/* <div className="absolute top-6 right-6 sm:top-8 sm:right-10 z-10">
