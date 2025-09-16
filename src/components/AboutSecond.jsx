@@ -95,7 +95,7 @@ const AboutSecond = () => {
             transition={{ delay: i * 0.2, duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-1">
+            <h2 className="text-1xl sm:text-2xl font-semibold text-white mb-1">
               {stat.num}
             </h2>
             <span className="text-gray-400 text-sm">{stat.label}</span>
