@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { useAuth } from "../contexts/AuthContext";
+import { User, LogOut } from "lucide-react";
 import logo from "../assets/logo.png"; 
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showUserMenu, setShowUserMenu] = useState(false);
+  const { currentUser, logout } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -95,15 +99,85 @@ const Navbar = () => {
                 </motion.button>
               )
             )}
-            <a href="/signup">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white text-black px-5 py-2 rounded-full font-medium text-base transition-all duration-300 hover:bg-white/90 hover:shadow-xl"
-              >
-                Sign in
-              </motion.button>
-            </a>
+            {/* Authentication Section */}
+            {currentUser ? (
+              <div className="relative">
+                <motion.button
+                  onClick={() => setShowUserMenu(!showUserMenu)}
+                  className="flex items-center gap-2 text-white/90 hover:text-white transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white/20">
+                    {currentUser.photoURL ? (
+                      <img 
+                        src={currentUser.photoURL} 
+                        alt="Profile" 
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                        <User className="w-4 h-4 text-white" />
+                      </div>
+                    )}
+                  </div>
+                  <span className="font-medium">
+                    {currentUser.displayName?.split(' ')[0] || 'User'}
+                  </span>
+                </motion.button>
+                
+                {/* User Dropdown */}
+                <AnimatePresence>
+                  {showUserMenu && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                      className="absolute right-0 mt-2 w-48 bg-black/90 backdrop-blur-lg border border-white/20 rounded-xl shadow-xl py-2 z-50"
+                    >
+                      <Link
+                        to="/dashboard"
+                        className="flex items-center gap-2 px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                        onClick={() => setShowUserMenu(false)}
+                      >
+                        <User className="w-4 h-4" />
+                        Dashboard
+                      </Link>
+                      <button
+                        onClick={() => {
+                          logout();
+                          setShowUserMenu(false);
+                        }}
+                        className="flex items-center gap-2 px-4 py-2 text-red-400 hover:text-red-300 hover:bg-red-500/10 transition-colors w-full text-left"
+                      >
+                        <LogOut className="w-4 h-4" />
+                        Sign Out
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ) : (
+              <div className="flex items-center gap-3">
+                <Link to="/login">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="text-white/90 hover:text-white font-medium text-base transition-all duration-300"
+                  >
+                    Sign In
+                  </motion.button>
+                </Link>
+                <Link to="/signup">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-2 rounded-full font-medium text-base transition-all duration-300 hover:shadow-xl"
+                  >
+                    Get Started
+                  </motion.button>
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* Mobile Hamburger */}
@@ -169,15 +243,48 @@ const Navbar = () => {
                   </Link>
                 )
               )}
-              <a href="/signup" className="w-full">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-black px-5 py-2 rounded-full font-medium text-base transition-all duration-300 hover:bg-white/90 hover:shadow-xl"
-                >
-                  Sign in
-                </motion.button>
-              </a>
+              {/* Mobile Authentication */}
+              {currentUser ? (
+                <>
+                  <Link
+                    to="/dashboard"
+                    onClick={() => setMenuOpen(false)}
+                    className="flex items-center gap-2 text-white/90 hover:text-white font-light text-base transition-all duration-300"
+                  >
+                    <User className="w-4 h-4" />
+                    Dashboard
+                  </Link>
+                  <button
+                    onClick={() => {
+                      logout();
+                      setMenuOpen(false);
+                    }}
+                    className="flex items-center gap-2 text-red-400 hover:text-red-300 font-light text-base transition-all duration-300"
+                  >
+                    <LogOut className="w-4 h-4" />
+                    Sign Out
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link
+                    to="/login"
+                    onClick={() => setMenuOpen(false)}
+                    className="text-white/90 hover:text-white font-light text-base transition-all duration-300"
+                  >
+                    Sign In
+                  </Link>
+                  <Link to="/signup" className="w-full" onClick={() => setMenuOpen(false)}>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-2 rounded-full font-medium text-base transition-all duration-300 hover:shadow-xl w-full"
+                    >
+                      Get Started
+                    </motion.button>
+                  </Link>
+                </>
+              )}
             </div>
           </motion.div>
         )}
