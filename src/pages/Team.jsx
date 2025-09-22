@@ -28,7 +28,15 @@ const Team = () => {
             Massive problems × AI velocity = MomntumAi.
            
             {/* <span className="text-amber-50"> responsible, life-enhancing AI.</span> */}
-          </h1>
+          </h1 >
+          <h2 className="text-2xl md:text-2xl font-light text-amber-50 leading-tight pt-10">
+                Why “Momntum”
+          </h2>
+          <h3  className="text-2xl md:text-2xl font-light text-amber-50 leading-tight pt-10">
+                In physics, momentum equals mass × velocity.
+
+We find substantial issues—the “mass”—and give them velocity through bold, rigorous AI. The result is forward force that disrupt industries and improves lives.
+          </h3>
         </div>
 
         <div className="md:w-1/2 flex justify-center">

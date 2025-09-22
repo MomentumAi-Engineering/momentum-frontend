@@ -23,7 +23,7 @@ import Blogs from './pages/Blogs.jsx';
 import Product from './pages/Product.jsx'
 
 import AuthCallback from './pages/auth/AuthCallback.jsx';
-import GraphSection from './components/BottomContext.jsx';
+// import GraphSection from './components/BottomContext.jsx';
 import Ending from './components/Ending.jsx';
 
 import { Toaster } from "react-hot-toast";
@@ -52,7 +52,7 @@ const AppWrapper = () => {
               <AboutSecond />
               <Moreabout />
               <TabSwitching />
-              <GraphSection/>
+              {/* <GraphSection/> */}
               {/* <Ending /> */}
               <Footer />
             </>
