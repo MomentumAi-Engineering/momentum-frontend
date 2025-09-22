@@ -64,16 +64,19 @@ const AboutSecond = () => {
       </motion.h1>
 
       <motion.h2
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        viewport={{ once: true }}
-        className="about-second text-lg sm:text-xl md:text-2xl font-light text-center text-gray-200 mb-12 mt-10 sm:mt-16"
-      >
-        Powering the  best product.
-        <br />
-        With Design, Development, and Innovation Combined.
-      </motion.h2>
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ delay: 0.3, duration: 0.8 }}
+  viewport={{ once: true }}
+  className="about-second text-lg sm:text-xl md:text-2xl font-light text-center text-gray-200 mb-12 mt-10 sm:mt-16"
+>
+  A product by MomntumAI
+  <br />
+  <span className="italic text-sm sm:text-base text-gray-300">
+    “AI-powered tool that transforms photo reports into fast, accurate solutions for communities and businesses.”
+  </span>
+</motion.h2>
+
 
       {/* Stats */}
       <motion.div
@@ -85,8 +88,8 @@ const AboutSecond = () => {
       >
         {[
           { num: "Report in under 30 seconds", },
-          { num: "95%", label: "Accuracy Rate" },
-          { num: "Free for all residents" },
+          { num: ">95%", label: "Accuracy Rate" },
+          { num: "Cost Free for all residents" },
         ].map((stat, i) => (
           <motion.div
             key={i}
