@@ -3,11 +3,15 @@ import Solu from '../assets/new_img.png';
 
 const FormlessUI = () => {
   const sections = [
-    { number: "01", title: "Faith & Meaning", description: "Guided by higher purpose, we trust in God as we create." },
-    { number: "02", title: "Human-Centered", description: "We put people first. AI should complement and amplify humanpotential." },
-    { number: "03", title: "Technical Integrity", description: "Grounded in transparency, rigor, and measurable results." },
-    { number: "04", title: "Simplicity & Impact", description: "Complex problems deserve clear, elegant solutions." },
-    { number: "05", title: "Courageous Curiosity", description: "We ask the bold questions others avoid, always in service ofpeople." },
+    { number: "01", title: "Faith & Meaning", description: "We believe our work has a higher purpose. We trust and rely in God as we create." },
+    { number: "02", title: "Human-Centered", description: " We develop AI solutions that empower people, not replace them." },
+    { number: "03", title: "Technical Integrity", description: "Rigorous, transparent, and always driven by real needs." },
+    { number: "04", title: "Simplicity & Impact", description: "Elegant beats complex; clarity wins." },
+    { number: "05", title: "Courageous Curiosity", description: "Very bold exploration in service of people." },
+    { number: "06", title: "Ethical Responsibility", description: " We only build what we can proudly stand behind." },
+    { number: "07", title: "Reveal the Unseen ", description: "Surface and solve needs others overlook." },
+    { number: "08", title: "Scalable Vision", description: "Dream big and scale responsibly." },
+    { number: "09", title: "Accessible AI", description: "Make advanced technology beneficial to everyone." },
   ];
 
   return (
@@ -48,7 +52,32 @@ const FormlessUI = () => {
             ))}
           </div>
         </div>
+
+
       </div>
+
+
+      <div className="w-full bg-gray-900 text-white py-20 px-6 sm:px-16 text-center mt-20 rounded-3xl shadow-lg">
+  <h2 className="text-5xl sm:text-6xl font-extralight mb-6 leading-tight">
+    Ready to create <span className="text-blue-400">momntum?</span>
+  </h2>
+  
+  <p className="text-lg sm:text-xl font-medium mb-8 max-w-2xl mx-auto leading-relaxed">
+    Whether you’re a partner, customer, or future teammate—let’s move what matters, together.
+  </p>
+  
+  <p className="text-md sm:text-lg mb-4 max-w-xl mx-auto">
+    We’re always looking for ethical innovators.
+  </p>
+  
+  <a
+    href="mailto:careers@momntumai.com"
+    className="inline-block mt-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full transition-all duration-300"
+  >
+    Share your story at careers@momntumai.com
+  </a>
+</div>
+
     </div>
   );
 };
