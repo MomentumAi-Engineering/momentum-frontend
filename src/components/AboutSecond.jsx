@@ -60,7 +60,7 @@ const AboutSecond = () => {
         viewport={{ once: true }}
         className="text-4xl sm:text-5xl md:text-6xl font-medium mb-4"
       >
-        Eaiser Solve One problem using Photo
+        EAiSER — Transform Problems into Solutions with One Photo
       </motion.h1>
 
       <motion.h2
