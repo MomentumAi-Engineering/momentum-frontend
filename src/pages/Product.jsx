@@ -1,5 +1,7 @@
 import React from "react";
 import Socials from "../mini-components/Socials";
+import { motion } from "framer-motion";
+
 
 const Product = () => {
   return (
@@ -77,25 +79,43 @@ const Product = () => {
       </section>
 
       {/* How it works */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 mb-32">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          How it works
-        </h2>
-        <div className="bg-gradient-to-r from-purple-800/30 to-blue-800/30 border border-purple-600/40 rounded-2xl shadow-xl p-10 text-center hover:scale-[1.01] transition-transform">
-          <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            <span className="font-semibold text-white">Snap a photo</span> → AI
-            detects the issue & auto-geolocates (95%+ accuracy) →{" "}
-            <span className="font-semibold text-white">Review & Submit</span> → Smart
-            routing to city crew or vetted pro → Real-time updates to{" "}
-            <span className="font-semibold text-green-400">“Fixed”</span>, with private
-            chat if needed.
-          </p>
-          <p className="text-blue-400 italic font-medium text-lg">
-            Demo: Snap → Detect → Confirm → Route → Track
-          </p>
-        </div>
-      </section>
+     <section className="max-w-6xl mx-auto px-6 md:px-12 mb-32">
+  <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+    How it works
+  </h2>
+  <div className="bg-gradient-to-r from-purple-800/30 to-blue-800/30 border border-purple-600/40 rounded-2xl shadow-xl p-10 text-center hover:scale-[1.01] transition-transform">
+    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+      <span className="font-semibold text-white">Snap a photo</span> → AI
+      detects the issue & auto-geolocates (95%+ accuracy) →{" "}
+      <span className="font-semibold text-white">Review & Submit</span> → Smart
+      routing to city crew or vetted pro → Real-time updates to{" "}
+      <span className="font-semibold text-green-400">“Fixed”</span>, with private
+      chat if needed.
+    </p>
 
+    {/* Animated Demo Line */}
+    <motion.p
+      className="text-blue-400 italic font-medium text-lg"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3, duration: 0.6 }}
+    >
+      Demo:&nbsp;
+      {["Snap", "Detect", "Confirm", "Route", "Track"].map((step, i) => (
+        <motion.span
+          key={i}
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6 + i * 0.6 }}
+          className="inline-block"
+        >
+          {step}
+          {i < 4 && " → "}
+        </motion.span>
+      ))}
+    </motion.p>
+  </div>
+</section>
       {/* Who it’s for */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 mb-32">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
