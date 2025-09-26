@@ -33,11 +33,11 @@ const Product = () => {
       </section>
 
       {/* Why EAiSER */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 mb-24">
+      <section className="max-w-6xl mx-auto px-6 md:px-12 mb-24 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Why EAiSER?
         </h2>
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-10 mb-12">
           {[
             {
               icon: "⚡",
@@ -65,6 +65,16 @@ const Product = () => {
             </div>
           ))}
         </div>
+
+        {/* Get EAiSER Button */}
+        <a
+          href="https://www.eaiser.ai/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-10 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl shadow-lg text-white font-semibold text-lg hover:scale-105 hover:shadow-purple-500/40 transition-all"
+        >
+          Get EAiSER
+        </a>
       </section>
 
       {/* How it works */}
@@ -85,7 +95,7 @@ const Product = () => {
       </section>
 
       {/* Socials */}
-      <section className="flex justify-center items-center py-10">
+      <section className="flex justify-center items-center py-16">
         <Socials />
       </section>
     </div>
