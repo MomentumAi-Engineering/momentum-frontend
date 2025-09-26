@@ -34,9 +34,9 @@ const AtomixCard = () => {
 
             <div>
               <p className="text-white  text-lg mb-1">
-                Raj <span className="text-gray-400">|</span> Dev
+                EaiserAI <span className="text-gray-400">|</span> Product
               </p>
-              <p className="text-gray-400 text-base">Creator & Maintainer</p>
+              <p className="text-gray-400 text-base">For the people</p>
             </div>
           </div>
         </div>
