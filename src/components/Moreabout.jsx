@@ -28,12 +28,15 @@ const Moreabout = () => {
 
       {/* Supporting Text */}
       <div className="my-text text-xl sm:text-2xl lg:text-3xl font-light mt-16 sm:mt-20 text-white space-y-4">
-        <p>Classifies issues as public or business-related with high accuracy</p>
-        <p>
-          Instantly analyzes your location with smart algorithms to give accurate, relevant
-          reports you can trust.
-        </p>
-      </div>
+  <p>Why Use Eaiser?</p>
+  <ul className="list-disc list-inside space-y-2">
+    <li>Report in under 30 seconds</li>
+    <li>Trusted accuracy and privacy</li>
+    <li>Free for all residents</li>
+    <li>Transform how your city, business, or trade handles problems</li>
+  </ul>
+</div>
+
 
       {/* Grid Content */}
       <div className="mt-16 sm:mt-20">
