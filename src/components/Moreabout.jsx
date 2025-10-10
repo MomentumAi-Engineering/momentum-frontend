@@ -22,9 +22,9 @@ const Moreabout = () => {
 
 
       {/* Tab Selector */}
-      <div className="mt-12 sm:mt-20">
+      {/* <div className="mt-12 sm:mt-20">
         <TabSelector />
-      </div>
+      </div> */}
 
       {/* Supporting Text */}
       <div className="my-text text-xl sm:text-2xl lg:text-3xl font-light mt-16 sm:mt-20 text-white space-y-4">
