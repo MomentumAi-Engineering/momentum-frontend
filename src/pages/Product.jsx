@@ -193,38 +193,89 @@ const Product = () => {
           See calculators and methods on Easier Ai.
         </p>
       </section>
-
+      
+      
+      
       {/* Pricing */}
-      <section
-        id="pricing"
-        className="max-w-6xl mx-auto px-6 md:px-12 mb-32"
+<section
+  id="pricing"
+  className="max-w-6xl mx-auto px-6 md:px-12 mb-32 text-center"
+>
+  <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+    Pricing at a glance
+  </h2>
+
+  <div className="grid md:grid-cols-3 gap-10">
+    {/* Residents */}
+    <div className="bg-gradient-to-br from-blue-900/30 to-blue-950/40 border border-blue-500/40 rounded-2xl p-8 shadow-lg hover:shadow-blue-500/30 transition-all hover:scale-[1.03]">
+      <h3 className="text-2xl font-semibold text-blue-300 mb-3">
+        Residents
+      </h3>
+      <p className="text-gray-100 text-lg mb-4 font-bold">Always Free!</p>
+      <p className="text-gray-300 mb-6 leading-relaxed">
+        Report and track city issues anytime — with zero cost, complete privacy,
+        and instant updates.
+      </p>
+      <a
+        href="https://www.eaiser.ai/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-xl shadow-md hover:scale-105 transition-all"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Pricing at a glance
-        </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-green-700/20 to-green-900/20 border border-green-500/30 rounded-2xl p-6">
-            <h3 className="text-xl font-semibold mb-2">Residents</h3>
-            <p className="text-gray-300">Free</p>
-          </div>
-          <div className="bg-gradient-to-br from-blue-700/20 to-blue-900/20 border border-blue-500/30 rounded-2xl p-6">
-            <h3 className="text-xl font-semibold mb-2">Cities</h3>
-            <p className="text-gray-300">
-              Community (≤50k): $2,000/yr • Metro (&gt;50k): $0.05 ×
-              population/yr (min $5,000) <br />
-              <span className="text-blue-400">[Start a 2-week pilot]</span>
-            </p>
-          </div>
-          <div className="bg-gradient-to-br from-purple-700/20 to-purple-900/20 border border-purple-500/30 rounded-2xl p-6">
-            <h3 className="text-xl font-semibold mb-2">Local Trades</h3>
-            <p className="text-gray-300">
-              Starter Free (5 matched leads/mo) • Pro $79/mo (unlimited +
-              dashboard). <br />
-              <span className="text-purple-400">[Start for Free]</span>
-            </p>
-          </div>
-        </div>
-      </section>
+        Get EAiSER
+      </a>
+    </div>
+
+    {/* Cities */}
+    <div className="bg-gradient-to-br from-blue-900/30 to-blue-950/40 border border-blue-500/40 rounded-2xl p-8 shadow-lg hover:shadow-blue-500/30 transition-all hover:scale-[1.03]">
+      <h3 className="text-2xl font-semibold text-blue-300 mb-3">
+        Cities
+      </h3>
+      <p className="text-gray-100 text-lg mb-4 font-semibold">
+        It’s affordable! 💼
+      </p>
+      <p className="text-gray-300 mb-6 leading-relaxed">
+        Reach out to our sales team to get you started — tailored pricing for
+        every community size.
+      </p>
+      <a
+        href="https://momntumai.com/contact"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-xl shadow-md hover:scale-105 transition-all"
+      >
+        Contact the Team
+      </a>
+    </div>
+
+    {/* Local Trades */}
+    <div className="bg-gradient-to-br from-blue-900/30 to-blue-950/40 border border-blue-500/40 rounded-2xl p-8 shadow-lg hover:shadow-blue-500/30 transition-all hover:scale-[1.03]">
+      <h3 className="text-2xl font-semibold text-blue-300 mb-3">
+        Local Trades
+      </h3>
+      <p className="text-gray-100 text-lg font-medium mb-2">
+        <span className="font-bold text-white">Starter Free</span> – 5 Matched Leads
+      </p>
+      <p className="text-gray-100 text-lg font-medium mb-6">
+        <span className="font-bold text-white">Pro $79/mo</span> – Unlimited leads/mo and Dashboard
+      </p>
+      <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+        <button
+          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-xl shadow-md hover:scale-105 transition-all"
+        >
+          Starter Free
+        </button>
+        <button
+          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-xl shadow-md hover:scale-105 transition-all"
+        >
+          Get Pro
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Security */}
       <section className="max-w-5xl mx-auto px-6 md:px-12 mb-32 text-center">
