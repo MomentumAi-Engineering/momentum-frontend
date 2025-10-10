@@ -82,45 +82,74 @@ const Product = () => {
 
       {/* How it works */}
       <section
-        id="how-it-works"
-        className="max-w-6xl mx-auto px-6 md:px-12 mb-32"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          How it works
-        </h2>
-        <div className="bg-gradient-to-r from-purple-800/30 to-blue-800/30 border border-purple-600/40 rounded-2xl shadow-xl p-10 text-center hover:scale-[1.01] transition-transform">
-          <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            <span className="font-semibold text-white">Snap a photo</span> → AI
-            detects the issue & auto-geolocates (95%+ accuracy) →{" "}
-            <span className="font-semibold text-white">Review & Submit</span> →
-            Smart routing to city crew or vetted pro → Real-time updates to{" "}
-            <span className="font-semibold text-green-400">“Fixed”</span>, with
-            private chat if needed.
-          </p>
+  id="how-it-works"
+  className="max-w-6xl mx-auto px-6 md:px-12 mb-32"
+>
+  {/* Animated Heading */}
+  <motion.h2
+    className="text-4xl md:text-5xl font-extrabold text-center mb-14 bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 text-transparent bg-clip-text"
+    initial={{ opacity: 0, y: -40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
+  >
+    How it works
+  </motion.h2>
 
-          {/* Animated Demo Line */}
-          <motion.p
-            className="text-blue-400 italic font-medium text-lg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-          >
-            Demo:&nbsp;
-            {["Snap", "Detect", "Confirm", "Route", "Track"].map((step, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 + i * 0.6 }}
-                className="inline-block"
-              >
-                {step}
-                {i < 4 && " → "}
-              </motion.span>
-            ))}
-          </motion.p>
-        </div>
-      </section>
+  {/* Animated Container */}
+  <motion.div
+    className="bg-gradient-to-r from-purple-800/40 to-blue-800/40 border border-purple-500/40 rounded-2xl shadow-2xl p-10 text-center backdrop-blur-lg transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(147,51,234,0.5)]"
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
+    whileHover={{ scale: 1.03 }}
+  >
+    {/* Description */}
+    <motion.p
+      className="text-gray-200 text-xl md:text-2xl leading-relaxed mb-8"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.6 }}
+    >
+      <span className="font-semibold text-white">Snap a photo</span> →
+      AI detects the issue & auto-geolocates (95%+ accuracy) →
+      <span className="font-semibold text-white"> Review & Submit </span>→
+      Smart routing to city crew or vetted pro →
+      Real-time updates to{" "}
+      <span className="font-semibold text-green-400 animate-pulse">“Fixed”</span>,
+      with private chat if needed.
+    </motion.p>
+
+    {/* Animated Demo Line */}
+    <motion.p
+      className="text-blue-400 italic font-semibold text-xl"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.4, duration: 0.8 }}
+    >
+      Demo:&nbsp;
+      {["Snap", "Detect", "Confirm", "Route", "Track"].map((step, i) => (
+        <motion.span
+          key={i}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 + i * 0.4, duration: 0.5 }}
+          className="inline-block text-lg md:text-xl text-blue-300"
+        >
+          {step}
+          {i < 4 && (
+            <motion.span
+              className="text-gray-400 mx-1"
+              animate={{ opacity: [0.3, 1, 0.3] }}
+              transition={{ repeat: Infinity, duration: 1.2, delay: i * 0.3 }}
+            >
+              →
+            </motion.span>
+          )}
+        </motion.span>
+      ))}
+    </motion.p>
+  </motion.div>
+</section>
 
       {/* Who it’s for */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 mb-32">
