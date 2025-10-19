@@ -75,11 +75,8 @@ const AppWrapper = () => {
 };
 
 const App = () => {
-  return (
-    <Router>
-      <AppWrapper />
-    </Router>
-  );
+  return <AppWrapper />;
 };
+
 
 export default App;

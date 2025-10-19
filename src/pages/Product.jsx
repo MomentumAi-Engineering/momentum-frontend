@@ -1,6 +1,7 @@
 import React from "react";
 import Socials from "../mini-components/Socials";
 import { motion } from "framer-motion";
+import Path from "../components/Path";
 
 const Product = () => {
   return (
@@ -320,56 +321,9 @@ const Product = () => {
       </section>
 
       {/* Choose your path */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 mb-32 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">
-          Choose your path
-        </h2>
-        <div className="flex flex-wrap justify-center gap-6 mb-8">
-          <a
-            href="#"
-            className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl shadow-md hover:scale-105 transition"
-          >
-            Get the App
-          </a>
-          <a
-            href="#"
-            className="px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl shadow-md hover:scale-105 transition"
-          >
-            Start a 2-week pilot
-          </a>
-          <a
-            href="#"
-            className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl shadow-md hover:scale-105 transition"
-          >
-            Start Free
-          </a>
-        </div>
-
-        {/* Updated scroll links */}
-        <div className="text-gray-400 text-sm space-x-4">
-          <a href="#how-it-works" className="hover:text-white">
-            How it works
-          </a>{" "}
-          •
-          <a href="#pricing" className="hover:text-white">
-            Pricing
-          </a>{" "}
-          •
-          <a href="#faq" className="hover:text-white">
-            FAQ
-          </a>{" "}
-          →
-          <a
-            href="https://www.eaiser.ai/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-400"
-          >
-            {" "}
-            Easier Ai
-          </a>
-        </div>
-      </section>
+      <div>
+        <Path />
+      </div>
 
       {/* Socials */}
       <section className="flex justify-center items-center py-16">
