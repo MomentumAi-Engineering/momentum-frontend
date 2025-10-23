@@ -1,96 +1,111 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const TabSwitching = () => {
-  const [activeTab, setActiveTab] = useState('whyBitcoin');
-
-  const cardClasses =
-  'w-[320px] h-[400px] bg-black bg-opacity-80 border border-gray-700 rounded-xl p-6 shadow-[0_0_8px_#ffffff80]';
-
-
-  const renderThreePanels = () => {
-    switch (activeTab) {
-      case 'whyBitcoin':
-        return (
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
-            <div className={cardClasses}>
-              <h3 className="text-white text-lg sm:text-xl font-semibold mb-4">Why EaiserAI?</h3>
-              <ul className="text-gray-300 text-base sm:text-lg space-y-3">
-                <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>One Photo, Easy Report</li>
-                <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>AI-Powered Detection</li>
-                <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Anonymous Reporting</li>
-                <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Decentralized</li>
-              </ul>
-              <p className="text-gray-400 text-sm mt-4 text-center">
-                A great contribution in the 21st century
-              </p>
-            </div>
-          </div>
-        );
-
-      case 'whyGiftBitcoin':
-        return (
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
-            <div className={cardClasses}>
-              <h3 className="text-white text-lg sm:text-xl font-semibold mb-4 text-center">Great value of products in digital age.</h3>
-              <ul className="text-gray-300 text-base sm:text-lg space-y-3">
-                <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>AI Decision Making</li>
-                <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Advance Analytics</li>
-                <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Powerful Insights</li>
-                <li className="flex items-center"><span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>Enterprise Security</li>
-              </ul>
-              <p className="text-gray-400 text-sm mt-4 text-center">
-                Safe, anonymous, and smart. That’s <span className="text-yellow-400 font-bold">EaiserAI</span>.
-              </p>
-            </div>
-          </div>
-        );
-
-      case 'whyUseBitcoinCard':
-        return (
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
-            <div className={cardClasses}>
-              <h3 className="text-white text-lg sm:text-xl font-semibold mb-4 text-center">Largest growing AI Company</h3>
-              <div className="bg-gray-700 bg-opacity-40 p-3 rounded-md text-sm text-gray-300">
-                <p className="text-white font-semibold mb-2">Market Cap</p>
-                <div className="flex justify-between py-1"><span>Google</span><span>$1.935 T</span></div>
-                <div className="flex justify-between py-1"><span>Microsoft</span><span>$1.935 T</span></div>
-                <div className="flex justify-between py-1"><span>Amazon</span><span>$1.935 T</span></div>
-                <div className="flex justify-between py-1"><span>Alphabet</span><span>$1.935 T</span></div>
-                <div className="flex justify-between py-1"><span>EaiserAI</span><span className="text-yellow-400 font-bold">$1.93 T</span></div>
-              </div>
-              <p className="text-gray-400 text-sm mt-4 text-center">
-                <span className="text-yellow-400 font-bold">7th largest market cap</span>
-              </p>
-            </div>
-          </div>
-        );
-
-      default:
-        return null;
-    }
-  };
-
-  const tabClass = (tabName) =>
-    `py-2 px-4 sm:px-6 cursor-pointer transition-all duration-300 whitespace-nowrap ${
-      activeTab === tabName
-        ? 'text-white text-lg sm:text-3xl font-bold'
-        : 'text-gray-500 text-base sm:text-xl'
-    }`;
+  const steps = [
+    {
+      id: 1,
+      title: 'Snap a Photo',
+      image:
+        'https://trello.com/1/cards/68e5d1f569a9d97964156094/attachments/68e5d2fb35b80998f5690bc7/download/Snap_a_Photo.png',
+      description: (
+        <>
+          See a problem — a pothole, sidewalk crack, or safety hazard? <br />
+          <span className="text-yellow-400 font-semibold">Open EAiSER</span>,
+          take a quick photo, and the app captures your location automatically.
+        </>
+      ),
+    },
+    {
+      id: 2,
+      title: 'AI Detects & Fills The Report',
+      image:
+        'https://trello.com/1/cards/68e5d1f569a9d97964156094/attachments/68e5d2e488b24c9ddebec42c/download/Al_Detects.png',
+      description: (
+        <>
+          <span className="text-yellow-400 font-semibold">EAiSER’s AI</span>{' '}
+          identifies the issue type with <span className="font-semibold">95%+</span> accuracy,
+          classifies it, and pre-fills your report. <br />
+          You simply review and confirm. <br />
+          <span className="text-gray-400 italic">(Accurate, complete, and ready to send.)</span>
+        </>
+      ),
+    },
+    {
+      id: 3,
+      title: 'We Route It',
+      image:
+        'https://trello.com/1/cards/68e5d1f569a9d97964156094/attachments/68e5d407327cba23063b4f68/download/image.png',
+      description: (
+        <>
+          <span className="text-yellow-400 font-semibold">EAiSER</span> delivers your report to the
+          right city department or verified business. <br />
+          You’ll get confirmation and updates as it’s resolved. <br />
+          <span className="text-gray-400 italic">(Fast, direct, and hassle-free.)</span>
+        </>
+      ),
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-black p-4 sm:p-8 font-sans">
-      <div className="max-w-7xl mx-auto">
-        {/* Tab Navigation */}
-        <div className="flex overflow-x-auto sm:overflow-visible no-scrollbar sm:justify-center items-center mb-12 mt-10 sm:mt-20 space-x-4 sm:space-x-6">
-          <div className={tabClass('whyBitcoin')} onClick={() => setActiveTab('whyBitcoin')}>WHY EaiserAI?</div>
-          <div className="hidden sm:block h-0.5 w-10 bg-gray-700"></div>
-          <div className={tabClass('whyGiftBitcoin')} onClick={() => setActiveTab('whyGiftBitcoin')}>OUR FEATURES</div>
-          <div className="hidden sm:block h-0.5 w-10 bg-gray-700"></div>
-          <div className={tabClass('whyUseBitcoinCard')} onClick={() => setActiveTab('whyUseBitcoinCard')}>WHY USE EaiserAI?</div>
-        </div>
+    <div className="min-h-screen bg-black text-white p-6 sm:p-12 font-sans flex flex-col items-center">
+      {/* Section Title */}
+      <h2 className="text-3xl sm:text-5xl font-bold text-center mb-6 sm:mb-10">
+        How it works? – <span className="text-yellow-400">EAiSER</span> in 3 Steps
+      </h2>
 
-        {/* Tab Content */}
-        {renderThreePanels()}
+      {/* Divider */}
+      <div className="w-24 sm:w-32 h-[2px] bg-gray-600 mb-10"></div>
+
+      {/* Steps */}
+      <div className="flex flex-col space-y-16 w-full max-w-6xl">
+        {steps.map((step, index) => (
+          <div
+            key={step.id}
+            className={`flex flex-col sm:flex-row items-center gap-10 ${
+              index % 2 === 1 ? 'sm:flex-row-reverse' : ''
+            }`}
+          >
+            {/* Image */}
+            <div className="flex-shrink-0 w-full sm:w-1/2 flex justify-center">
+              <img
+                src={step.image}
+                alt={step.title}
+                className="w-80 sm:w-[420px] rounded-lg shadow-[0_0_12px_#ffffff40] object-contain"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="sm:w-1/2 text-center sm:text-left">
+              <h3 className="text-2xl sm:text-3xl font-semibold mb-4 text-yellow-400">
+                {step.title}
+              </h3>
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">{step.description}</p>
+
+              {/* Divider under each step */}
+              {index < steps.length - 1 && (
+                <div className="w-16 sm:w-24 h-[1px] bg-gray-700 mt-6 mx-auto sm:mx-0"></div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Call to Action */}
+      <div className="mt-20 flex flex-col sm:flex-row gap-6">
+        <a
+          href="https://easier.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-yellow-400 text-black font-semibold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-all duration-300"
+        >
+          Get EAiSER
+        </a>
+        <a
+          href="/product"
+          className="border border-yellow-400 text-yellow-400 font-semibold px-8 py-3 rounded-lg hover:bg-yellow-400 hover:text-black transition-all duration-300"
+        >
+          Learn More
+        </a>
       </div>
     </div>
   );
