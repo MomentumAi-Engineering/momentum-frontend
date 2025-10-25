@@ -9,7 +9,7 @@ import {
 import Home from './components/Home.jsx';
 import Navbar from './components/Navbar.jsx';
 import About from './components/About.jsx';
-import AboutSecond from './components/AboutSecond.jsx';
+// import AboutSecond from './components/AboutSecond.jsx';
 import Team from './pages/Team.jsx';
 import Footer from './components/Footer.jsx';
 import Contact from './pages/Contact.jsx';
@@ -49,7 +49,7 @@ const AppWrapper = () => {
             <>
               <Home />
               <About />
-              <AboutSecond />
+              {/* <AboutSecond /> */}
               <Moreabout />
               <TabSwitching />
               {/* <GraphSection/> */}

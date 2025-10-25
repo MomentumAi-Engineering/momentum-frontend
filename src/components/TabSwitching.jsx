@@ -1,12 +1,13 @@
 import React from 'react';
+import imgOne from "../assets/report.png";
+import imgTwo from "../assets/report-11.png";
 
 const TabSwitching = () => {
   const steps = [
     {
       id: 1,
       title: 'Snap a Photo',
-      image:
-        'https://trello.com/1/cards/68e5d1f569a9d97964156094/attachments/68e5d2fb35b80998f5690bc7/download/Snap_a_Photo.png',
+      image: imgOne,
       description: (
         <>
           See a problem — a pothole, sidewalk crack, or safety hazard? <br />
@@ -18,8 +19,7 @@ const TabSwitching = () => {
     {
       id: 2,
       title: 'AI Detects & Fills The Report',
-      image:
-        'https://trello.com/1/cards/68e5d1f569a9d97964156094/attachments/68e5d2e488b24c9ddebec42c/download/Al_Detects.png',
+      image: imgTwo,
       description: (
         <>
           <span className="text-yellow-400 font-semibold">EAiSER’s AI</span>{' '}
