@@ -1,7 +1,7 @@
 import React from 'react';
 import imgOne from "../assets/report.png";
 import imgTwo from "../assets/report-11.png";
-
+import imgThree from "../assets/build.png";
 const TabSwitching = () => {
   const steps = [
     {
@@ -33,8 +33,7 @@ const TabSwitching = () => {
     {
       id: 3,
       title: 'We Route It',
-      image:
-        'https://trello.com/1/cards/68e5d1f569a9d97964156094/attachments/68e5d407327cba23063b4f68/download/image.png',
+      image: imgThree,
       description: (
         <>
           <span className="text-yellow-400 font-semibold">EAiSER</span> delivers your report to the
