@@ -32,6 +32,10 @@
     <meta property="og:title" content="Momntum AI | Ethical AI Solutions for Businesses" />
     <meta property="og:description" content="Revolutionizing how ethical technology interacts with modern business. Innovation with responsibility." />
     <meta property="og:image" content="https://momntumai.com/logo.png" />
+    <!-- ✅ Added for Rich Preview -->
+    <meta property="og:image:alt" content="Momntum AI Logo" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="800" />
     <meta property="og:url" content="https://momntumai.com" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Momntum AI" />
@@ -78,7 +82,7 @@
     <meta name="google-site-verification" content="jkwaCQMgy151-NcWbZDIRdQgeX894Iwf0DaiV9mP1oA" />
     <meta name="msvalidate.01" content="D3BDF96B60894B0B512AE837BBD0F98F" />
     
-    <!-- Structured Data for Organization -->
+    <!-- ✅ Updated & Enriched Structured Data for Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -89,6 +93,11 @@
       "url": "https://momntumai.com",
       "logo": "https://momntumai.com/logo.png",
       "description": "Ethical AI solutions for businesses",
+      "foundingDate": "2025",
+      "foundingLocation": {
+        "@type": "Place",
+        "name": "Fairview, Nashville, TN"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Fairview",
@@ -108,7 +117,10 @@
         "https://www.linkedin.com/company/momntum-ai-us",
         "https://x.com/Momntum_Ai"
       ],
-      "foundingDate": "2025",
+      "brand": {
+        "@type": "Brand",
+        "name": "Momntum AI"
+      },
       "founders": [
         { "@type": "Person", "name": "Joel Girones", "jobTitle": "Founder" },
         { "@type": "Person", "name": "Rishav Kumar", "jobTitle": "Co-Founder" }
@@ -145,12 +157,43 @@
       }
     },
     {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Momntum AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Momntum AI provides ethical, AI-powered solutions to enhance productivity and innovation for startups and enterprises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who founded Momntum AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Momntum AI was founded by Joel Girones and Rishav Kumar in 2025."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Momntum AI offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We deliver advanced AI solutions for automation, analytics, and ethical AI frameworks for startups and enterprises."
+          }
+        }
+      ]
+    },
+    {
       "@type": "Product",
       "name": "Eaiser AI",
       "image": [
         "https://momntumai.com/logo.png",
         "https://momntumai.com/product-banner.png"
       ],
+      "brand": { "@type": "Brand", "name": "Momntum AI" },
+      "sku": "EAI-001",
       "provider": {
         "@type": "Organization",
         "name": "Momntum AI"
@@ -175,8 +218,6 @@
 }
 </script>
 
-
-    
     <!-- Web App Manifest -->
     <link rel="manifest" href="/manifest.json" />
     <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin />
